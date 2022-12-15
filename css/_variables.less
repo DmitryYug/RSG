@@ -1,0 +1,23 @@
+@test-border: 1px solid black;
+@content-width: 920px;
+@header-height: 90px;
+@footer-height: 360px;
+@regular-text-color: #2C3148;
+@footer-background: #EBF3FF;
+@text-description-color: #7C7F8D;
+@text-link-color: #005D9F;
+@divider-color: #D5E2F7;
+
+//mixins
+.flex-column(@align, @justify) {
+  display: flex;
+  flex-direction: column;
+  align-items: @align;
+  justify-content: @justify;
+}
+.flex-default(@align, @justify) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+
