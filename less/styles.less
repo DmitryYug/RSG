@@ -2,10 +2,11 @@
 @import 'header.less';
 @import 'footer.less';
 @import 'content.less';
+@import 'components.less';
 
 .start-links {
-  font-size: 30px;
-  width: 500px;
+  font-size: 20px;
+  width: 900px;
   margin: 100px auto 0 auto;
 }
 
@@ -17,68 +18,53 @@ body {
 header {
   height: @header-height;
   padding: 24px 55px 28px 24px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17.15px;
-  color: @text-link-color;
   position: relative;
+  .divider-bottom(0, 0)
 
-  &:after {
-    content: '';
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    background: @divider-color;
-  }
 
 }
 
 footer {
   width: 100%;
   height: @footer-height;
-  background-color: @footer-background;
+  background-color: @background-medium;
 }
 
 main {
   height: 100%;
-  margin-bottom: 95px;
-
-  p {
-    font-weight: 400;
-    font-style: normal;
-
-    font-size: 20px;
-    line-height: 130%;
-    color: @regular-text-color;
-  }
-
-  a {
-    text-decoration: underline;
-    color: #005D9F;
-  }
 }
 
-.content-container {
-  width: @content-width;
-  margin: 0 auto;
+.content {
+  &-container {
+    width: @content-width;
+    margin: 0 auto;
+  }
+
+  &-wrapper {
+    margin: 0 auto;
+    width: 100%;
+
+    &.procurements-planned {
+      margin-top: 80px;
+      margin-bottom: 95px;
+    }
+  }
 
   &.main {
-
-  }
-
-  &.index {
     margin-top: 65px;
-  }
+    margin-bottom: 65px;
 
-  &.choose {
-    .flex-column(center, start);
-    margin-top: 80px;
-  }
+    &-choose-site {
+      .flex-column(center, start);
+      margin-top: 80px;
+      margin-bottom: 100px;
+    }
 
-  &.slider {
-    margin-top: 80px;
+    &-slider {
+      width: 100%;
+      margin-top: 80px;
+      margin-bottom: 95px;
+    }
   }
 }
 
@@ -90,100 +76,297 @@ main {
     width: auto;
   }
 
-  &.divider {
-    &:after {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 2px;
-      top: 0;
-      right: -25px;
-      background: #D5E2F7;
-    }
-  }
-
-  &.header {
-    margin-right: 50px;
-    width: 150px;
-    height: 45px;
-    position: relative;
-  }
-
-  &.footer {
-    img {
-      max-width: 70%;
-      height: auto
-    }
+  &.expand {
+    margin-left: 10px;
+    width: 12px;
+    height: 6px;
   }
 
   &.icon24 {
-    width: 24px;
-    height: 24px;
+    .icon(24px, 24px);
     margin-right: 10px;
   }
 
-  &.icon36 {
-    width: 36px;
-    height: 36px;
+  &.icon16 {
+    .icon(16px, 16px);
   }
-}
 
-.title-container {
-  width: 100%;
-
-  &.slider {
-    margin-bottom: 55px;
+  &.icon36 {
+    .icon(36px, 36px);
   }
 }
 
 .text {
-  &.title {
+
+  &-title {
     font-weight: 750;
     font-size: 64px;
     line-height: 110%;
-    color: @text-link-color;
+    color: @background-dark;
     margin: 0;
 
     &.divider {
       position: relative;
-
-      &:after {
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        left: 0;
-        bottom: -56px;
-        background: @divider-color;
-      }
+      .divider-bottom(-55px, 0)
     }
+
     &.main {
       margin-bottom: 65px;
     }
-    &.choose {
-      margin-bottom: 80px;
-    }
+
 
   }
 
-  &.subtitle {
+  &-subtitle {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
     color: #005D9F
   }
 
-  &.description {
+  &-description {
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
     color: @text-description-color;
   }
 
-  &.link {
-    color: @text-link-color;
+  &-link {
+    color: @background-dark;
     font-weight: 450;
     font-size: 20px;
     line-height: 130%;
+
+    &.nav {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17.15px;
+      color: @background-dark;
+    }
+
+    &.active {
+      color: @active-link;
+    }
+  }
+}
+
+.table-container {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  tr {
+    vertical-align: top;
+
+    &:nth-child(2n) {
+      background-color: @background-medium;
+    }
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  .cell-flex-col {
+    .flex-column(start, center);
+  }
+
+  &-header {
+    background-color: @divider-color;
+  }
+
+  &.procurements-planned {
+    margin: 55px 80px 0 80px;
+    position: relative;
+    .divider-bottom(-30px, 0);
+
+    tr {
+      height: 70px;
+    }
+
+    th {
+      .text-props(450, 14px, 115%, @text-regular-color);
+    }
+
+    td {
+      .text-props(450, 16px, 130%, @text-regular-color);
+    }
+  }
+
+  &.choose-client-modal {
+    tr {
+
+      th {
+        .text-props(_, 12px, 115%, @text-regular-color);
+
+        &:nth-child(1) {
+          width: 215px;
+        }
+      }
+
+      td {
+        .text-props(400, 14px, 115%, @text-regular-color);
+        height: 60px;
+
+        &:nth-child(1) {
+          .text-props(450, 14px, 115%, @text-regular-color)
+        }
+      }
+
+    }
+  }
+
+}
+
+.input-with-btn {
+  .flex-default(center, end);
+  height: 100%;
+  border: 1px solid #D6D8E0;
+  border-radius: 2px;
+  background-color: white;
+
+  #from, #to, #client {
+    border: none;
+  }
+
+  button {
+    background-color: transparent;
+    margin-right: 10px;
+  }
+
+  &.calendar {
+    margin-right: 10px;
+  }
+
+  &.client {
+    width: 60%;
+  }
+
+  &.search {
+    padding: 10px;
+    .flex-default(center, start);
+
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+.form-container {
+  margin-top: 55px;
+  padding: 25px;
+  width: 690px;
+  height: 100%;
+  background: @background-light;
+
+  span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: @background-dark;
+
+    &.clear {
+      color: grey;
+    }
+  }
+
+  &-header {
+    .flex-default(center, space-between);
+
+    &.divided {
+      .divider-bottom(-20px, 0);
+      position: relative;
+      margin-bottom: 35px;
+    }
+
+
+    button {
+      background-color: transparent;
+    }
+  }
+
+  &-body {
+
+    .item {
+      .flex-default(center, space-between);
+      height: 50px;
+      font-weight: 450;
+      font-size: 16px;
+      line-height: 130%;
+      color: @text-regular-color;
+      margin-bottom: 10px;
+
+      input, select {
+        height: 100%;
+        width: 60%;
+        border: 1px solid #D6D8E0;
+        border-radius: 2px;
+      }
+
+      a {
+        text-decoration: underline;
+        text-align: left;
+      }
+
+      #changes-period {
+        max-width: 80px;
+        margin-right: 20px;
+      }
+
+      #plan-period {
+        .flex-default(center, center);
+        height: 100%;
+        width: 50%;
+        margin-right: 81px;
+
+        label {
+          margin-right: 10px;
+        }
+      }
+
+      #from {
+        margin-right: 5px;
+        background-size: 18px;
+      }
+
+      #to {
+        background-size: 18px;
+      }
+
+      &.flex {
+        .flex-default(center, center);
+        margin: 0;
+        width: 60%;
+
+        &:nth-child(2) {
+          text-align: left;
+        }
+      }
+
+      &.checkbox {
+        .flex-default(center, start);
+        .divider-bottom(-20px, 0);
+        position: relative;
+
+        input {
+          height: 20px;
+          width: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &-footer {
+
   }
 }

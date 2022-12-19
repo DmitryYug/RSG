@@ -1,55 +1,60 @@
 @import '_variables.less';
 
+.header {
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-nav-left {
-  &-container {
-    .flex-default(center, center);
-  }
-
-  &-item {
-    margin-right: 24px;
-  }
-}
-
-button {
-  padding: 0;
-  margin-right: 24px;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-
-.header-nav-right {
   &-container {
     display: flex;
     justify-content: space-between;
+    button {
+      padding: 0;
+      margin-right: 24px;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+    }
+    .text-link {
+      margin-right: 25px;
+    }
   }
 
-  &-item {
-    .flex-default(center, center);
+  &-nav-left {
+    &-container {
+      .flex-default(center, center);
+    }
+  }
 
-    &.divider {
-      position: relative;
-      margin-right: 55px;
-
-      &:after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 2px;
-        top: 0;
-        right: -25px;
-        background: @divider-color;
-      }
+  &-nav-right {
+    &-container {
+      display: flex;
+      justify-content: space-between;
     }
 
+    &-item {
+      .flex-default(center, center);
+
+      &.divider {
+        position: relative;
+        .divider-right(0, 0)
+      }
+
+    }
   }
+
+  &.icon-container {
+    margin-right: 50px;
+    width: 150px;
+    height: 45px;
+    position: relative;
+
+    &.divider {
+      .divider-right(0, -25px)
+    }
+  }
+
 }
+
+
+
+
 

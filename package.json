@@ -1,0 +1,16 @@
+{
+  "name": "zakupki-verstka",
+  "version": "1.0.0",
+  "author": "ntdev",
+  "scripts": {
+    "watch-less": "watch-less-do-more -i less/styles.less -o less/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.ntdev.ru/rosgidro/zakupki-verstka.git"
+  },
+  "dependencies": {
+    "less": "^3.13.1",
+    "watch-less-do-more": "^0.4.0"
+  }
+}

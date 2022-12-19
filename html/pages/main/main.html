@@ -6,14 +6,13 @@
     <meta charset="UTF-8">
 
     <!--    Custom links-->
-    <link rel="stylesheet" type="text/css" href="../../../styles.css"/>
-    <link rel="stylesheet" href="../../../less/initial-styles/normalize.css"/>
-    <link rel="stylesheet" href="../../../less/initial-styles/nullstyle.css"/>
+    <base href="../../../">
+    <link rel="stylesheet" type="text/css" href="less/styles.css"/>
+    <link rel="stylesheet" href="less/initial-styles/normalize.css"/>
+    <link rel="stylesheet" href="less/initial-styles/nullstyle.css"/>
 
     <!--    Fonts-->
     <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
-    <link href="https://www.dafontfree.net/embed/YXZhbnRnYXJkZWN0dC1ib2xkJmRhdGEvMjIvYS8xMTE3ODYvQVZHNjVfX0MudHRm"
-          rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -21,34 +20,34 @@
 <header>
     <nav class="header-container">
         <div class="header-nav-left-container">
-            <div class="header-nav-left-item icon-container header divider">
-                <img src="../../../images/header/logo.png" alt="">
+            <div class="header icon-container divider">
+                <img src="images/header/logo.png" alt="">
             </div>
-            <a href="" class="header-nav-left-item">АНОНСИРОВАНИЕ ЗАКУПОК</a>
-            <a href="" class="header-nav-left-item">ЗАКУПКИ</a>
-            <a href="" class="header-nav-left-item">ДОГОВРЫ</a>
-            <button class="header-nav-left-item">...</button>
+            <a href="" class="text-link nav">АНОНСИРОВАНИЕ ЗАКУПОК</a>
+            <a href="" class="text-link nav">ЗАКУПКИ</a>
+            <a href="" class="text-link nav">ДОГОВРЫ</a>
+            <button class="text-link nav">...</button>
         </div>
         <div class="header-nav-right-container">
             <button class="header-nav-right-item divider">
                 <div class="icon-container icon24">
-                    <img src="../../../images/header/message.png" alt="">
+                    <img src="images/header/message.png" alt="">
                 </div>
-                <a href="">
+                <a class="text-link nav" href="">
                     ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
                 </a>
             </button>
             <button class="header-nav-right-item divider">
                 <div class="icon-container icon24">
-                    <img src="../../../images/header/global.png" alt="">
+                    <img src="images/header/global.png" alt="">
                 </div>
-                <a href="">
+                <a class="text-link nav" href="">
                     ВСЕ САЙТЫ
                 </a>
             </button>
             <button class="header-nav-right-item">
                 <div class="icon-container icon24">
-                    <img src="../../../images/header/search.png" alt="">
+                    <img src="images/header/search.png" alt="">
                 </div>
             </button>
         </div>
@@ -56,14 +55,14 @@
 </header>
 
 <main>
-    <section class="main-with-background">
-<!--        If you need text not from background-->
-<!--        <div class="main-title-container content-container">-->
-<!--            <h2 class="text subtitle">ЗАКУПКИ</h2>-->
-<!--            <h1 class="text title main">ПАО "РУСГИДРО"</h1>-->
-<!--        </div>-->
+    <section class="main-background-section">
+        <!--        If you need text not from background-->
+        <!--        <div class="main-title-container content-container">-->
+        <!--            <h2 class="text subtitle">ЗАКУПКИ</h2>-->
+        <!--            <h1 class="text title main">ПАО "РУСГИДРО"</h1>-->
+        <!--        </div>-->
     </section>
-    <article class="content-container index">
+    <article class="content-container main">
         <p>
             ПАО «РусГидро» при проведении закупок товаров, работ, услуг руководствуется требованиями законодательства
             Российской Федерации, в частности, требованием Федерального закона от 18.07.2011 №223-ФЗ «О закупках
@@ -99,10 +98,10 @@
         </p>
         <p>Подробнее в разделе Управление закупочной деятельностью</p>
         <p>С системой закупок Группы РусГидро можно ознакомиться здесь</p>
+        <div class="main-picture">
+            <img src="images/content/main/main-article-picture.png" alt="">
+        </div>
     </article>
-    <div class="main-picture">
-        <img src="../../../images/content/main-article-picture.png" alt="">
-    </div>
 </main>
 
 <footer>
@@ -110,37 +109,37 @@
         <div class="footer-container with-background">
             <div class="footer-row divider">
                 <div class="icon-container footer">
-                    <img src="../../../images/header/logo.png" alt="">
+                    <img src="images/header/logo.png" alt="">
                 </div>
                 <div class="phone-block-container">
                     <div class="phone-block-number">+7 800 333 80 00</div>
-                    <div class="text description">Многоканальный телефон</div>
+                    <div class="text-description">Многоканальный телефон</div>
                 </div>
                 <div class="phone-block-container">
                     <div class="phone-block-number">+7 495 122 05 55</div>
-                    <div class="text description">Многоканальный телефон</div>
+                    <div class="text-description">Многоканальный телефон</div>
                 </div>
                 <div class="phone-block-container">
                     <div class="phone-block-number">+7 800 555 99 97</div>
-                    <div class="text description">«Горячая линия» для акционеров</div>
+                    <div class="text-description">«Горячая линия» для акционеров</div>
                 </div>
             </div>
             <div class="footer-row divider">
                 <div class="icon-container footer">
-                    <img src="../../../images/footer/eais.png"/>
+                    <img src="images/footer/eais.png"/>
                 </div>
                 <div class="icon-container footer">
-                    <img src="../../../images/footer/roseltorh.png"/>
+                    <img src="images/footer/roseltorh.png"/>
                 </div>
                 <div class="icon-container footer">
-                    <img src="../../../images/footer/rad.png"/>
+                    <img src="images/footer/rad.png"/>
                 </div>
             </div>
             <div class="footer-row">
-                <div class="text description">
+                <div class="text-description">
                     127006, Москва, ул. Малая Дмитровка, д.7
                 </div>
-                <div class="text description">
+                <div class="text-description">
                     117393, Москва, ул. Архитектора Власова, д.51
                 </div>
             </div>

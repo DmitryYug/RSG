@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>filters-expanded</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="UTF-8">
+
+    <!--    Custom links-->
+    <base href="../../../../">
+    <link rel="stylesheet" href="less/styles.css"/>
+    <link rel="stylesheet" href="less/initial-styles/normalize.css"/>
+    <link rel="stylesheet" href="less/initial-styles/nullstyle.css"/>
+
+    <!--    Fonts-->
+    <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav class="header-container">
+        <div class="header-nav-left-container">
+            <div class="header icon-container divider">
+                <img src="images/header/logo.png" alt="">
+            </div>
+            <a href="" class="text-link nav active">АНОНСИРОВАНИЕ ЗАКУПОК</a>
+            <a href="" class="text-link nav">ЗАКУПКИ</a>
+            <a href="" class="text-link nav">ДОГОВРЫ</a>
+            <button class="text-link nav">...</button>
+        </div>
+        <div class="header-nav-right-container">
+            <button class="header-nav-right-item divider">
+                <div class="icon-container icon24">
+                    <img src="images/header/message.png" alt="">
+                </div>
+                <a class="text-link nav" href="">
+                    ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
+                </a>
+            </button>
+            <button class="header-nav-right-item divider">
+                <div class="icon-container icon24">
+                    <img src="images/header/global.png" alt="">
+                </div>
+                <a class="text-link nav" href="">
+                    ВСЕ САЙТЫ
+                </a>
+            </button>
+            <button class="header-nav-right-item">
+                <div class="icon-container icon24">
+                    <img src="images/header/search.png" alt="">
+                </div>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="content-wrapper procurements-planned">
+        <div class="procurements-planned  content-container title-container">
+            <h2 class="text-subtitle">ПАО «РУСГИДРО»</h2>
+            <h1 class="text-title">Планы закупок</h1>
+            <p>В периоды 12:00—12:15, 15:00—15:15, 23:00—00:00 по МСК происходит обновление данных, данные для выгрузки
+                могут быть недоступны.</p>
+        </div>
+        <div class="procurements-planned content-container">
+            <div class="procurements-planned form-container">
+                <div class="procurements-planned form-container-header divided">
+                    <button class="procurements-planned btn-filter">
+                        <span>фильтры</span>
+                        <div class="icon-container expand">
+                            <img src="images/content/procurements/form/arrow-up.png" alt="">
+                        </div>
+                    </button>
+                    <button class="procurements-planned btn-clear">
+                        <span class="clear">очистить</span>
+                    </button>
+                </div>
+                <div class="procurements-planned form-container-body">
+                    <form>
+                        <div class="item">
+                            <label for="changes-period">Период внесения сведений</label>
+                            <div class="item flex">
+                                <select id="changes-period"></select>
+                                <a href="">Выгрузить план закупки по Группе РусГидро за указанный год</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <label for="client">Заказчик</label>
+
+                            <div class="input-with-btn client">
+                                <input id="client">
+                                <button class="icon-container icon16">
+                                    ...
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <label for="plan-title">Наименование плана</label>
+                            <input id="plan-title">
+                        </div>
+
+                        <div class="item">
+                            <label for="lot-number">Номер лота</label>
+                            <input id="lot-number">
+                        </div>
+
+                        <div class="item">
+                            <label for="agreement-issue">Предмет договора</label>
+                            <input id="agreement-issue">
+                        </div>
+
+                        <div class="item">
+                            <label for="type">Вид</label>
+                            <select id="type"></select>
+                        </div>
+
+                        <div class="item">
+                            <label for="plan-period">Период действия плана</label>
+                            <div id="plan-period">
+                                <label for="from">с</label>
+                                <div class="input-with-btn calendar">
+                                    <input id="from">
+                                    <button class="icon-container icon16">
+                                        <img src="images/content/procurements/form/calendar.png" alt="">
+                                    </button>
+                                </div>
+                                <label for="to">по</label>
+                                <div class="input-with-btn calendar">
+                                    <input id="to">
+                                    <button class="icon-container icon16">
+                                        <img src="images/content/procurements/form/calendar.png" alt="">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item checkbox">
+                            <input id="show-archive" type="checkbox">
+                            <label for="show-archive">Показывать архивные версии</label>
+                        </div>
+
+                        <button class="procurements-planned btn-apply">применить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container procurements-planned">
+            <table>
+
+                <thead class="table-container-header">
+                <tr>
+                    <th>Наименование плана закупки</th>
+                    <th>Номер плана закупки (ссылка в ЕИС)</th>
+                    <th>Заказчик</th>
+                    <th>Период действия плана закупки</th>
+                    <th>Версия плана закупки</th>
+                    <th>Первоначальная дата утверждения плана закупки</th>
+                    <th>Позиции плана закупки (лоты)</th>
+                    <th>Печатная форма</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>План закупки товаров (работ, услуг) Гидроремонт–ВКК АО 2022 год</td>
+                    <td>2210542592</td>
+                    <td>Гидроремонт–ВКК АО</td>
+                    <td>01.01.2022 – 31.12.2024</td>
+                    <td>290</td>
+                    <td>18.11.2022</td>
+                    <td class="cell-flex-col">
+                        <span>889</span>
+                        <button class="procurements-planned btn-list">
+                            <img src="images/content/procurements/table/list-btn.png" alt="">
+                        </button>
+                    </td>
+                    <td>
+                        <button class="procurements-planned btn-download">
+                            <img src="images/content/procurements/table/download-btn.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>План закупки товаров (работ, услуг) Гидроремонт–ВКК АО 2022 год</td>
+                    <td>2210542592</td>
+                    <td>Гидроремонт–ВКК АО</td>
+                    <td>01.01.2022 – 31.12.2024</td>
+                    <td>290</td>
+                    <td>18.11.2022</td>
+                    <td class="cell-flex-col">
+                        <span>889</span>
+                        <button>
+                            <img src="images/content/procurements/table/list-btn.png" alt=""
+                                 class="procurements-planned btn-list">
+                        </button>
+                    </td>
+                    <td>
+                        <button class="procurements-planned btn-download">
+                            <img src="images/content/procurements/table/download-btn.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>План закупки товаров (работ, услуг) Гидроремонт–ВКК АО 2022 год</td>
+                    <td>2210542592</td>
+                    <td>Гидроремонт–ВКК АО</td>
+                    <td>01.01.2022 – 31.12.2024</td>
+                    <td>290</td>
+                    <td>18.11.2022</td>
+                    <td class="cell-flex-col">
+                        <span>889</span>
+                        <button class="procurements-planned btn-list">
+                            <img src="images/content/procurements/table/list-btn.png" alt="">
+                        </button>
+                    </td>
+                    <td>
+                        <button class="procurements-planned btn-download">
+                            <img src="images/content/procurements/table/download-btn.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>План закупки товаров (работ, услуг) Гидроремонт–ВКК АО 2022 год</td>
+                    <td>2210542592</td>
+                    <td>Гидроремонт–ВКК АО</td>
+                    <td>01.01.2022 – 31.12.2024</td>
+                    <td>290</td>
+                    <td>18.11.2022</td>
+                    <td class="cell-flex-col">
+                        <span>889</span>
+                        <button class="procurements-planned btn-list">
+                            <img src="images/content/procurements/table/list-btn.png" alt="">
+                        </button>
+                    </td>
+                    <td>
+                        <button class="procurements-planned btn-download">
+                            <img src="images/content/procurements/table/download-btn.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>План закупки товаров (работ, услуг) Гидроремонт–ВКК АО 2022 год</td>
+                    <td>2210542592</td>
+                    <td>Гидроремонт–ВКК АО</td>
+                    <td>01.01.2022 – 31.12.2024</td>
+                    <td>290</td>
+                    <td>18.11.2022</td>
+                    <td class="cell-flex-col">
+                        <span>889</span>
+                        <button class="procurements-planned btn-list">
+                            <img src="images/content/procurements/table/list-btn.png" alt="">
+                        </button>
+                    </td>
+                    <td>
+                        <button class="procurements-planned btn-download">
+                            <img src="images/content/procurements/table/download-btn.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>План закупки товаров (работ, услуг) Гидроремонт–ВКК АО 2022 год</td>
+                    <td>2210542592</td>
+                    <td>Гидроремонт–ВКК АО</td>
+                    <td>01.01.2022 – 31.12.2024</td>
+                    <td>290</td>
+                    <td>18.11.2022</td>
+                    <td class="cell-flex-col">
+                        <span>889</span>
+                        <button class="procurements-planned btn-list">
+                            <img src="images/content/procurements/table/list-btn.png" alt="">
+                        </button>
+                    </td>
+                    <td>
+                        <button class="procurements-planned btn-download">
+                            <img src="images/content/procurements/table/download-btn.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="procurements-planned pagination-container">
+            <button class="current-page">
+                <span>1</span>
+            </button>
+            <button>
+                <span>2</span>
+            </button>
+            <button>
+                <span>3</span>
+            </button>
+            <button>
+                <span>4</span>
+            </button>
+            <button>
+                <span>...</span>
+            </button>
+            <button>
+                <span>12</span>
+            </button>
+            <button>
+                <img class="icon-container icon24"
+                     src="images/content/procurements/table/arrow-right.png"
+                     alt=""
+                >
+            </button>
+            <button>
+                <img class="icon-container icon24"
+                     src="images/content/procurements/table/double-arrow-right.png"
+                     alt=""
+                >
+            </button>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-container with-background">
+            <div class="footer-row divider">
+                <div class="icon-container footer">
+                    <img src="images/header/logo.png" alt="">
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 800 333 80 00</div>
+                    <div class="text-description">Многоканальный телефон</div>
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 495 122 05 55</div>
+                    <div class="text-description">Многоканальный телефон</div>
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 800 555 99 97</div>
+                    <div class="text-description">«Горячая линия» для акционеров</div>
+                </div>
+            </div>
+            <div class="footer-row divider">
+                <div class="icon-container footer">
+                    <img src="images/footer/eais.png"/>
+                </div>
+                <div class="icon-container footer">
+                    <img src="images/footer/roseltorh.png"/>
+                </div>
+                <div class="icon-container footer">
+                    <img src="images/footer/rad.png"/>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="text-description">
+                    127006, Москва, ул. Малая Дмитровка, д.7
+                </div>
+                <div class="text-description">
+                    117393, Москва, ул. Архитектора Власова, д.51
+                </div>
+            </div>
+        </div>
+        <div class="footer-row no-background">
+            <div class="copyright">© ПАО «РусГидро» 2006-2022</div>
+            <a class="disclaimer">
+                Уведомление об ответственности и праве интеллектуальной собственности
+            </a>
+        </div>
+
+    </div>
+
+
+</footer>
+
+</body>
+</html>
