@@ -40,6 +40,8 @@ main {
 
 
 .btn {
+  background-color: transparent;
+  .flex-default(center, center);
 
   &-filter {
     .flex-default(center, center)
@@ -137,34 +139,32 @@ main {
     &.main {
       margin-bottom: 65px;
     }
+    &-card {
+      .text-props(450, 24px, 135%, @text-regular-color)
+    }
   }
 
   &-subtitle {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #005D9F
+    .text-props(700, 18px, 24px, @background-dark);
+    &-card {
+      .text-props(450, 20px, 130%, @text-regular-color);
+      margin-bottom: 25px;
+    }
   }
 
   &-description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    color: @text-description-color;
+    .text-props(400, 16px, 130%, @text-description-color);
+    &-card {
+      .text-props(400, 20px, 130%, @text-description-color);
+    }
   }
 
   &-link {
-    color: @background-dark;
-    font-weight: 450;
-    font-size: 20px;
-    line-height: 130%;
+    .text-props(450, 20px, 130%, @background-dark);
 
     &.nav {
+      .text-props(700, 14px, 17px, @background-dark);
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 17.15px;
-      color: @background-dark;
     }
 
     &.active {
@@ -537,4 +537,21 @@ main {
     }
 
   }
+}
+
+.card {
+  #card-header button{
+    margin-bottom: 55px;
+  }
+
+  li {
+    .flex-column(start, start);
+    margin-bottom: 40px;
+    position: relative;
+    .divider-bottom(-20px, 0);
+  }
+
+  &-item {
+  }
+
 }
