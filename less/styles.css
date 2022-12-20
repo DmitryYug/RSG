@@ -228,6 +228,9 @@
 .agreements-linked-docs.title-container {
   margin-bottom: 70px;
 }
+.stats-default.link-list li {
+  margin-bottom: 15px;
+}
 .overlay-menu-container {
   display: flex;
   flex-direction: column;
@@ -327,6 +330,8 @@ main section {
 }
 .btn {
   background-color: transparent;
+}
+.btn.flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,6 +367,9 @@ main section {
   width: auto;
 }
 .btn.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   word-wrap: break-word;
   max-width: 100px;
 }
@@ -878,4 +886,7 @@ main section {
   left: 0;
   bottom: -20px;
   background: #D5E2F7;
+}
+.card li table {
+  width: 530px;
 }
