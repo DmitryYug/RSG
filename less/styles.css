@@ -203,7 +203,7 @@
   margin-right: 10px;
 }
 .procurements-planned p {
-  font-weight: 400;
+  font-weight: 400 !important;
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
@@ -255,18 +255,26 @@
   height: 100%;
   width: auto;
 }
-.procurements-planned.btn-apply {
-  margin-top: 30px;
-  width: 150px;
-  height: 50px;
-  background: #005D9F;
-  border-radius: 2px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 135%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #FFFFFF;
+.procurements-about p {
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2C3148;
+}
+.procurements-about.title-container {
+  margin-bottom: 55px;
+}
+.procurements-about.title-container h1 {
+  margin-bottom: 25px;
+}
+.procurements-about.btn-o-zakupke {
+  width: 112px;
+  height: 16px;
+  margin-top: 15px;
+}
+.procurements-about.btn-o-zakupke img {
+  height: 100%;
+  width: auto;
 }
 .overlay-menu-container {
   display: flex;
@@ -417,8 +425,12 @@ main {
   width: 36px;
   height: 36px;
 }
+.icon-container.icon20 {
+  width: 20px;
+  height: 20px;
+}
 .text-title {
-  font-weight: 750;
+  font-weight: 750 !important;
   font-size: 64px;
   line-height: 110%;
   color: #005D9F;
@@ -491,6 +503,17 @@ main {
   align-items: start;
   justify-content: center;
 }
+.table-container .cell-flex-col :nth-child(n) {
+  margin-bottom: 5px;
+}
+.table-container .cell-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-container .cell-flex :nth-child(n) {
+  margin-right: 5px;
+}
 .table-container-header {
   background-color: #D5E2F7;
 }
@@ -521,6 +544,12 @@ main {
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
+}
+.table-container.procurements-about {
+  margin: 55px 80px 0 80px;
+}
+.table-container.procurements-about td:nth-child(6) {
+  min-width: 125px;
 }
 .table-container.choose-client-modal tr th {
   font-weight: _ !important;
@@ -553,10 +582,17 @@ main {
   border-radius: 2px;
   background-color: white;
 }
-.input-with-btn #from,
-.input-with-btn #to,
-.input-with-btn #client {
+.input-with-btn #from-date-about,
+.input-with-btn #from-date-planned,
+.input-with-btn #from-price-about,
+.input-with-btn #to-date-about,
+.input-with-btn #to-date-planned,
+.input-with-btn #to-price-about,
+.input-with-btn #client-about,
+.input-with-btn #client-planned {
   border: none;
+  width: 100%;
+  padding: 5px;
 }
 .input-with-btn button {
   background-color: transparent;
@@ -585,10 +621,9 @@ main {
   background: #F9F9FE;
 }
 .form-container span {
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 14px;
   line-height: 17px;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #005D9F;
 }
@@ -600,11 +635,11 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.form-container-header.divided {
+.form-container-header.divider {
   position: relative;
   margin-bottom: 35px;
 }
-.form-container-header.divided:after {
+.form-container-header.divider:after {
   content: '';
   position: absolute;
   height: 1px;
@@ -626,11 +661,13 @@ main {
   line-height: 130%;
   color: #2C3148;
   margin-bottom: 10px;
+  position: relative;
 }
 .form-container-body .item input,
 .form-container-body .item select {
   height: 100%;
   width: 60%;
+  padding: 5px;
   border: 1px solid #D6D8E0;
   border-radius: 2px;
 }
@@ -642,7 +679,9 @@ main {
   max-width: 80px;
   margin-right: 20px;
 }
-.form-container-body .item #plan-period {
+.form-container-body .item #plan-period,
+.form-container-body .item #public-period,
+.form-container-body .item #price-range {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -650,14 +689,20 @@ main {
   width: 50%;
   margin-right: 81px;
 }
-.form-container-body .item #plan-period label {
+.form-container-body .item #plan-period label,
+.form-container-body .item #public-period label,
+.form-container-body .item #price-range label {
   margin-right: 10px;
 }
-.form-container-body .item #from {
+.form-container-body .item #from-price-about,
+.form-container-body .item #from-date-planned,
+.form-container-body .item #from-date-about {
   margin-right: 5px;
   background-size: 18px;
 }
-.form-container-body .item #to {
+.form-container-body .item #to-price-about,
+.form-container-body .item #to-date-planned,
+.form-container-body .item #to-date-about {
   background-size: 18px;
 }
 .form-container-body .item.flex {
@@ -674,9 +719,62 @@ main {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+.form-container-body .item.checkbox input {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.form-container-body .item.divider:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -30px;
+  background: #D5E2F7;
+}
+.form-container.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  width: 150px;
+  height: 50px;
+  background: #005D9F;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
   position: relative;
 }
-.form-container-body .item.checkbox:after {
+.accordion-container {
+  position: relative;
+}
+.accordion-container:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 105%;
+  background: #D5E2F7;
+}
+.accordion-container li {
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: 450 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2C3148;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.accordion-container li:after {
   content: '';
   position: absolute;
   height: 1px;
@@ -685,8 +783,6 @@ main {
   bottom: -20px;
   background: #D5E2F7;
 }
-.form-container-body .item.checkbox input {
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
+.accordion-container button {
+  background-color: transparent;
 }

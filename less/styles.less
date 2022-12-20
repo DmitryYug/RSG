@@ -94,15 +94,16 @@ main {
   &.icon36 {
     .icon(36px, 36px);
   }
+
+  &.icon20 {
+    .icon(20px, 20px);
+  }
 }
 
 .text {
 
   &-title {
-    font-weight: 750;
-    font-size: 64px;
-    line-height: 110%;
-    color: @background-dark;
+    .text-props(750, 64px, 110%, @background-dark);
     margin: 0;
 
     &.divider {
@@ -177,6 +178,15 @@ main {
 
   .cell-flex-col {
     .flex-column(start, center);
+    :nth-child(n) {
+      margin-bottom: 5px;
+    }
+  }
+  .cell-flex {
+    .flex-default(center, center);
+    :nth-child(n) {
+      margin-right: 5px;
+    }
   }
 
   &-header {
@@ -198,6 +208,12 @@ main {
 
     td {
       .text-props(450, 16px, 130%, @text-regular-color);
+    }
+  }
+  &.procurements-about {
+    margin: 55px 80px 0 80px;
+    td:nth-child(6) {
+      min-width: 125px;
     }
   }
 
@@ -233,8 +249,12 @@ main {
   border-radius: 2px;
   background-color: white;
 
-  #from, #to, #client {
+  #from-date-about, #from-date-planned, #from-price-about,
+  #to-date-about, #to-date-planned, #to-price-about,
+  #client-about, #client-planned {
     border: none;
+    width: 100%;
+    padding: 5px;
   }
 
   button {
@@ -259,6 +279,7 @@ main {
     }
   }
 }
+
 .form-container {
   margin-top: 55px;
   padding: 25px;
@@ -267,10 +288,7 @@ main {
   background: @background-light;
 
   span {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.02em;
+    .text-props(700, 14px, 17px, @background-dark);
     text-transform: uppercase;
     color: @background-dark;
 
@@ -282,12 +300,11 @@ main {
   &-header {
     .flex-default(center, space-between);
 
-    &.divided {
+    &.divider {
       .divider-bottom(-20px, 0);
       position: relative;
       margin-bottom: 35px;
     }
-
 
     button {
       background-color: transparent;
@@ -295,7 +312,6 @@ main {
   }
 
   &-body {
-
     .item {
       .flex-default(center, space-between);
       height: 50px;
@@ -304,10 +320,12 @@ main {
       line-height: 130%;
       color: @text-regular-color;
       margin-bottom: 10px;
+      position: relative;
 
       input, select {
         height: 100%;
         width: 60%;
+        padding: 5px;
         border: 1px solid #D6D8E0;
         border-radius: 2px;
       }
@@ -322,7 +340,7 @@ main {
         margin-right: 20px;
       }
 
-      #plan-period {
+      #plan-period, #public-period, #price-range {
         .flex-default(center, center);
         height: 100%;
         width: 50%;
@@ -333,12 +351,12 @@ main {
         }
       }
 
-      #from {
+      #from-price-about, #from-date-planned, #from-date-about {
         margin-right: 5px;
         background-size: 18px;
       }
 
-      #to {
+      #to-price-about, #to-date-planned, #to-date-about {
         background-size: 18px;
       }
 
@@ -354,8 +372,6 @@ main {
 
       &.checkbox {
         .flex-default(center, start);
-        .divider-bottom(-20px, 0);
-        position: relative;
 
         input {
           height: 20px;
@@ -363,10 +379,46 @@ main {
           margin-right: 10px;
         }
       }
+
+      &.divider {
+        .divider-bottom(-30px, 0);
+      }
+
     }
   }
 
-  &-footer {
+  &.submit-btn {
+    .flex-default(center, center);
+    margin-top: 45px;
+    width: 150px;
+    height: 50px;
+    background: @background-dark;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+  }
 
+
+}
+
+.accordion-container {
+  position: relative;
+  .divider-bottom(105%, 0);
+
+  li {
+    position: relative;
+    .divider-bottom(-20px, 0);
+    margin-bottom: 30px;
+    .text-props(450, 20px, 130%, @text-regular-color);
+    .flex-default(center, start);
+  }
+
+  button {
+    background-color: transparent;
   }
 }

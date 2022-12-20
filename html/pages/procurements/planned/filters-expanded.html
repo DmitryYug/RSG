@@ -63,8 +63,8 @@
                 могут быть недоступны.</p>
         </div>
         <div class="procurements-planned content-container">
-            <div class="procurements-planned form-container">
-                <div class="procurements-planned form-container-header divided">
+            <div class="form-container">
+                <div class="form-container-header divider">
                     <button class="procurements-planned btn-filter">
                         <span>фильтры</span>
                         <div class="icon-container expand">
@@ -75,7 +75,7 @@
                         <span class="clear">очистить</span>
                     </button>
                 </div>
-                <div class="procurements-planned form-container-body">
+                <div class="form-container-body">
                     <form>
                         <div class="item">
                             <label for="changes-period">Период внесения сведений</label>
@@ -86,10 +86,10 @@
                         </div>
 
                         <div class="item">
-                            <label for="client">Заказчик</label>
+                            <label for="client-planned">Заказчик</label>
 
                             <div class="input-with-btn client">
-                                <input id="client">
+                                <input id="client-planned">
                                 <button class="icon-container icon16">
                                     ...
                                 </button>
@@ -119,16 +119,16 @@
                         <div class="item">
                             <label for="plan-period">Период действия плана</label>
                             <div id="plan-period">
-                                <label for="from">с</label>
+                                <label for="from-date-planned">с</label>
                                 <div class="input-with-btn calendar">
-                                    <input id="from">
+                                    <input id="from-date-planned">
                                     <button class="icon-container icon16">
                                         <img src="images/content/procurements/form/calendar.png" alt="">
                                     </button>
                                 </div>
-                                <label for="to">по</label>
+                                <label for="to-date-planned">по</label>
                                 <div class="input-with-btn calendar">
-                                    <input id="to">
+                                    <input id="to-date-planned">
                                     <button class="icon-container icon16">
                                         <img src="images/content/procurements/form/calendar.png" alt="">
                                     </button>
@@ -137,12 +137,12 @@
                             </div>
                         </div>
 
-                        <div class="item checkbox">
+                        <div class="item divider checkbox">
                             <input id="show-archive" type="checkbox">
                             <label for="show-archive">Показывать архивные версии</label>
                         </div>
 
-                        <button class="procurements-planned btn-apply">применить</button>
+                        <button class="form-container submit-btn">применить</button>
                     </form>
                 </div>
             </div>
