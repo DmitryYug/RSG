@@ -53,6 +53,17 @@
     background: @divider-color;
   }
 }
+.divider-top(@top, @left) {
+  &:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: @left;
+    top: @top;
+    background: @divider-color;
+  }
+}
 .icon(@width, @height) {
   width: @width;
   height: @height;

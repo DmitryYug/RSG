@@ -406,19 +406,55 @@ main {
 
 }
 
-.accordion-container {
-  position: relative;
-  .divider-bottom(105%, 0);
+.accordion {
 
-  li {
+  &-container {
     position: relative;
-    .divider-bottom(-20px, 0);
-    margin-bottom: 30px;
-    .text-props(450, 20px, 130%, @text-regular-color);
-    .flex-default(center, start);
-  }
+    ul {
+      position: relative;
+      &:last-child {
+       .divider-bottom(0, 0)
+      }
+    }
+    li {
+      .flex-column(start, center);
+      position: relative;
+    }
 
-  button {
-    background-color: transparent;
+    button {
+      background-color: transparent;
+    }
+
+
+  }
+  &-item {
+    a {
+      color: @background-dark;
+    }
+    p {
+      font-weight: 400;
+    }
+
+    &.header {
+      .text-props(450, 20px, 130%, @text-regular-color);
+      .flex-default(center, start);
+      position: relative;
+      //.divider-bottom(0, 0);
+      .divider-top(0, 0);
+      width: 100%;
+      padding: 15px 0;
+      &.expanded {
+        background-color: @background-light;
+        .divider-bottom(0, 0);
+      }
+    }
+    &.content {
+      .text-props(400, 20px, 130%, @text-regular-color);
+      .flex-default(center, start);
+      margin-left: 34px;
+      margin-top: 30px;
+      padding-bottom: 35px;
+    }
+
   }
 }
