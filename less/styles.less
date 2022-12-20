@@ -30,12 +30,14 @@ footer {
 
 main {
   height: 100%;
+
   section {
     margin-top: 80px;
     margin-bottom: 95px;
   }
-
 }
+
+
 
 .btn {
 
@@ -70,6 +72,12 @@ main {
       width: auto;
     }
   }
+
+  &.wrap {
+    word-wrap: break-word;
+    max-width: 100px;
+  }
+
 }
 
 .content {
@@ -198,10 +206,19 @@ main {
   }
 
   .cell-flex {
-    .flex-default(center, center);
+    .flex-default(start, center);
 
     :nth-child(n) {
       margin-right: 5px;
+    }
+
+    button {
+      text-align: left;
+      color: @background-dark;
+    }
+
+    span {
+      text-align: left;
     }
   }
 
@@ -235,6 +252,18 @@ main {
     }
   }
 
+  &.agreements-main {
+    margin: 55px 80px 0 80px;
+
+    td:nth-child(2) {
+      min-width: 125px;
+    }
+
+    td:nth-child(1) {
+      max-width: 145px;
+    }
+  }
+
   &.choose-client-modal {
     tr {
 
@@ -258,6 +287,32 @@ main {
     }
   }
 
+
+}
+
+.pagination-container {
+  .flex-default(center, start);
+  margin: 35px 80px 0 80px;
+  padding-left: 10px;
+
+  span {
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 115%;
+    color: @text-regular-color;
+  }
+
+  button {
+    background-color: transparent;
+    margin-right: 20px;
+  }
+
+  .current-page {
+    width: 40px;
+    height: 40px;
+    background: #EEEFF4;
+    border-radius: 100px;
+  }
 }
 
 .input-with-btn {

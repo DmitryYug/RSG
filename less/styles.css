@@ -210,29 +210,6 @@
 .procurements-planned.title-container h1 {
   margin-bottom: 25px;
 }
-.procurements-planned.pagination-container {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin: 35px 80px 0 80px;
-  padding-left: 10px;
-}
-.procurements-planned.pagination-container span {
-  font-weight: 450;
-  font-size: 16px;
-  line-height: 115%;
-  color: #2C3148;
-}
-.procurements-planned.pagination-container button {
-  background-color: transparent;
-  margin-right: 20px;
-}
-.procurements-planned.pagination-container .current-page {
-  width: 40px;
-  height: 40px;
-  background: #EEEFF4;
-  border-radius: 100px;
-}
 .procurements-about p {
   font-weight: 400 !important;
   font-size: 20px;
@@ -375,6 +352,10 @@ main section {
   height: 100%;
   width: auto;
 }
+.btn.wrap {
+  word-wrap: break-word;
+  max-width: 100px;
+}
 .content-container {
   width: 920px;
   margin: 0 auto;
@@ -493,10 +474,17 @@ main section {
 .table-container .cell-flex {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 .table-container .cell-flex :nth-child(n) {
   margin-right: 5px;
+}
+.table-container .cell-flex button {
+  text-align: left;
+  color: #005D9F;
+}
+.table-container .cell-flex span {
+  text-align: left;
 }
 .table-container-header {
   background-color: #D5E2F7;
@@ -535,6 +523,15 @@ main section {
 .table-container.procurements-about td:nth-child(6) {
   min-width: 125px;
 }
+.table-container.agreements-main {
+  margin: 55px 80px 0 80px;
+}
+.table-container.agreements-main td:nth-child(2) {
+  min-width: 125px;
+}
+.table-container.agreements-main td:nth-child(1) {
+  max-width: 145px;
+}
 .table-container.choose-client-modal tr th {
   font-weight: _ !important;
   font-size: 12px;
@@ -556,6 +553,29 @@ main section {
   font-size: 14px;
   line-height: 115%;
   color: #2C3148;
+}
+.pagination-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 35px 80px 0 80px;
+  padding-left: 10px;
+}
+.pagination-container span {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 115%;
+  color: #2C3148;
+}
+.pagination-container button {
+  background-color: transparent;
+  margin-right: 20px;
+}
+.pagination-container .current-page {
+  width: 40px;
+  height: 40px;
+  background: #EEEFF4;
+  border-radius: 100px;
 }
 .input-with-btn {
   display: flex;
