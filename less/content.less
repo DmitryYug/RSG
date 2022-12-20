@@ -32,6 +32,7 @@
     background: url('../images/content/main/main-background.png') left;
     background-size: cover;
     margin-bottom: 65px;
+    margin-top: 0;
   }
 
   &-choose-site {
@@ -47,8 +48,7 @@
     }
 
     &.title-container {
-      width: 100%;
-      margin: 80px auto;
+      margin-bottom: 80px;
     }
   }
 
@@ -67,7 +67,7 @@
 
 
     &.title-container {
-      width: @content-width;
+      //width: @content-width;
       margin: 80px auto 55px auto;
     }
 
@@ -135,31 +135,6 @@
         border-radius: 100px;
       }
     }
-
-    &.btn {
-      &-filter {
-        .flex-default(center, center)
-      }
-
-      &-list {
-        .icon(112px, 16px);
-
-        img {
-          height: 100%;
-          width: auto;
-        }
-      }
-
-      &-download {
-        .icon(112px, 21px);
-
-        img {
-          height: 100%;
-          width: auto;
-        }
-      }
-
-    }
   }
 
   &-about {
@@ -174,17 +149,15 @@
         margin-bottom: 25px;
       }
     }
-    &.btn {
-      &-o-zakupke {
-        .icon(112px, 16px);
-        margin-top: 15px;
-        img {
-          height: 100%;
-          width: auto;
-        }
-      }
-    }
 
   }
 
+}
+
+.agreements {
+  &-main {
+    &.title-container {
+      margin-bottom: 55px;
+    }
+  }
 }
