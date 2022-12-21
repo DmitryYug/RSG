@@ -11,7 +11,6 @@
 }
 
 body {
-  //max-width: 1920px;
   font-family: 'Avenir Next Cyr', sans-serif;
   min-height: 100vh;
 }
@@ -30,7 +29,6 @@ footer {
 
 main {
   height: 100%;
-
   section {
     margin-top: 80px;
     margin-bottom: 95px;
@@ -606,12 +604,15 @@ main {
 .info-block {
   position: relative;
   .divider-top(0, 0);
+
   .item {
     .flex-default(stretch, start);
     position: relative;
     .divider-bottom(0, 0);
+
     span {
       padding: 13px;
+
       &:nth-child(1) {
         .text-props(550, 16px, 130%, @text-regular-color);
         background-color: @background-medium;
@@ -620,16 +621,18 @@ main {
 
       &:nth-child(2) {
         .text-props(400, 16px, 130%, @text-regular-color);
-        width: 65%; position:;
+        width: 65%;
       }
+
       img {
         margin-right: 10px;
       }
     }
   }
-    &.mtr-lot {
-      margin-top: 30px;
-    }
+
+  &.mtr-lot {
+    margin-top: 30px;
+  }
 }
 
 .link-list {
@@ -640,19 +643,24 @@ main {
   position: relative;
   .divider-top(-10px, 0);
   margin-top: 65px;
-  button {
+
+  span {
+    cursor: pointer;
     background-color: transparent;
     .text-props(450, 20px, 130%, @background-dark);
     position: relative;
     margin-right: 25px;
+
     &:after {
       position: absolute;
       content: "/";
       .text-props(450, 20px, 130%, #C3C4CC);
       right: -20px;
     }
+
     &:last-child {
       .text-props(450, 20px, 130%, @text-regular-color);
+
       &:after {
         content: '';
       }

@@ -1009,7 +1009,6 @@ main section {
   line-height: 130%;
   color: #2C3148;
   width: 65%;
-  position: ;
 }
 .info-block .item span img {
   margin-right: 10px;
@@ -1030,7 +1029,8 @@ main section {
   top: -10px;
   background: #D5E2F7;
 }
-.breadcrumbs button {
+.breadcrumbs span {
+  cursor: pointer;
   background-color: transparent;
   font-weight: 450 !important;
   font-size: 20px;
@@ -1039,7 +1039,7 @@ main section {
   position: relative;
   margin-right: 25px;
 }
-.breadcrumbs button:after {
+.breadcrumbs span:after {
   position: absolute;
   content: "/";
   font-weight: 450 !important;
@@ -1048,12 +1048,12 @@ main section {
   color: #C3C4CC;
   right: -20px;
 }
-.breadcrumbs button:last-child {
+.breadcrumbs span:last-child {
   font-weight: 450 !important;
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
 }
-.breadcrumbs button:last-child:after {
+.breadcrumbs span:last-child:after {
   content: '';
 }
