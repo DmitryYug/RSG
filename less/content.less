@@ -29,10 +29,31 @@
   &-background-section {
     width: 100%;
     height: 400px;
+    //for 1440
     background: url('../images/content/main/main-background.png') left;
+    //for 1920
+    //background: url("../images/content/main/main-background-1920.png") left;
     background-size: cover;
     margin-bottom: 65px;
     margin-top: 0;
+    position: relative;
+  }
+
+  &.title-container {
+
+    position: absolute;
+    bottom: 0;
+    //for 1440
+    left: 260px;
+    //for 1920
+    //left: 215px;
+    &-subtitle {
+      color: white;
+      margin-bottom: 15px;
+    }
+    &-title {
+      color: white;
+    }
   }
 
   &-choose-site {

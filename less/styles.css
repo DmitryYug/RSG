@@ -147,6 +147,19 @@
   background-size: cover;
   margin-bottom: 65px;
   margin-top: 0;
+  position: relative;
+}
+.main.title-container {
+  position: absolute;
+  bottom: 0;
+  left: 260px;
+}
+.main.title-container-subtitle {
+  color: white;
+  margin-bottom: 15px;
+}
+.main.title-container-title {
+  color: white;
 }
 .main-choose-site-links {
   display: flex;
@@ -227,6 +240,9 @@
 }
 .agreements-linked-docs.title-container {
   margin-bottom: 70px;
+}
+.stats-default.link-list li {
+  margin-bottom: 15px;
 }
 .overlay-menu-container {
   display: flex;
@@ -325,6 +341,14 @@ main section {
   margin-top: 80px;
   margin-bottom: 95px;
 }
+.btn {
+  background-color: transparent;
+}
+.btn.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .btn-filter {
   display: flex;
   justify-content: center;
@@ -404,6 +428,7 @@ main section {
   height: 20px;
 }
 .text-title {
+  font-family: 'Avenir Next Cyr Medium', sans-serif;
   font-weight: 750 !important;
   font-size: 64px;
   line-height: 110%;
@@ -436,6 +461,7 @@ main section {
   font-size: 18px;
   line-height: 24px;
   color: #005D9F;
+  letter-spacing: 0.02em;
 }
 .text-subtitle-card {
   font-weight: 450 !important;
@@ -878,4 +904,7 @@ main section {
   left: 0;
   bottom: -20px;
   background: #D5E2F7;
+}
+.card li table {
+  width: 530px;
 }
