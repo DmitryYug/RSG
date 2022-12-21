@@ -149,7 +149,10 @@ main {
     }
 
     &-card {
-      .text-props(450, 24px, 135%, @text-regular-color)
+      .text-props(450, 24px, 135%, @text-regular-color);
+      &-bold {
+        .text-props(750, 24px, 135%, @text-regular-color);
+      }
     }
   }
 
@@ -552,7 +555,7 @@ main {
 }
 
 .card {
-  #card-header button {
+  &-header button {
     margin-bottom: 55px;
   }
 
@@ -566,7 +569,6 @@ main {
       width: 530px;
     }
   }
-
 
   &-item {
   }
