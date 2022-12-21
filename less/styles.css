@@ -250,6 +250,15 @@
 .mtr-lot.title-container {
   margin-bottom: 70px;
 }
+.archive-main.text-title {
+  margin-bottom: 25px ;
+}
+.archive-main.link-list {
+  margin-top: 40px;
+}
+.archive-main.link-list li {
+  margin-bottom: 10px;
+}
 .overlay-menu-container {
   display: flex;
   flex-direction: column;
@@ -1007,4 +1016,44 @@ main section {
 }
 .info-block.mtr-lot {
   margin-top: 30px;
+}
+.breadcrumbs {
+  position: relative;
+  margin-top: 65px;
+}
+.breadcrumbs:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: -10px;
+  background: #D5E2F7;
+}
+.breadcrumbs button {
+  background-color: transparent;
+  font-weight: 450 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #005D9F;
+  position: relative;
+  margin-right: 25px;
+}
+.breadcrumbs button:after {
+  position: absolute;
+  content: "/";
+  font-weight: 450 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #C3C4CC;
+  right: -20px;
+}
+.breadcrumbs button:last-child {
+  font-weight: 450 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2C3148;
+}
+.breadcrumbs button:last-child:after {
+  content: '';
 }

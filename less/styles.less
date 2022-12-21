@@ -631,3 +631,31 @@ main {
       margin-top: 30px;
     }
 }
+
+.link-list {
+
+}
+
+.breadcrumbs {
+  position: relative;
+  .divider-top(-10px, 0);
+  margin-top: 65px;
+  button {
+    background-color: transparent;
+    .text-props(450, 20px, 130%, @background-dark);
+    position: relative;
+    margin-right: 25px;
+    &:after {
+      position: absolute;
+      content: "/";
+      .text-props(450, 20px, 130%, #C3C4CC);
+      right: -20px;
+    }
+    &:last-child {
+      .text-props(450, 20px, 130%, @text-regular-color);
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
