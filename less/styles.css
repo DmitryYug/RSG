@@ -244,6 +244,12 @@
 .stats-default.link-list li {
   margin-bottom: 15px;
 }
+.stats-archive.title-container {
+  margin-bottom: 70px;
+}
+.mtr-lot.title-container {
+  margin-bottom: 70px;
+}
 .overlay-menu-container {
   display: flex;
   flex-direction: column;
@@ -949,4 +955,56 @@ main section {
   left: 0;
   bottom: -10px;
   background: #005D9F;
+}
+.info-block {
+  position: relative;
+}
+.info-block:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #D5E2F7;
+}
+.info-block .item {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  position: relative;
+}
+.info-block .item:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #D5E2F7;
+}
+.info-block .item span {
+  padding: 13px;
+}
+.info-block .item span:nth-child(1) {
+  font-weight: 550 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
+  background-color: #EBF3FF;
+  width: 35%;
+}
+.info-block .item span:nth-child(2) {
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
+  width: 65%;
+  position: ;
+}
+.info-block .item span img {
+  margin-right: 10px;
+}
+.info-block.mtr-lot {
+  margin-top: 30px;
 }
