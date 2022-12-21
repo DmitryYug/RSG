@@ -38,12 +38,13 @@ main {
 }
 
 
-
 .btn {
   background-color: transparent;
+
   &.flex {
     .flex-default(center, center);
   }
+
   &-filter {
     .flex-default(center, center)
   }
@@ -82,7 +83,6 @@ main {
   }
 
   &.wrap {
-    .flex-default(center, center);
     word-wrap: break-word;
     max-width: 100px;
   }
@@ -135,6 +135,7 @@ main {
 .text {
 
   &-title {
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
     .text-props(750, 64px, 110%, @background-dark);
     margin: 0;
 
@@ -146,6 +147,7 @@ main {
     &.main {
       margin-bottom: 65px;
     }
+
     &-card {
       .text-props(450, 24px, 135%, @text-regular-color)
     }
@@ -153,6 +155,8 @@ main {
 
   &-subtitle {
     .text-props(700, 18px, 24px, @background-dark);
+    letter-spacing: 0.02em;
+
     &-card {
       .text-props(450, 20px, 130%, @text-regular-color);
       margin-bottom: 25px;
@@ -161,6 +165,7 @@ main {
 
   &-description {
     .text-props(400, 16px, 130%, @text-description-color);
+
     &-card {
       .text-props(400, 20px, 130%, @text-description-color);
     }
@@ -547,7 +552,7 @@ main {
 }
 
 .card {
-  #card-header button{
+  #card-header button {
     margin-bottom: 55px;
   }
 
@@ -556,6 +561,7 @@ main {
     margin-bottom: 40px;
     position: relative;
     .divider-bottom(-20px, 0);
+
     table {
       width: 530px;
     }
