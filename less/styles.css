@@ -259,6 +259,9 @@
 .archive-main.link-list li {
   margin-bottom: 10px;
 }
+.tt-projects.title-container {
+  margin-bottom: 70px;
+}
 .overlay-menu-container {
   display: flex;
   flex-direction: column;
