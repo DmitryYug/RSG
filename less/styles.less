@@ -29,6 +29,7 @@ footer {
 
 main {
   height: 100%;
+
   section {
     margin-top: 80px;
     margin-bottom: 95px;
@@ -184,6 +185,7 @@ main {
     &.active {
       color: @active-link;
     }
+
     &.underline {
       text-decoration: underline;
     }
@@ -246,7 +248,19 @@ main {
 
   &-header {
     background-color: @divider-color;
+
+    &-child {
+      background-color: @background-medium;
+    }
   }
+
+  &-child {
+    table {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
 
   &.procurements-planned {
     tr {
@@ -605,6 +619,7 @@ main {
 
   &-subtabs {
     margin-top: 25px;
+
     button {
       padding: 10px;
       background-color: transparent;
@@ -613,6 +628,7 @@ main {
       text-transform: uppercase;
       border-radius: 4px;
     }
+
     .active {
       background-color: #EEEFF4;
     }
@@ -651,13 +667,10 @@ main {
   &.mtr-lot {
     margin-top: 30px;
   }
+
   &.results-procurements {
     margin-top: 35px;
   }
-}
-
-.link-list {
-
 }
 
 .breadcrumbs {
@@ -688,3 +701,5 @@ main {
     }
   }
 }
+
+

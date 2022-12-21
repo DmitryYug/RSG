@@ -166,10 +166,10 @@
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  height: 760px;
+  max-height: 760px;
   flex-wrap: wrap;
 }
-.main-choose-site-links a {
+.main-choose-site-links li {
   margin-bottom: 20px;
   margin-right: 80px;
 }
@@ -592,6 +592,13 @@ main section {
 }
 .table-container-header {
   background-color: #D5E2F7;
+}
+.table-container-header-child {
+  background-color: #EBF3FF;
+}
+.table-container-child table {
+  width: 100%;
+  text-align: left;
 }
 .table-container.procurements-planned tr {
   height: 70px;
