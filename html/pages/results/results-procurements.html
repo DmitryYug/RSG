@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>mtr-lot</title>
+    <title>results-main</title>
     <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="UTF-8">
 
@@ -55,78 +55,114 @@
 
 <main>
     <section class="content-wrapper">
-
-        <div class="content-container title-container mtr-lot">
-            <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
-            <h1 class="text-title divider">Продажи MTP</h1>
-        </div>
-
         <div class="content-container">
+            <div class="results title-container ">
+                <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
+                <h1 class="results text-title divider">Результаты закупок</h1>
+                <p class="text-title-card">Полная информация о закупках размещена в
+                    <a class="text-link underline">ЕИС</a>
+                </p>
+            </div>
+
             <div class="card-header">
                 <button class="btn-back">
                     <img class="icon-container icon24" src="../../../images/content/elements/card/back.png" alt="">
-                    <span class="text-link">Все продажи MTP</span>
+                    <span class="text-link">Все закупки</span>
                 </button>
-                <p class="text-title-card-bold">Лот 1-ТМЦ-2018-НижГЭС</p>
+                <p class="text-title-card-bold">Подрядные работы по техническому перевооружению ВЧ связи</p>
             </div>
 
+            <div>
+                <div class="tabs">
+                    <button class="active">Извещения</button>
+                    <button>Разъяснения</button>
+                    <button>протоколы</button>
+                </div>
+                <div class="tabs-subtabs">
+                    <button class="tabs-subtabs active">Извещения о проведении</button>
+                    <button>Извещения об отмене</button>
+                </div>
+            </div>
 
-            <div class="info-block mtr-lot">
+            <div class="info-block results-procurements">
                 <div class="item">
-                    <span>Дата и время изменений</span>
-                    <span>05.07.2018 9:46:13</span>
+                    <span>Способ закупки</span>
+                    <span>Конкурс в электронной форме</span>
                 </div>
                 <div class="item">
-                    <span>Документы-файлы</span>
-                    <span>
-                        <button class="btn flex">
-                            <img class="icon-container icon20"
-                                 src="../../../images/content/elements/accordion/download.png" alt="">
-                           Лот 1-ТМЦ-2018-НижГЭС
-                        </button>
-                    </span>
+                    <span>Наименование закупки</span>
+                    <span>Подрядные работы по техническому перевооружению ВЧ связи</span>
                 </div>
                 <div class="item">
-                    <span>Номер лота</span>
-                    <span>Лот 1-ТМЦ-2018-НижГЭС</span>
+                    <span>Лоты закупки</span>
+                    <span>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</span>
                 </div>
                 <div class="item">
-                    <span>Дата публикации</span>
-                    <span>27.02.2020</span>
+                    <span>Заказчик</span>
+                    <span>Ационерное общество “Южные электрические сети Камчатки”</span>
                 </div>
                 <div class="item">
                     <span>Организация</span>
-                    <span>Филиал Публичного акционерного общества “Федеральная гиродгенерирующая компания – РусГидро” – “Нижегородская ГЭС”</span>
+                    <span>Ационерное общество “Южные электрические сети Камчатки”</span>
                 </div>
                 <div class="item">
-                    <span>Комментарий</span>
-                    <span></span>
+                    <span>Статус закупки</span>
+                    <span>Сбор заявок</span>
                 </div>
-                <div class="item">
-                    <span>Уведомление о продаже</span>
-                    <span>невостребованных ТМЦ</span>
-                </div>
-                <div class="item">
-                    <span>Вид продажи</span>
-                    <span>Открытый запрос цен</span>
-                </div>
-                <div class="item">
-                    <span>Дата и время подачи предложений</span>
-                    <span>19.07.2018 13:00</span>
-                </div>
-                <div class="item">
-                    <span>Итоги процедуры</span>
-                    <span>Нет</span>
-                </div>
-                <div class="item">
-                    <span>Архивировано</span>
-                    <span>Да</span>
-                </div>
-
             </div>
+
 
         </div>
 
+
+        <div class="table-container with-margin">
+            <table>
+                <thead class="table-container-header">
+                <tr>
+                    <th>Регистрационный номер в ЕИС / Дата публикации</th>
+                    <th>Номер лота</th>
+                    <th>Способ и наименование закупки</th>
+                    <th>Заказчик</th>
+                    <th>Организатор</th>
+                    <th>Общая стоимость</th>
+                    <th>Статус закупки</th>
+                    <th>Последние изменения</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="cell-flex-col">
+                        <div class="cell-flex">
+                            <button>32211623062</button>
+                            <button class="procurements-about icon-container icon20">
+                                <img src="../../../../images/content/elements/table/new-tab.png" alt="">
+                            </button>
+                        </div>
+                        <span>16.08.2022 11:33:40</span>
+                        <button class="btn-o-zakupke">
+                            <img src="../../../../images/content/elements/table/o-zakupke.png" alt="">
+                        </button>
+                    </td>
+                    <td>001–ПРО ДЭК-2022-ЦСО</td>
+                    <td>Конкурс в электронной форме Проектирование и строительство Информационно-теристического центра
+                        (Чиркейская ГЭС)
+                    </td>
+                    <td>Ационерное Общество “Центр сервисного обеспечения Саяно-Шушенской ГЭС имени П.С. Непорожнего”
+                    </td>
+                    <td>Ационерное Общество “Центр сервисного обеспечения Саяно-Шушенской ГЭС имени П.С. Непорожнего”
+                    </td>
+                    <td class="cell-flex-col">
+                        <span>40 680 000,00</span>
+                        <span>Российский рубль</span>
+                    </td>
+                    <td>Сбор заявок</td>
+                    <td>16.08.2022</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
 
     </section>
 

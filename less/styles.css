@@ -262,11 +262,23 @@
 .tt-projects.title-container {
   margin-bottom: 70px;
 }
-.results-main.title-container {
+.results.title-container {
   margin-bottom: 70px;
 }
-.results-main.text-title {
+.results.text-title {
   margin-bottom: 25px ;
+}
+.results.text-title.divider {
+  position: relative;
+}
+.results.text-title.divider:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -105px;
+  background: #D5E2F7;
 }
 .overlay-menu-container {
   display: flex;
@@ -977,6 +989,23 @@ main section {
   bottom: -10px;
   background: #005D9F;
 }
+.tabs-subtabs {
+  margin-top: 25px;
+}
+.tabs-subtabs button {
+  padding: 10px;
+  background-color: transparent;
+  font-weight: 700 !important;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7C7F8D;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+.tabs-subtabs .active {
+  background-color: #EEEFF4;
+}
 .info-block {
   position: relative;
 }
@@ -1027,6 +1056,9 @@ main section {
 }
 .info-block.mtr-lot {
   margin-top: 30px;
+}
+.info-block.results-procurements {
+  margin-top: 35px;
 }
 .breadcrumbs {
   position: relative;

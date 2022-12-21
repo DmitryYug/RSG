@@ -602,6 +602,21 @@ main {
       background: @background-dark;
     }
   }
+
+  &-subtabs {
+    margin-top: 25px;
+    button {
+      padding: 10px;
+      background-color: transparent;
+      .text-props(700, 14px, 17px, @text-description-color);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+    .active {
+      background-color: #EEEFF4;
+    }
+  }
 }
 
 .info-block {
@@ -635,6 +650,9 @@ main {
 
   &.mtr-lot {
     margin-top: 30px;
+  }
+  &.results-procurements {
+    margin-top: 35px;
   }
 }
 
