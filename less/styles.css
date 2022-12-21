@@ -312,8 +312,8 @@
   margin: 100px auto 0 auto;
 }
 body {
-  max-width: 1920px;
   font-family: 'Avenir Next Cyr', sans-serif;
+  min-height: 100vh;
 }
 header {
   height: 90px;
@@ -330,7 +330,6 @@ header:after {
   background: #D5E2F7;
 }
 footer {
-  width: 100%;
   height: 360px;
   background-color: #EBF3FF;
 }
@@ -504,6 +503,9 @@ main section {
 .text-link.active {
   color: #F08400;
 }
+.table-container {
+  max-width: 1280px;
+}
 .table-container table {
   width: 100%;
   border-collapse: collapse;
@@ -521,6 +523,9 @@ main section {
 }
 .table-container button {
   background-color: transparent;
+}
+.table-container.with-margin {
+  margin: 55px auto 0 auto;
 }
 .table-container .cell-flex-col {
   display: flex;
@@ -549,19 +554,6 @@ main section {
 .table-container-header {
   background-color: #D5E2F7;
 }
-.table-container.procurements-planned {
-  margin: 55px 80px 0 80px;
-  position: relative;
-}
-.table-container.procurements-planned:after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  left: 0;
-  bottom: -30px;
-  background: #D5E2F7;
-}
 .table-container.procurements-planned tr {
   height: 70px;
 }
@@ -577,14 +569,8 @@ main section {
   line-height: 130%;
   color: #2C3148;
 }
-.table-container.procurements-about {
-  margin: 55px 80px 0 80px;
-}
 .table-container.procurements-about td:nth-child(6) {
   min-width: 125px;
-}
-.table-container.agreements-main {
-  margin: 55px 80px 0 80px;
 }
 .table-container.agreements-main td:nth-child(2) {
   min-width: 125px;
@@ -621,8 +607,19 @@ main section {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 35px 80px 0 80px;
+  max-width: 1280px;
+  margin: 35px auto 0 auto;
   padding-left: 10px;
+  position: relative;
+}
+.pagination-container:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 130%;
+  background: #D5E2F7;
 }
 .pagination-container span {
   font-weight: 450;
@@ -913,4 +910,43 @@ main section {
   left: 0;
   bottom: -20px;
   background: #D5E2F7;
+}
+.tabs {
+  width: 390px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+.tabs:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+  background: #D5E2F7;
+}
+.tabs button {
+  background-color: transparent;
+  font-weight: 700 !important;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7C7F8D;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.tabs .active {
+  position: relative;
+  color: #2C3148;
+}
+.tabs .active:after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+  background: #005D9F;
 }

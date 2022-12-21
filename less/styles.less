@@ -11,27 +11,26 @@
 }
 
 body {
-  max-width: 1920px;
+  //max-width: 1920px;
   font-family: 'Avenir Next Cyr', sans-serif;
+  min-height: 100vh;
 }
 
 header {
   height: @header-height;
   padding: 24px 55px 28px 24px;
   position: relative;
-  .divider-bottom(0, 0)
-}
+  .divider-bottom(0, 0);
+  }
 
 footer {
-  width: 100%;
-  height: @footer-height;
+    height: @footer-height;
   background-color: @background-medium;
 }
 
 main {
   height: 100%;
-
-  section {
+    section {
     margin-top: 80px;
     margin-bottom: 95px;
   }
@@ -150,6 +149,7 @@ main {
 
     &-card {
       .text-props(450, 24px, 135%, @text-regular-color);
+
       &-bold {
         .text-props(750, 24px, 135%, @text-regular-color);
       }
@@ -189,6 +189,7 @@ main {
 }
 
 .table-container {
+  max-width: 1280px;
 
   table {
     width: 100%;
@@ -210,6 +211,10 @@ main {
 
   button {
     background-color: transparent;
+  }
+
+  &.with-margin {
+    margin: 55px auto 0 auto;
   }
 
   .cell-flex-col {
@@ -242,10 +247,6 @@ main {
   }
 
   &.procurements-planned {
-    margin: 55px 80px 0 80px;
-    position: relative;
-    .divider-bottom(-30px, 0);
-
     tr {
       height: 70px;
     }
@@ -260,16 +261,12 @@ main {
   }
 
   &.procurements-about {
-    margin: 55px 80px 0 80px;
-
     td:nth-child(6) {
       min-width: 125px;
     }
   }
 
   &.agreements-main {
-    margin: 55px 80px 0 80px;
-
     td:nth-child(2) {
       min-width: 125px;
     }
@@ -281,7 +278,6 @@ main {
 
   &.choose-client-modal {
     tr {
-
       th {
         .text-props(_, 12px, 115%, @text-regular-color);
 
@@ -312,8 +308,11 @@ main {
 
 .pagination-container {
   .flex-default(center, start);
-  margin: 35px 80px 0 80px;
+  max-width: 1280px;
+  margin: 35px auto 0 auto;
   padding-left: 10px;
+  position: relative;
+  .divider-bottom(130%, 0);
 
   span {
     font-weight: 450;
@@ -571,8 +570,33 @@ main {
     .divider-bottom(-20px, 0);
 
   }
+}
 
-  &-item {
+.tabs {
+  width: 390px;
+  position: relative;
+  .divider-bottom(-10px, 0);
+  .flex-default(center, space-between);
+  margin-top: 60px;
+
+  button {
+    background-color: transparent;
+    .text-props(700, 14px, 17px, @text-description-color);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 
+  .active {
+    position: relative;
+    color: @text-regular-color;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      left: 0;
+      bottom: -10px;
+      background: @background-dark;
+    }
+  }
 }
