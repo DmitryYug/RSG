@@ -614,6 +614,9 @@ main section {
   line-height: 115%;
   color: #2C3148;
 }
+.table-container.card-table-fixed-width {
+  width: 530px;
+}
 .pagination-container {
   display: flex;
   justify-content: start;
@@ -910,7 +913,4 @@ main section {
   left: 0;
   bottom: -20px;
   background: #D5E2F7;
-}
-.card li table {
-  width: 530px;
 }
