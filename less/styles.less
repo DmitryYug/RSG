@@ -40,7 +40,10 @@ main {
 
 
 .btn {
-
+  background-color: transparent;
+  &.flex {
+    .flex-default(center, center);
+  }
   &-filter {
     .flex-default(center, center)
   }
@@ -79,6 +82,7 @@ main {
   }
 
   &.wrap {
+    .flex-default(center, center);
     word-wrap: break-word;
     max-width: 100px;
   }
@@ -552,7 +556,11 @@ main {
     margin-bottom: 40px;
     position: relative;
     .divider-bottom(-20px, 0);
+    table {
+      width: 530px;
+    }
   }
+
 
   &-item {
   }
