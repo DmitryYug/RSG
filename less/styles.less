@@ -13,6 +13,8 @@
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
   min-height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 header {
@@ -89,52 +91,50 @@ main {
 }
 
 .content {
+
   &-container {
     width: @content-width;
     margin: 0 auto;
   }
 
-  &-wrapper {
-    width: 100%;
-  }
 }
 
-.icon-container {
-  .flex-default(center, center);
+.icon {
 
   img {
     height: 100%;
     width: auto;
   }
 
-  &.expand {
-    margin-left: 10px;
-    width: 12px;
-    height: 6px;
+  &.size-16 {
+    .icon(16px, 16px);
   }
 
-  &.icon24 {
+  &.size-20 {
+    .icon(20px, 20px);
+  }
+
+  &.size-24 {
     .icon(24px, 24px);
     margin-right: 10px;
   }
 
-  &.icon16 {
-    .icon(16px, 16px);
-  }
-
-  &.icon36 {
+  &.size-36 {
     .icon(36px, 36px);
   }
 
-  &.icon20 {
-    .icon(20px, 20px);
-  }
-  &.icon72 {
+  &.size-72 {
     .icon(72px, 72px);
   }
 
   &.captcha {
     .icon(228px, 57px)
+  }
+
+  &.expand {
+    margin-left: 10px;
+    width: 12px;
+    height: 6px;
   }
 }
 
@@ -150,10 +150,6 @@ main {
       .divider-bottom(-55px, 0)
     }
 
-    &.main {
-      margin-bottom: 65px;
-    }
-
     &-card {
       .text-props(450, 24px, 135%, @text-regular-color);
 
@@ -166,6 +162,7 @@ main {
   &-subtitle {
     .text-props(700, 18px, 24px, @background-dark);
     letter-spacing: 0.02em;
+    margin-bottom: 15px;
 
     &-card {
       .text-props(450, 20px, 130%, @text-regular-color);
@@ -182,6 +179,7 @@ main {
   }
 
   &-link {
+    font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 20px, 130%, @background-dark);
 
     &.nav {
@@ -206,18 +204,29 @@ main {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    gap: 10px;
   }
 
-  th, td {
+  th {
+    font-family: "Avenir Next Cyr Medium", sans-serif;
+    .text-props(450, 14px, 115%, @text-regular-color);
+  }
+
+  td {
+    .text-props(400, 16px, 130%, @text-regular-color);
     padding: 10px;
+    &:first-child {
+      font-family: "Avenir Next Cyr Medium", sans-serif;
+      .text-props(450, 16px, 130%, @text-regular-color);
+    }
   }
 
   tr {
     vertical-align: top;
-
     &:nth-child(2n) {
       background-color: @background-medium;
     }
+
   }
 
   button {
@@ -259,6 +268,9 @@ main {
   }
 
   &-header {
+    th {
+      padding: 5px;
+    }
     background-color: @divider-color;
 
     &-child {
@@ -273,67 +285,52 @@ main {
       border: 1px solid @divider-color;
     }
   }
+}
 
+&.procurements-about {
+  td:nth-child(6) {
+    min-width: 125px;
+  }
+}
 
-  &.procurements-planned {
-    tr {
-      height: 70px;
-    }
+&.agreements-main {
+  td:nth-child(2) {
+    min-width: 125px;
+  }
 
+  td:nth-child(1) {
+    max-width: 145px;
+  }
+}
+
+&.choose-client-modal {
+  tr {
     th {
-      .text-props(450, 14px, 115%, @text-regular-color);
+      .text-props(_, 12px, 115%, @text-regular-color);
+
+      &:nth-child(1) {
+        width: 215px;
+      }
     }
 
     td {
-      .text-props(450, 16px, 130%, @text-regular-color);
-    }
-  }
+      .text-props(400, 14px, 115%, @text-regular-color);
+      height: 60px;
 
-  &.procurements-about {
-    td:nth-child(6) {
-      min-width: 125px;
-    }
-  }
-
-  &.agreements-main {
-    td:nth-child(2) {
-      min-width: 125px;
-    }
-
-    td:nth-child(1) {
-      max-width: 145px;
-    }
-  }
-
-  &.choose-client-modal {
-    tr {
-      th {
-        .text-props(_, 12px, 115%, @text-regular-color);
-
-        &:nth-child(1) {
-          width: 215px;
-        }
+      &:nth-child(1) {
+        .text-props(450, 14px, 115%, @text-regular-color)
       }
-
-      td {
-        .text-props(400, 14px, 115%, @text-regular-color);
-        height: 60px;
-
-        &:nth-child(1) {
-          .text-props(450, 14px, 115%, @text-regular-color)
-        }
-      }
-
     }
-  }
 
-  &.card {
-    &-table-fixed-width {
-      width: 530px;
-    }
   }
-
 }
+
+&.card {
+  &-table-fixed-width {
+    width: 530px;
+  }
+}
+
 
 .pagination-container {
   .flex-default(center, start);
@@ -402,6 +399,7 @@ main {
 }
 
 .form-container {
+
   margin-top: 55px;
   padding: 25px;
   width: 690px;
@@ -446,10 +444,12 @@ main {
       .flex-column(center, center);
       padding: 85px 0;
       gap: 15px;
+
       div {
         .text-props(450, 24px, 135%, @text-description-color);
       }
     }
+
     .item {
       .flex-default(center, space-between);
       .text-props(450, 16px, 130%, @text-regular-color);
@@ -479,9 +479,14 @@ main {
       }
 
       label {
+        font-family: "Avenir Next Cyr Medium", sans-serif;
         .text-props(450, 16px, 130%, @text-regular-color);
         max-width: 35%;
         margin-right: 10px;
+
+        &.full-width {
+          max-width: 100%;
+        }
       }
 
       &.align-top label {
@@ -559,6 +564,7 @@ main {
 
       &.checkbox {
         .flex-default(center, start);
+        margin-top: 20px;
 
         input {
           height: 20px;

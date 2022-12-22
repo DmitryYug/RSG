@@ -39,13 +39,13 @@
   right: 0;
   background: #D5E2F7;
 }
-.header.icon-container {
+.header.icon {
   margin-right: 50px;
   width: 150px;
   height: 45px;
   position: relative;
 }
-.header.icon-container.divider:after {
+.header.icon.divider:after {
   content: '';
   position: absolute;
   height: 100%;
@@ -94,7 +94,7 @@
 }
 .phone-block-number {
   font-weight: 750;
-  font-size: 24px;
+  font-size-24: 24px;
   line-height: 110%;
   text-transform: uppercase;
   color: #2C3148;
@@ -109,7 +109,7 @@
   margin-right: 32px;
   font-family: 'avantgardectt-bold', sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size-24: 14px;
   line-height: 130%;
   color: #7C7F8D;
 }
@@ -120,45 +120,69 @@
   color: #005D9F;
   text-decoration-line: underline;
 }
-.main p {
+.main-start p {
   font-weight: 400 !important;
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
 }
-.main a {
+.main-start a {
   text-decoration: underline;
-  color: #005D9F;
 }
-.main-picture {
+.main-start button {
+  display: inline;
+  background-color: transparent;
+}
+.main-start-picture {
   margin: 65px auto 95px auto;
   width: 920px;
   height: 360px;
   overflow: visible;
 }
-.main-picture img {
+.main-start-picture img {
   height: 100%;
   width: auto;
 }
-.main-background-section {
+.main-start.background-section {
   width: 100%;
   height: 400px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 70.02%, rgba(0, 0, 0, 0.72) 100%), url('../images/content/main/main-background.png') left;
-  background-size: cover;
+  background-size-24: cover;
   margin-bottom: 65px;
   margin-top: 0;
   position: relative;
 }
-.main.title-container {
+.main-start.background-section-title-container {
   position: absolute;
+  left: auto;
   bottom: 0;
-  left: 260px;
 }
-.main.title-container-subtitle {
+.main-start.background-section-title-container h2 {
+  font-weight: 700 !important;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+.main-start.background-section-title-container h1 {
+  font-family: 'Avenir Next Cyr Medium', sans-serif;
+  font-weight: 750 !important;
+  font-size: 64px;
+  line-height: 110%;
+  color: white;
+  margin-top: 15px;
+}
+.main-start.title-container h2 {
+  font-weight: 700 !important;
+  font-size: 18px;
+  line-height: 24px;
   color: white;
   margin-bottom: 15px;
 }
-.main.title-container-title {
+.main-start.title-container h1 {
+  font-family: 'Avenir Next Cyr Medium', sans-serif;
+  font-weight: 750 !important;
+  font-size: 64px;
+  line-height: 110%;
   color: white;
 }
 .main-choose-site-links {
@@ -190,7 +214,8 @@
   margin-bottom: 95px;
 }
 .main-slider.title-container {
-  margin: 80px auto 55px auto;
+  margin-top: 80px;
+  margin-bottom: 55px;
 }
 .main-slider.picture-container {
   height: 80%;
@@ -207,7 +232,7 @@
 }
 .main-slider.action.counter {
   font-weight: 400;
-  font-size: 14px;
+  font-size-24: 14px;
   line-height: 115%;
   text-align: center;
   color: #2C3148;
@@ -251,7 +276,7 @@
   margin-bottom: 70px;
 }
 .archive-main.text-title {
-  margin-bottom: 25px ;
+  margin-bottom: 25px;
 }
 .archive-main.link-list {
   margin-top: 40px;
@@ -266,7 +291,7 @@
   margin-bottom: 70px;
 }
 .results.text-title {
-  margin-bottom: 25px ;
+  margin-bottom: 25px;
 }
 .results.text-title.divider {
   position: relative;
@@ -345,7 +370,7 @@
   align-items: center;
   padding: 10px;
   font-weight: 750;
-  font-size: 14px;
+  font-size-24: 14px;
   line-height: 115%;
   color: #FFFFFF;
   background-color: #005D9F;
@@ -381,7 +406,7 @@
   width: 20px;
   height: 20px;
   background-image: url("../images/components/img.png");
-  background-size: 20px 20px;
+  background-size-24: 20px 20px;
 }
 .start-links {
   font-size: 20px;
@@ -391,6 +416,8 @@
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
   min-height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 header {
   height: 90px;
@@ -469,47 +496,39 @@ main section {
   width: 920px;
   margin: 0 auto;
 }
-.content-wrapper {
-  width: 100%;
-}
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.icon-container img {
+.icon img {
   height: 100%;
   width: auto;
 }
-.icon-container.expand {
-  margin-left: 10px;
-  width: 12px;
-  height: 6px;
+.icon.size-16 {
+  width: 16px;
+  height: 16px;
 }
-.icon-container.icon24 {
+.icon.size-20 {
+  width: 20px;
+  height: 20px;
+}
+.icon.size-24 {
   width: 24px;
   height: 24px;
   margin-right: 10px;
 }
-.icon-container.icon16 {
-  width: 16px;
-  height: 16px;
-}
-.icon-container.icon36 {
+.icon.size-36 {
   width: 36px;
   height: 36px;
 }
-.icon-container.icon20 {
-  width: 20px;
-  height: 20px;
-}
-.icon-container.icon72 {
+.icon.size-72 {
   width: 72px;
   height: 72px;
 }
-.icon-container.captcha {
+.icon.captcha {
   width: 228px;
   height: 57px;
+}
+.icon.expand {
+  margin-left: 10px;
+  width: 12px;
+  height: 6px;
 }
 .text-title {
   font-family: 'Avenir Next Cyr Medium', sans-serif;
@@ -531,9 +550,6 @@ main section {
   bottom: -55px;
   background: #D5E2F7;
 }
-.text-title.main {
-  margin-bottom: 65px;
-}
 .text-title-card {
   font-weight: 450 !important;
   font-size: 24px;
@@ -552,6 +568,7 @@ main section {
   line-height: 24px;
   color: #005D9F;
   letter-spacing: 0.02em;
+  margin-bottom: 15px;
 }
 .text-subtitle-card {
   font-weight: 450 !important;
@@ -573,6 +590,7 @@ main section {
   color: #7C7F8D;
 }
 .text-link {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
   font-weight: 450 !important;
   font-size: 20px;
   line-height: 130%;
@@ -598,10 +616,28 @@ main section {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  gap: 10px;
 }
-.table-container th,
+.table-container th {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 14px;
+  line-height: 115%;
+  color: #2C3148;
+}
 .table-container td {
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
   padding: 10px;
+}
+.table-container td:first-child {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
 }
 .table-container tr {
   vertical-align: top;
@@ -654,6 +690,9 @@ main section {
 .table-container-header {
   background-color: #D5E2F7;
 }
+.table-container-header th {
+  padding: 5px;
+}
 .table-container-header-child {
   background-color: #EBF3FF;
 }
@@ -664,53 +703,38 @@ main section {
   text-align: left;
   border: 1px solid #D5E2F7;
 }
-.table-container.procurements-planned tr {
-  height: 70px;
-}
-.table-container.procurements-planned th {
-  font-weight: 450 !important;
-  font-size: 14px;
-  line-height: 115%;
-  color: #2C3148;
-}
-.table-container.procurements-planned td {
-  font-weight: 450 !important;
-  font-size: 16px;
-  line-height: 130%;
-  color: #2C3148;
-}
-.table-container.procurements-about td:nth-child(6) {
+.procurements-about td:nth-child(6) {
   min-width: 125px;
 }
-.table-container.agreements-main td:nth-child(2) {
+.agreements-main td:nth-child(2) {
   min-width: 125px;
 }
-.table-container.agreements-main td:nth-child(1) {
+.agreements-main td:nth-child(1) {
   max-width: 145px;
 }
-.table-container.choose-client-modal tr th {
+.choose-client-modal tr th {
   font-weight: _ !important;
   font-size: 12px;
   line-height: 115%;
   color: #2C3148;
 }
-.table-container.choose-client-modal tr th:nth-child(1) {
+.choose-client-modal tr th:nth-child(1) {
   width: 215px;
 }
-.table-container.choose-client-modal tr td {
+.choose-client-modal tr td {
   font-weight: 400 !important;
   font-size: 14px;
   line-height: 115%;
   color: #2C3148;
   height: 60px;
 }
-.table-container.choose-client-modal tr td:nth-child(1) {
+.choose-client-modal tr td:nth-child(1) {
   font-weight: 450 !important;
   font-size: 14px;
   line-height: 115%;
   color: #2C3148;
 }
-.table-container.card-table-fixed-width {
+.card-table-fixed-width {
   width: 530px;
 }
 .pagination-container {
@@ -880,12 +904,16 @@ main section {
   text-align: left;
 }
 .form-container-body .item label {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
   font-weight: 450 !important;
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
   max-width: 35%;
   margin-right: 10px;
+}
+.form-container-body .item label.full-width {
+  max-width: 100%;
 }
 .form-container-body .item.align-top label {
   height: 160px;
@@ -969,6 +997,7 @@ main section {
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-top: 20px;
 }
 .form-container-body .item.checkbox input {
   height: 20px;
