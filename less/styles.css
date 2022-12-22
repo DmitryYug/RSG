@@ -114,14 +114,14 @@
   color: #7C7F8D;
 }
 .disclaimer {
-  font-weight: 450;
+  font-weight: 450 !important;
   font-size: 14px;
   line-height: 115%;
-  text-decoration-line: underline;
   color: #005D9F;
+  text-decoration-line: underline;
 }
 .main p {
-  font-weight: 400;
+  font-weight: 400 !important;
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
@@ -290,6 +290,36 @@
 .contacts.picture-container img {
   width: 100%;
   height: 100%;
+}
+.contact-form.title-container {
+  margin-bottom: 40px;
+  min-width: 1069px;
+}
+.contact-form.title-container h1 {
+  font-weight: 750 !important;
+  font-size: 48px;
+  line-height: 110%;
+  color: #005D9F;
+  letter-spacing: -0.02em;
+}
+.contact-form article {
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
+}
+.contact-form article ul li {
+  position: relative;
+  margin-bottom: 5px;
+}
+.contact-form article ul li:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  top: 12px;
+  left: -20px;
+  background-color: #005D9F;
 }
 .overlay-menu-container {
   display: flex;
@@ -472,6 +502,14 @@ main section {
 .icon-container.icon20 {
   width: 20px;
   height: 20px;
+}
+.icon-container.icon72 {
+  width: 72px;
+  height: 72px;
+}
+.icon-container.captcha {
+  width: 228px;
+  height: 57px;
 }
 .text-title {
   font-family: 'Avenir Next Cyr Medium', sans-serif;
@@ -756,6 +794,9 @@ main section {
   height: 100%;
   background: #F9F9FE;
 }
+.form-container.contact {
+  width: 820px;
+}
 .form-container span {
   font-weight: 700 !important;
   font-size: 14px;
@@ -765,6 +806,13 @@ main section {
 }
 .form-container span.clear {
   color: grey;
+}
+.form-container-disclaimer {
+  margin-top: 8px;
+  font-weight: 400 !important;
+  font-size: 12px;
+  line-height: 115%;
+  color: #4E536B;
 }
 .form-container-header {
   display: flex;
@@ -787,12 +835,25 @@ main section {
 .form-container-header button {
   background-color: transparent;
 }
+.form-container-body-message-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 85px 0;
+  gap: 15px;
+}
+.form-container-body-message-sent div {
+  font-weight: 450 !important;
+  font-size: 24px;
+  line-height: 135%;
+  color: #7C7F8D;
+}
 .form-container-body .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  font-weight: 450;
+  font-weight: 450 !important;
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
@@ -801,7 +862,14 @@ main section {
 }
 .form-container-body .item input,
 .form-container-body .item select {
-  height: 100%;
+  height: 50px;
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #D6D8E0;
+  border-radius: 2px;
+}
+.form-container-body .item textarea {
+  height: 160px;
   width: 60%;
   padding: 5px;
   border: 1px solid #D6D8E0;
@@ -810,6 +878,27 @@ main section {
 .form-container-body .item a {
   text-decoration: underline;
   text-align: left;
+}
+.form-container-body .item label {
+  font-weight: 450 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
+  max-width: 35%;
+  margin-right: 10px;
+}
+.form-container-body .item.align-top label {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.form-container-body .item.input-container {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .form-container-body .item #changes-period {
   max-width: 80px;
@@ -825,11 +914,6 @@ main section {
   width: 50%;
   margin-right: 81px;
 }
-.form-container-body .item #plan-period label,
-.form-container-body .item #public-period label,
-.form-container-body .item #price-range label {
-  margin-right: 10px;
-}
 .form-container-body .item #from-price-about,
 .form-container-body .item #from-date-planned,
 .form-container-body .item #from-date-about {
@@ -840,6 +924,36 @@ main section {
 .form-container-body .item #to-date-planned,
 .form-container-body .item #to-date-about {
   background-size: 18px;
+}
+.form-container-body .item #files {
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.form-container-body .item #files button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.02em;
+  border-radius: 100px;
+  min-width: 170px;
+  padding: 10px 16px;
+}
+.form-container-body .item #files span {
+  text-transform: none;
+  margin-right: 10px;
+}
+.form-container-body .item #files .upload-file {
+  background-color: #D5E2F7;
+}
+.form-container-body .item #files .upload-file span {
+  text-transform: uppercase;
+}
+.form-container-body .item #captcha {
+  width: 50%;
 }
 .form-container-body .item.flex {
   display: flex;

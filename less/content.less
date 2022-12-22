@@ -3,10 +3,7 @@
 .main {
 
   p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 130%;
-    color: @text-regular-color;
+    .text-props(400, 20px, 130%, @text-regular-color)
   }
 
   a {
@@ -214,7 +211,7 @@
     margin-bottom: 25px ;
     &.divider {
       position: relative;
-      .divider-bottom(-105px, 0)
+      .divider-bottom(-105px, 0);
     }
   }
 }
@@ -230,6 +227,35 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+.contact-form {
+  &.title-container {
+    margin-bottom: 40px;
+    min-width: 1069px;
+    h1 {
+      .text-props(750, 48px, 110%, @background-dark);
+      letter-spacing: -0.02em;
+    }
+  }
+  article {
+    .text-props(400, 16px, 130%, @text-regular-color);
+    ul {
+      li {
+        position: relative;
+        margin-bottom: 5px;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 1px;
+          top: 12px;
+          left: -20px;
+          background-color: @background-dark;
+        }
+      }
     }
   }
 }
