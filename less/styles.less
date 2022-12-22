@@ -583,13 +583,42 @@ main {
   &-header button {
     margin-bottom: 55px;
   }
+  &.divider-top {
+    li:first-child {
+      position: relative;
+      .divider-top(-10px, 0);
+    }
+  }
 
   li {
     .flex-column(start, start);
     margin-bottom: 40px;
     position: relative;
     .divider-bottom(-20px, 0);
+  }
 
+  &-item {
+    &.title {
+      .text-props(450, 20px, 130%, @text-regular-color);
+      margin-bottom: 25px;
+    }
+    &.info {
+      &-container {
+        .flex-column(start, center);
+      }
+      &-item {
+        margin-bottom: 5px;
+        span:nth-child(1) {
+          .text-props(400, 16px, 130%, @text-description-color);
+        }
+        span:nth-child(2) {
+          .text-props(400, 16px, 130%, @text-regular-color);
+        }
+        &.single {
+          .text-props(400, 16px, 130%, @text-regular-color);
+        }
+      }
+    }
   }
 }
 
