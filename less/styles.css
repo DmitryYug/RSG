@@ -590,15 +590,30 @@ main section {
 .table-container .cell-flex span {
   text-align: left;
 }
+.table-container.divider-bottom {
+  position: relative;
+}
+.table-container.divider-bottom:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -10px;
+  background: #D5E2F7;
+}
 .table-container-header {
   background-color: #D5E2F7;
 }
 .table-container-header-child {
   background-color: #EBF3FF;
 }
-.table-container-child table {
+.table-container-child table,
+.table-container-child th,
+.table-container-child td {
   width: 100%;
   text-align: left;
+  border: 1px solid #D5E2F7;
 }
 .table-container.procurements-planned tr {
   height: 70px;

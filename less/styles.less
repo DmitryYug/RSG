@@ -246,6 +246,11 @@ main {
     }
   }
 
+  &.divider-bottom {
+    position: relative;
+    .divider-bottom(-10px, 0);
+  }
+
   &-header {
     background-color: @divider-color;
 
@@ -255,9 +260,10 @@ main {
   }
 
   &-child {
-    table {
+    table, th, td {
       width: 100%;
       text-align: left;
+      border: 1px solid @divider-color;
     }
   }
 
@@ -552,7 +558,6 @@ main {
       .text-props(450, 20px, 130%, @text-regular-color);
       .flex-default(center, start);
       position: relative;
-      //.divider-bottom(0, 0);
       .divider-top(0, 0);
       width: 100%;
       padding: 15px 0;
