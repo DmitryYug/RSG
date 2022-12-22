@@ -260,6 +260,12 @@
 .procurements-about.title-container h1 {
   margin-bottom: 25px;
 }
+.procurements-about th:first-child {
+  width: 135px;
+}
+.procurements-about td:nth-child(6) {
+  min-width: 125px;
+}
 .agreements-main.title-container {
   margin-bottom: 55px;
 }
@@ -616,7 +622,6 @@ main section {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  gap: 10px;
 }
 .table-container th {
   font-family: "Avenir Next Cyr Medium", sans-serif;
@@ -630,14 +635,7 @@ main section {
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
-  padding: 10px;
-}
-.table-container td:first-child {
-  font-family: "Avenir Next Cyr Medium", sans-serif;
-  font-weight: 450 !important;
-  font-size: 16px;
-  line-height: 130%;
-  color: #2C3148;
+  padding: 5px;
 }
 .table-container tr {
   vertical-align: top;
@@ -646,10 +644,22 @@ main section {
   background-color: #EBF3FF;
 }
 .table-container button {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
   background-color: transparent;
 }
 .table-container.with-margin {
   margin: 55px auto 0 auto;
+}
+.table-container.first-column-bold td:first-child {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
 }
 .table-container .cell-flex-col {
   display: flex;
@@ -657,8 +667,14 @@ main section {
   align-items: start;
   justify-content: center;
 }
-.table-container .cell-flex-col :nth-child(n) {
+.table-container .cell-flex-col:nth-child(n) {
   margin-bottom: 5px;
+}
+.table-container .cell-flex-col span {
+  font-weight: 400 !important;
+  font-size: 14px;
+  line-height: 115%;
+  color: #2C3148;
 }
 .table-container .cell-flex {
   display: flex;
@@ -702,9 +718,6 @@ main section {
   width: 100%;
   text-align: left;
   border: 1px solid #D5E2F7;
-}
-.procurements-about td:nth-child(6) {
-  min-width: 125px;
 }
 .agreements-main td:nth-child(2) {
   min-width: 125px;
@@ -1101,7 +1114,7 @@ main section {
   color: #2C3148;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   margin-left: 34px;
   margin-top: 30px;
   padding-bottom: 35px;

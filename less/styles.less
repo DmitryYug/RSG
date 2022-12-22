@@ -204,7 +204,6 @@ main {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    gap: 10px;
   }
 
   th {
@@ -214,15 +213,12 @@ main {
 
   td {
     .text-props(400, 16px, 130%, @text-regular-color);
-    padding: 10px;
-    &:first-child {
-      font-family: "Avenir Next Cyr Medium", sans-serif;
-      .text-props(450, 16px, 130%, @text-regular-color);
-    }
+    padding: 5px;
   }
 
   tr {
     vertical-align: top;
+
     &:nth-child(2n) {
       background-color: @background-medium;
     }
@@ -230,6 +226,8 @@ main {
   }
 
   button {
+    font-family: "Avenir Next Cyr Medium", sans-serif;
+    .text-props(450, 16px, 130%, @text-regular-color);
     background-color: transparent;
   }
 
@@ -237,11 +235,22 @@ main {
     margin: 55px auto 0 auto;
   }
 
+  &.first-column-bold {
+    td:first-child {
+      font-family: "Avenir Next Cyr Medium", sans-serif;
+      .text-props(450, 16px, 130%, @text-regular-color);
+    }
+  }
+
   .cell-flex-col {
     .flex-column(start, center);
 
-    :nth-child(n) {
+    &:nth-child(n) {
       margin-bottom: 5px;
+    }
+
+    span {
+      .text-props(400, 14px, 115%, @text-regular-color);
     }
   }
 
@@ -271,6 +280,7 @@ main {
     th {
       padding: 5px;
     }
+
     background-color: @divider-color;
 
     &-child {
@@ -287,11 +297,6 @@ main {
   }
 }
 
-&.procurements-about {
-  td:nth-child(6) {
-    min-width: 125px;
-  }
-}
 
 &.agreements-main {
   td:nth-child(2) {
@@ -649,10 +654,11 @@ main {
 
     &.content {
       .text-props(400, 20px, 130%, @text-regular-color);
-      .flex-default(center, start);
+      .flex-default(start, start);
       margin-left: 34px;
       margin-top: 30px;
       padding-bottom: 35px;
+
     }
 
   }
