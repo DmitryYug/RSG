@@ -6,8 +6,29 @@
 
 .start-links {
   font-size: 20px;
-  width: 900px;
-  margin: 100px auto 0 auto;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 30px;
+  .flex-column(start, center);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .box {
+    &:first-child {
+      margin-right: 150px;
+    }
+    .flex-default(start, center);
+    flex-wrap: wrap;
+    ul {
+      .flex-column(start, start);
+      flex-wrap: wrap;
+      column-gap: 100px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 body {
