@@ -287,6 +287,10 @@ main {
       width: 100%;
       text-align: left;
       border: 1px solid @divider-color;
+      .text-props(400, 12px, 115%, @text-regular-color);
+    }
+    th:nth-child(3) {
+      min-width: 100px;
     }
   }
 }
@@ -714,7 +718,7 @@ main {
     &:after {
       content: '';
       position: absolute;
-      height: 3px;
+      height: 4px;
       width: 100%;
       left: 0;
       bottom: -10px;
