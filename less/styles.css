@@ -298,7 +298,14 @@
   margin-bottom: 70px;
 }
 .mtr-lot.title-container {
-  margin-bottom: 70px;
+  margin: 70px auto;
+}
+.mtr-lot.info-block {
+  margin-top: 30px;
+  margin-bottom: 95px;
+}
+.mtr-main.table-container th:nth-child(2) {
+  min-width: 130px;
 }
 .archive-main.text-title {
   margin-bottom: 25px;
@@ -624,13 +631,14 @@ main section {
   font-size: 14px;
   line-height: 115%;
   color: #2C3148;
+  padding: 10px;
 }
 .table-container td {
   font-weight: 400 !important;
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
-  padding: 5px;
+  padding: 10px;
 }
 .table-container tr {
   vertical-align: top;
@@ -645,6 +653,12 @@ main section {
   line-height: 130%;
   color: #2C3148;
   background-color: transparent;
+}
+.table-container button.small {
+  font-weight: 450 !important;
+  font-size: 14px;
+  line-height: 115%;
+  color: #2C3148;
 }
 .table-container.with-margin {
   margin: 55px auto 0 auto;
@@ -681,9 +695,7 @@ main section {
   display: flex;
   justify-content: center;
   align-items: start;
-}
-.table-container .cell-flex :nth-child(n) {
-  margin-right: 5px;
+  gap: 5px;
 }
 .table-container .cell-flex button {
   text-align: left;
@@ -1243,18 +1255,6 @@ main section {
 .tabs-subtabs .active {
   background-color: #EEEFF4;
 }
-.info-block {
-  position: relative;
-}
-.info-block:before {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background: #D5E2F7;
-}
 .info-block .item {
   display: flex;
   justify-content: start;
@@ -1270,10 +1270,24 @@ main section {
   bottom: 0;
   background: #D5E2F7;
 }
-.info-block .item span {
+.info-block .item:nth-child(2) {
+  position: relative;
+}
+.info-block .item:nth-child(2):before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #D5E2F7;
+}
+.info-block .item span,
+.info-block .item div {
   padding: 13px;
 }
-.info-block .item span:nth-child(1) {
+.info-block .item span:nth-child(1),
+.info-block .item div:nth-child(1) {
   font-weight: 550 !important;
   font-size: 16px;
   line-height: 130%;
@@ -1281,18 +1295,32 @@ main section {
   background-color: #EBF3FF;
   width: 35%;
 }
-.info-block .item span:nth-child(2) {
+.info-block .item span:nth-child(2),
+.info-block .item div:nth-child(2) {
   font-weight: 400 !important;
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
   width: 65%;
 }
-.info-block .item span img {
+.info-block .item span img,
+.info-block .item div img {
   margin-right: 10px;
 }
-.info-block.mtr-lot {
-  margin-top: 30px;
+.info-block .item-title {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2C3148;
+  margin-bottom: 25px;
+}
+.info-block .item-title-bold {
+  font-weight: 750 !important;
+  font-size: 24px;
+  line-height: 135%;
+  color: #2C3148;
+  margin-bottom: 25px;
 }
 .info-block.results-procurements {
   margin-top: 35px;

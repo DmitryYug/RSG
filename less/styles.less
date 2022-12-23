@@ -210,11 +210,12 @@ main {
   th {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 14px, 115%, @text-regular-color);
+    padding: 10px;
   }
 
   td {
     .text-props(400, 16px, 130%, @text-regular-color);
-    padding: 5px;
+    padding: 10px;
   }
 
   tr {
@@ -229,6 +230,10 @@ main {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 16px, 130%, @text-regular-color);
     background-color: transparent;
+
+    &.small {
+      .text-props(450, 14px, 115%, @text-regular-color);
+    }
   }
 
   &.with-margin {
@@ -237,6 +242,7 @@ main {
 
   &.is-card-item {
     width: 530px;
+
     td {
       padding: 10px;
     }
@@ -263,10 +269,7 @@ main {
 
   .cell-flex {
     .flex-default(start, center);
-
-    :nth-child(n) {
-      margin-right: 5px;
-    }
+    gap: 5px;
 
     button {
       text-align: left;
@@ -674,6 +677,7 @@ main {
       font-family: "Avenir Next Cyr Medium", sans-serif;
       .text-props(450, 20px, 130%, @text-regular-color);
       margin-bottom: 25px;
+
       &-bold {
         .text-props(750, 24px, 135%, @text-regular-color);
       }
@@ -753,15 +757,18 @@ main {
 }
 
 .info-block {
-  position: relative;
-  .divider-top(0, 0);
 
   .item {
     .flex-default(stretch, start);
     position: relative;
     .divider-bottom(0, 0);
 
-    span {
+    &:nth-child(2) {
+      position: relative;
+      .divider-top(0, 0);
+    }
+
+    span, div {
       padding: 13px;
 
       &:nth-child(1) {
@@ -779,11 +786,19 @@ main {
         margin-right: 10px;
       }
     }
+
+    &-title {
+      font-family: "Avenir Next Cyr Medium", sans-serif;
+      .text-props(450, 20px, 130%, @text-regular-color);
+      margin-bottom: 25px;
+
+      &-bold {
+        .text-props(750, 24px, 135%, @text-regular-color);
+        margin-bottom: 25px;
+      }
+    }
   }
 
-  &.mtr-lot {
-    margin-top: 30px;
-  }
 
   &.results-procurements {
     margin-top: 35px;
