@@ -321,8 +321,18 @@
 .archive.link-list li {
   margin-bottom: 10px;
 }
+.tt-projects p {
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2C3148;
+}
+.tt-projects.content-container {
+  margin-bottom: 130px;
+}
 .tt-projects.title-container {
   margin-bottom: 70px;
+  margin-top: 75px;
 }
 .results.title-container {
   margin-bottom: 70px;
