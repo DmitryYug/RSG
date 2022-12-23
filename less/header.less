@@ -5,14 +5,11 @@
   &-container {
     display: flex;
     justify-content: space-between;
+
     button {
-      padding: 0;
-      margin-right: 24px;
-      border: none;
-      font: inherit;
-      color: inherit;
       background-color: transparent;
     }
+
     .text-link {
       margin-right: 25px;
     }
@@ -32,17 +29,15 @@
 
     &-item {
       .flex-default(center, center);
-
       &.divider {
         position: relative;
-        .divider-right(0, 0)
+        .divider-right(0, -15px)
       }
 
     }
   }
 
-  &.icon
- {
+  &.icon {
     margin-right: 50px;
     width: 150px;
     height: 45px;

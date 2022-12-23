@@ -137,6 +137,10 @@ main {
     width: 12px;
     height: 6px;
   }
+  &.footer-logo {
+    width: 195px;
+    height: auto;
+  }
 }
 
 .text {
@@ -160,7 +164,6 @@ main {
 
   &-description {
     .text-props(400, 16px, 130%, @text-description-color);
-
   }
 
   &-link {
@@ -168,8 +171,10 @@ main {
     .text-props(450, 20px, 130%, @background-dark);
 
     &.nav {
+      font-family: "Avenir Next Cyr", sans-serif;
       .text-props(700, 14px, 17px, @background-dark);
       text-transform: uppercase;
+      letter-spacing: 0.02em;
     }
 
     &.active {
