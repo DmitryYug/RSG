@@ -288,6 +288,9 @@
 .agreements-linked-docs.title-container {
   margin-bottom: 70px;
 }
+.stats-default.title-container {
+  margin-bottom: 65px;
+}
 .stats-default.link-list li {
   margin-bottom: 15px;
 }
@@ -509,6 +512,7 @@ main section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 55px;
 }
 .btn.wrap {
   word-wrap: break-word;
@@ -644,6 +648,12 @@ main section {
 }
 .table-container.with-margin {
   margin: 55px auto 0 auto;
+}
+.table-container.is-card-item {
+  width: 530px;
+}
+.table-container.is-card-item td {
+  padding: 10px;
 }
 .table-container.first-column-bold td:first-child {
   font-family: "Avenir Next Cyr Medium", sans-serif;
@@ -1101,19 +1111,6 @@ main section {
   margin-top: 30px;
   padding-bottom: 35px;
 }
-.card-header {
-  font-family: "Avenir Next Cyr Medium", sans-serif;
-  font-weight: 450 !important;
-  font-size: 24px;
-  line-height: 135%;
-  color: #2C3148;
-}
-.card-header button {
-  margin-bottom: 55px;
-}
-.card-table-fixed-width {
-  width: 530px;
-}
 .card.divider-top li:first-child {
   position: relative;
 }
@@ -1150,6 +1147,12 @@ main section {
   line-height: 130%;
   color: #2C3148;
   margin-bottom: 25px;
+}
+.card-item.title-bold {
+  font-weight: 750 !important;
+  font-size: 24px;
+  line-height: 135%;
+  color: #2C3148;
 }
 .card-item.info {
   font-weight: 400 !important;

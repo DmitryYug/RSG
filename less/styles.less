@@ -81,6 +81,7 @@ main {
   &-back {
     background-color: transparent;
     .flex-default(center, center);
+    margin-bottom: 55px;
   }
 
   &.wrap {
@@ -222,7 +223,6 @@ main {
     &:nth-child(2n) {
       background-color: @background-medium;
     }
-
   }
 
   button {
@@ -233,6 +233,13 @@ main {
 
   &.with-margin {
     margin: 55px auto 0 auto;
+  }
+
+  &.is-card-item {
+    width: 530px;
+    td {
+      padding: 10px;
+    }
   }
 
   &.first-column-bold {
@@ -646,37 +653,7 @@ main {
   }
 }
 
-
-//&.card {
-//  //&-table-fixed-width {
-//  //  width: 530px;
-//  //}
-//  //&-header {
-//  //  font-family: "Avenir Next Cyr Medium", sans-serif;
-//  //  .text-props(450, 24px, 135%, @text-regular-color);
-//  //}
-//  &-item {
-//    &.title {
-//
-//    }
-//  }
-//
-//}
-
 .card {
-
-  &-header {
-    font-family: "Avenir Next Cyr Medium", sans-serif;
-    .text-props(450, 24px, 135%, @text-regular-color);
-
-    button {
-      margin-bottom: 55px;
-    }
-  }
-
-  &-table-fixed-width {
-    width: 530px;
-  }
 
   &.divider-top {
     li:first-child {
@@ -697,6 +674,9 @@ main {
       font-family: "Avenir Next Cyr Medium", sans-serif;
       .text-props(450, 20px, 130%, @text-regular-color);
       margin-bottom: 25px;
+      &-bold {
+        .text-props(750, 24px, 135%, @text-regular-color);
+      }
     }
 
     &.info {
