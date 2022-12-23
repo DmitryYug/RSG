@@ -12,6 +12,9 @@
 
     <!--    Fonts-->
     <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+
+    <script type="application/javascript" src="/query-3.6.3.js"></script>
+    <script src="/script.js"></script>
 </head>
 
 <body>
@@ -25,18 +28,51 @@
             <a href="" class="text-link nav">АНОНСИРОВАНИЕ ЗАКУПОК</a>
             <a href="" class="text-link nav">ЗАКУПКИ</a>
             <a href="" class="text-link nav">ДОГОВРЫ</a>
-            <button class="text-link nav">...</button>
+
+            <div>
+                <button id="nav-more" class="text-link nav">...</button>
+                <div class="overlay-menu">
+                    <ul class="overlay-menu-container">
+                        <li class="text-link nav">
+                            <a href="">Управление закупочной деятельностью</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Сотрудничество с смсп</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Результаты закупок</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Обсуждение проектов ТТ</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Статистика</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Продажи МТP</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Архив</a>
+                        </li>
+                        <li class="text-link nav">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
         </div>
         <div class="header-nav-right-container">
             <a class="header-nav-right-item divider text-link nav">
                 <img class="icon size-24" src="../../../images/header/message.png" alt="">
                 ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
             </a>
-            <a class="header-nav-right-item divider text-link nav">
+            <a id='choose-site' class="header-nav-right-item divider text-link nav">
                 <img class="icon size-24" src="../../../images/header/global.png" alt="">
                 ВСЕ САЙТЫ
             </a>
-            <button class="header-nav-right-item">
+            <button id="main-search" class="header-nav-right-item">
                 <img class="icon size-24" src="../../../images/header/search.png" alt="">
             </button>
         </div>

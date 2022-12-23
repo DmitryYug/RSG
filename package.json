@@ -10,6 +10,7 @@
     "url": "https://gitlab.ntdev.ru/rosgidro/zakupki-verstka.git"
   },
   "dependencies": {
+    "jquery": "^3.6.3",
     "less": "^3.13.1",
     "watch-less-do-more": "^0.4.0"
   }

@@ -1,6 +1,8 @@
 @import '_variables.less';
 
 .overlay-menu {
+  position: relative;
+  display: none;
   &-container {
     .flex-column(start, space-between);
     padding: 25px;
@@ -25,7 +27,7 @@
     .flex-default(center, space-between);
     padding: 10px;
     font-weight: 750;
-    font-size-24: 14px;
+    font-size: 14px;
     line-height: 115%;
     color: #FFFFFF;
     background-color: @background-dark;
@@ -62,7 +64,7 @@
       width: 20px;
       height: 20px;
       background-image: url("../images/components/img.png");
-      background-size-24: 20px 20px;
+      background-size: 20px 20px;
     }
   }
 
