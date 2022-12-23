@@ -5,6 +5,7 @@
     p {
       .text-props(400, 20px, 130%, @text-regular-color)
     }
+
     a {
       text-decoration: underline;
     }
@@ -39,6 +40,7 @@
         position: absolute;
         left: auto;
         bottom: 0;
+
         h2 {
           .text-props(700, 18px, 24px, white);
         }
@@ -158,9 +160,11 @@
         margin-bottom: 25px;
       }
     }
+
     th:first-child {
       width: 135px;
     }
+
     td:nth-child(6) {
       min-width: 125px;
     }
@@ -174,6 +178,7 @@
     &.title-container {
       margin-bottom: 55px;
     }
+
     td:nth-child(2) {
       min-width: 125px;
     }
@@ -188,7 +193,7 @@
 
     td:last-child {
       font-family: "Avenir Next Cyr Medium", sans-serif;
-      .text-props(450, 14px, 115%,@background-dark);
+      .text-props(450, 14px, 115%, @background-dark);
     }
   }
 
@@ -204,6 +209,7 @@
     &.title-container {
       margin-bottom: 65px;
     }
+
     &.link-list {
       li {
         margin-bottom: 15px;
@@ -223,11 +229,13 @@
     &.title-container {
       margin: 70px auto;
     }
+
     &.info-block {
       margin-top: 30px;
       margin-bottom: 95px;
     }
   }
+
   &-main {
     &.table-container {
       th:nth-child(2) {
@@ -238,17 +246,21 @@
 }
 
 .archive {
-  &-main {
-    &.text-title {
-      margin-bottom: 25px;
+  &.title-container {
+    margin-bottom: 25px;
+    margin-top: 80px;
+
+    p {
+      margin-top: 25px;
     }
+  }
 
-    &.link-list {
-      margin-top: 40px;
+  &.link-list {
+    margin-top: 40px;
+    margin-bottom: 95px;
 
-      li {
-        margin-bottom: 10px;
-      }
+    li {
+      margin-bottom: 10px;
     }
   }
 }

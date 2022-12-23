@@ -307,13 +307,18 @@
 .mtr-main.table-container th:nth-child(2) {
   min-width: 130px;
 }
-.archive-main.text-title {
+.archive.title-container {
   margin-bottom: 25px;
+  margin-top: 80px;
 }
-.archive-main.link-list {
+.archive.title-container p {
+  margin-top: 25px;
+}
+.archive.link-list {
   margin-top: 40px;
+  margin-bottom: 95px;
 }
-.archive-main.link-list li {
+.archive.link-list li {
   margin-bottom: 10px;
 }
 .tt-projects.title-container {
