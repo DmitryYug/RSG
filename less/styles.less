@@ -6,8 +6,29 @@
 
 .start-links {
   font-size: 20px;
-  width: 900px;
-  margin: 100px auto 0 auto;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 30px;
+  .flex-column(start, center);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .box {
+    &:first-child {
+      margin-right: 150px;
+    }
+    .flex-default(start, center);
+    flex-wrap: wrap;
+    ul {
+      .flex-column(start, start);
+      flex-wrap: wrap;
+      column-gap: 100px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 body {
@@ -137,6 +158,7 @@ main {
     width: 12px;
     height: 6px;
   }
+
   &.footer-logo {
     width: 195px;
     height: auto;
@@ -294,6 +316,7 @@ main {
       border: 1px solid @divider-color;
       .text-props(400, 12px, 115%, @text-regular-color);
     }
+
     th:nth-child(3) {
       min-width: 100px;
     }
@@ -655,6 +678,11 @@ main {
     li:first-child {
       position: relative;
       .divider-top(-10px, 0);
+    }
+
+    p {
+      position: relative;
+      .divider-bottom(-15px, 0);
     }
   }
 

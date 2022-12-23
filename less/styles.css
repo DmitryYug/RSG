@@ -296,7 +296,7 @@
   color: #005D9F;
 }
 .agreements-linked-docs.title-container {
-  margin-bottom: 70px;
+  margin: 70px auto;
 }
 .stats-default.title-container {
   margin-bottom: 65px;
@@ -478,8 +478,36 @@
 }
 .start-links {
   font-size: 20px;
-  width: 900px;
-  margin: 100px auto 0 auto;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.start-links .box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.start-links .box:first-child {
+  margin-right: 150px;
+}
+.start-links .box ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  column-gap: 100px;
+}
+.start-links .box li {
+  margin-bottom: 10px;
 }
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
@@ -1182,6 +1210,18 @@ main section {
   width: 100%;
   left: 0;
   top: -10px;
+  background: #D5E2F7;
+}
+.card.divider-top p {
+  position: relative;
+}
+.card.divider-top p:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -15px;
   background: #D5E2F7;
 }
 .card li {
