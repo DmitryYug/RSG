@@ -572,18 +572,6 @@ main section {
   bottom: -55px;
   background: #D5E2F7;
 }
-.text-title-card {
-  font-weight: 450 !important;
-  font-size: 24px;
-  line-height: 135%;
-  color: #2C3148;
-}
-.text-title-card-bold {
-  font-weight: 750 !important;
-  font-size: 24px;
-  line-height: 135%;
-  color: #2C3148;
-}
 .text-subtitle {
   font-weight: 700 !important;
   font-size: 18px;
@@ -592,22 +580,9 @@ main section {
   letter-spacing: 0.02em;
   margin-bottom: 15px;
 }
-.text-subtitle-card {
-  font-weight: 450 !important;
-  font-size: 20px;
-  line-height: 130%;
-  color: #2C3148;
-  margin-bottom: 25px;
-}
 .text-description {
   font-weight: 400 !important;
   font-size: 16px;
-  line-height: 130%;
-  color: #7C7F8D;
-}
-.text-description-card {
-  font-weight: 400 !important;
-  font-size: 20px;
   line-height: 130%;
   color: #7C7F8D;
 }
@@ -756,9 +731,6 @@ main section {
   font-size: 14px;
   line-height: 115%;
   color: #2C3148;
-}
-.card-table-fixed-width {
-  width: 530px;
 }
 .pagination-container {
   display: flex;
@@ -1129,8 +1101,18 @@ main section {
   margin-top: 30px;
   padding-bottom: 35px;
 }
+.card-header {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 24px;
+  line-height: 135%;
+  color: #2C3148;
+}
 .card-header button {
   margin-bottom: 55px;
+}
+.card-table-fixed-width {
+  width: 530px;
 }
 .card.divider-top li:first-child {
   position: relative;
@@ -1162,11 +1144,18 @@ main section {
   background: #D5E2F7;
 }
 .card-item.title {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
   font-weight: 450 !important;
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
   margin-bottom: 25px;
+}
+.card-item.info {
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #7C7F8D;
 }
 .card-item.info-container {
   display: flex;
