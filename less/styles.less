@@ -137,6 +137,7 @@ main {
     width: 12px;
     height: 6px;
   }
+
   &.footer-logo {
     width: 195px;
     height: auto;
@@ -294,6 +295,7 @@ main {
       border: 1px solid @divider-color;
       .text-props(400, 12px, 115%, @text-regular-color);
     }
+
     th:nth-child(3) {
       min-width: 100px;
     }
@@ -655,6 +657,11 @@ main {
     li:first-child {
       position: relative;
       .divider-top(-10px, 0);
+    }
+
+    p {
+      position: relative;
+      .divider-bottom(-15px, 0);
     }
   }
 

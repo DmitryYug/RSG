@@ -296,7 +296,7 @@
   color: #005D9F;
 }
 .agreements-linked-docs.title-container {
-  margin-bottom: 70px;
+  margin: 70px auto;
 }
 .stats-default.title-container {
   margin-bottom: 65px;
@@ -1182,6 +1182,18 @@ main section {
   width: 100%;
   left: 0;
   top: -10px;
+  background: #D5E2F7;
+}
+.card.divider-top p {
+  position: relative;
+}
+.card.divider-top p:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -15px;
   background: #D5E2F7;
 }
 .card li {
