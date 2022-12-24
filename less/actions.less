@@ -1,0 +1,18 @@
+#choose-site {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  &.active {
+    transition: opacity 2s;
+    height: 100%;
+    opacity: 1;
+    margin-top: 80px;
+  }
+}
+
+#close-choose-site-modal {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

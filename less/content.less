@@ -2,13 +2,6 @@
 
 .main {
   &-start {
-    p {
-      .text-props(400, 20px, 130%, @text-regular-color)
-    }
-
-    a {
-      text-decoration: underline;
-    }
 
     button {
       display: inline;
@@ -69,9 +62,10 @@
   }
 
   &-choose-site {
+
     &-links {
       .flex-column(start, start);
-      max-height: 760px;
+      height: 760px;
       flex-wrap: wrap;
 
       li {
