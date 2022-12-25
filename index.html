@@ -27,36 +27,36 @@
             </button>
             <button id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ ЗАКУПОК</button>
             <button id="procurements-about-nav-btn" class="text-link nav">ЗАКУПКИ</button>
-            <button id="agreements-nav-btn" href="" class="text-link nav">ДОГОВРЫ</button>
+            <button id="agreements-nav-btn" class="text-link nav">ДОГОВРЫ</button>
+            <button id="nav-more" class="text-link nav">
+                <img class="icon size-24" src="/images/header/dots.png" alt="">
+            </button>
 
-            <div class="overlay-menu-container">
-                <button id="nav-more" class="text-link nav">
-                    <img class="icon size-24" src="/images/header/dots.png" alt="">
-                </button>
-                <ul class="overlay-menu">
-                    <li class="text-link nav">
-                        <button >Управление закупочной деятельностью</button>
+            <div class="overlay-menu">
+                <ul>
+                    <li>
+                        <button>Управление закупочной деятельностью</button>
                     </li>
-                    <li class="text-link nav">
-                        <a href="">Сотрудничество с смсп</a>
+                    <li >
+                        <button>Сотрудничество с смсп</button>
                     </li>
-                    <li class="text-link nav">
-                        <a id="results-nav-btn">Результаты закупок</a>
+                    <li >
+                        <button id="results-nav-btn">Результаты закупок</button>
                     </li>
-                    <li class="text-link nav">
-                        <a href="">Обсуждение проектов ТТ</a>
+                    <li >
+                        <button id="tt-projects-nav-btn">Обсуждение проектов ТТ</button>
                     </li>
-                    <li class="text-link nav">
-                        <a href="">Статистика</a>
+                    <li >
+                        <button id="stats-nav-btn">Статистика</button>
                     </li>
-                    <li class="text-link nav">
-                        <a href="">Продажи МТP</a>
+                    <li >
+                        <button id="mtr-nav-btn">Продажи МТP</button>
                     </li>
-                    <li class="text-link nav">
-                        <a href="">Архив</a>
+                    <li >
+                        <button id="archive-nav-btn">Архив</button>
                     </li>
-                    <li class="text-link nav">
-                        <a href="">Контакты</a>
+                    <li >
+                        <button id="contacts-nav-btn">Контакты</button>
                     </li>
                 </ul>
             </div>
@@ -64,7 +64,8 @@
         </div>
 
         <div class="header-nav-right-container">
-            <button class="header-nav-right-item divider text-link nav">
+            <button id="contact-form-nav-btn"
+                    class="header-nav-right-item divider text-link nav">
                 <img class="icon size-24" src="/images/header/message.png" alt="message">
                 ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
             </button>
@@ -73,7 +74,7 @@
                 ВСЕ САЙТЫ
             </button>
 
-            <button id="close-choose-site-modal" class="header-nav-right-item">
+            <button id="close-choose-site-modal-btn" class="header-nav-right-item">
                 <img class="icon size-24" src="/images/header/close.png" alt="">
             </button>
             <button id="main-search" class="header-nav-right-item">
@@ -1014,6 +1015,95 @@
 
         </div>
 
+        <div id="stats">
+            <div class="content-container">
+                <div class="stats-default title-container">
+                    <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
+                    <h1 class="text-title divider">Отчетные данные</h1>
+                </div>
+                <ul class="card">
+                    <li>
+                        <p class="card-item title">Сведения о количестве и об общей стоимости договоров, заключенных
+                            заказчиком по результатам закупки товаров, работ, услуг, в том числе об общей стоимости
+                            договоров, информация о которых не внесена в реестр договоров</p>
+                        <div class="table-container is-card-item">
+                            <table>
+                                <thead class="table-container-header">
+                                <tr>
+                                    <th>Кол-во договоров</th>
+                                    <th>Стоимость договоров (руб. без НДС)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2332</td>
+                                    <td>21 538 267 417,69</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="card-item title">Сведения об изменении цены, объема и сроков приобретаемой продукции за
+                            период с 01.01.2022 по 31.10.2022</p>
+                        <div class="table-container is-card-item first-column-bold">
+                            <table>
+                                <thead class="table-container-header">
+                                <tr>
+                                    <th>Стоимость дополнительных соглашений</th>
+                                    <th>Кол-во договоров</th>
+                                    <th>Кол-во дополнительных соглашений</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Изменение цены</td>
+                                    <td>0</td>
+                                    <td>0, 00</td>
+                                </tr>
+                                <tr>
+                                    <td>Изменение цены</td>
+                                    <td>0</td>
+                                    <td>0, 00</td>
+                                </tr>
+                                <tr>
+                                    <td>Изменение цены</td>
+                                    <td>0</td>
+                                    <td>0, 00</td>
+                                </tr>
+                                <tr>
+                                    <td>Итого</td>
+                                    <td>0</td>
+                                    <td>0, 00</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="stats-default link-list">
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/watch.png" alt="">
+                            <span class="text-link">Архив данных за 2021 г.</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/watch.png" alt="">
+                            <span class="text-link">Архив данных за 2020 г.</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/watch.png" alt="">
+                            <span class="text-link">Архив данных за 2019 г.</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div id="results">
             <div class="content-container">
                 <div class="results title-container ">
@@ -1206,6 +1296,552 @@
                          alt=""
                     >
                 </button>
+            </div>
+        </div>
+
+        <div id="mtr">
+            <div class="content-container">
+
+                <div class="title-container">
+                    <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
+                    <h1 class="text-title">Продажи MTP</h1>
+                </div>
+
+                <div class="form-container">
+                    <div class="form-container-header">
+                        <button class="btn-filter">
+                            <span>фильтры</span>
+                            <div class="icon size-24">
+                                <img src="../../../images/content/icons/arrow-down.png" alt="">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <button>Опубликованные</button>
+                    <button>Итоги подведены</button>
+                    <button class="active">Архив</button>
+                </div>
+
+            </div>
+            <div class="mtr-main table-container with-margin">
+                <table>
+                    <thead class="table-container-header">
+                    <tr>
+                        <th>Дата публикации</th>
+                        <th>Номер лота</th>
+                        <th>Уведомление о продаже</th>
+                        <th>Вид продажи</th>
+                        <th>Организация</th>
+                        <th>Дата и время подачи предложений</th>
+                        <th>Итоги процедуры</th>
+                        <th>Комментарий</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>18.11.2022</td>
+                        <td>
+                            <div class="cell-flex">
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                </button>
+                                <button >
+                                    1-ТМЦ-2018-НижГЭС
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-flex">
+                                <button>
+                                    невостребованных ТМЦ
+                                </button>
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                </button>
+                            </div>
+                        </td>
+                        <td>Открытый запрос цен</td>
+                        <td>
+                            Филиал Публичного акционерного общества “Федеральная гиродгенерирующая компания – РусГидро” –
+                            “Нижегородская ГЭС”
+                        </td>
+                        <td>19.07.2018 13:00:00</td>
+                        <td class="cell-flex">
+                            <button class="icon size-20">
+                                <img src="../../../images/content/icons/download.png" alt="">
+                            </button>
+                            <button class="table-container small">
+                                Подписан протокол о выборе победителей
+                            </button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18.11.2022</td>
+                        <td>
+                            <div class="cell-flex">
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                </button>
+                                <button>
+                                    1-ТМЦ-2018-НижГЭС
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-flex">
+                                <button>
+                                    невостребованных ТМЦ
+                                </button>
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                </button>
+                            </div>
+                        </td>
+                        <td>Открытый запрос цен</td>
+                        <td>
+                            Филиал Публичного акционерного общества “Федеральная гиродгенерирующая компания – РусГидро” –
+                            “Нижегородская ГЭС”
+                        </td>
+                        <td>19.07.2018 13:00:00</td>
+                        <td class="cell-flex">
+                            <button class="icon size-20">
+                                <img src="../../../images/content/icons/download.png" alt="">
+                            </button>
+                            <button class="table-container small">
+                                Подписан протокол о выборе победителей
+                            </button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18.11.2022</td>
+                        <td>
+                            <div class="cell-flex">
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                </button>
+                                <button>
+                                    1-ТМЦ-2018-НижГЭС
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-flex">
+                                <button>
+                                    невостребованных ТМЦ
+                                </button>
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                </button>
+                            </div>
+                        </td>
+                        <td>Открытый запрос цен</td>
+                        <td>
+                            Филиал Публичного акционерного общества “Федеральная гиродгенерирующая компания – РусГидро” –
+                            “Нижегородская ГЭС”
+                        </td>
+                        <td>19.07.2018 13:00:00</td>
+                        <td class="cell-flex">
+                            <button class="icon size-20">
+                                <img src="../../../images/content/icons/download.png" alt="">
+                            </button>
+                            <button class="table-container small">
+                                Подписан протокол о выборе победителей
+                            </button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18.11.2022</td>
+                        <td>
+                            <div class="cell-flex">
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                </button>
+                                <button>
+                                    1-ТМЦ-2018-НижГЭС
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-flex">
+                                <button>
+                                    невостребованных ТМЦ
+                                </button>
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                </button>
+                            </div>
+                        </td>
+                        <td>Открытый запрос цен</td>
+                        <td>
+                            Филиал Публичного акционерного общества “Федеральная гиродгенерирующая компания – РусГидро” –
+                            “Нижегородская ГЭС”
+                        </td>
+                        <td>19.07.2018 13:00:00</td>
+                        <td class="cell-flex">
+                            <button class="icon size-20">
+                                <img src="../../../images/content/icons/download.png" alt="">
+                            </button>
+                            <button class="table-container small">
+                                Подписан протокол о выборе победителей
+                            </button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18.11.2022</td>
+                        <td>
+                            <div class="cell-flex">
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                </button>
+                                <button>
+                                    1-ТМЦ-2018-НижГЭС
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-flex">
+                                <button>
+                                    невостребованных ТМЦ
+                                </button>
+                                <button class="icon size-20">
+                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                </button>
+                            </div>
+                        </td>
+                        <td>Открытый запрос цен</td>
+                        <td>
+                            Филиал Публичного акционерного общества “Федеральная гиродгенерирующая компания – РусГидро” –
+                            “Нижегородская ГЭС”
+                        </td>
+                        <td>19.07.2018 13:00:00</td>
+                        <td class="cell-flex">
+                            <button class="icon size-20">
+                                <img src="../../../images/content/icons/download.png" alt="">
+                            </button>
+                            <button class="table-container small">
+                                Подписан протокол о выборе победителей
+                            </button>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination-container">
+                <button class="current-page">
+                    <span>1</span>
+                </button>
+                <button>
+                    <span>2</span>
+                </button>
+                <button>
+                    <span>3</span>
+                </button>
+                <button>
+                    <span>4</span>
+                </button>
+                <button>
+                    <span>...</span>
+                </button>
+                <button>
+                    <span>12</span>
+                </button>
+                <button>
+                    <img class="icon size-24"
+                         src="../../../images/content/icons/arrow-right.png"
+                         alt=""
+                    >
+                </button>
+                <button>
+                    <img class="icon size-24"
+                         src="../../../images/content/icons/double-arrow-right.png"
+                         alt=""
+                    >
+                </button>
+            </div>
+        </div>
+
+        <div id="archive">
+            <div class="content-container">
+                <div class=" archive title-container">
+                    <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
+                    <h1 class="text-title ">Архив</h1>
+                    <p class="card-item title">В данном разделе закупки до 2016 года РусГидро и всех ДО</p>
+                </div>
+
+                <div class=" breadcrumbs">
+                    <span>Архив завершенных закупок</span>
+                    <span>2016</span>
+                </div>
+
+                <ul  class="archive link-list">
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn flex">
+                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <span class="text-link">1-АХО-2016-ЭСК</span>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="tt-projects">
+            <div class="tt-projects content-container">
+                <div class="tt-projects title-container">
+                    <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
+                    <h1 class="text-title divider">Обсуждение проектов ТТ</h1>
+                </div>
+                <article>
+                    <p>В целях повышения эффективности проведения планируемой закупки, обеспечения равноправия, справедливости,
+                        отсутствия дискриминации и необоснованных ограничений конкуренции, по решению руководителя по закупкам,
+                        до начала проведения закупки могут быть организованы публичные профессиональные обсуждения проектов
+                        технических требований на закупаемую продукцию.</p>
+                    <br>
+                    <p>В ходе публичного профессионального обсуждения потенциальные Участники / производители продукции могут
+                        либо подтверждить возможность поставки продукции по заявленным требованиям, либо дать встречные
+                        предложения по их изменению.</p>
+                    <br>
+                    <p>Обсуждение проектов технических требований проводится посредством функциональности площадки ЕЭТП.
+                        Функциональность доступна по адресу:
+                        <a class="text-link wrap">https://www.roseltorg.ru/personal/rushydro#discussion</a>
+                        <span>
+                    <img class="icon size-24" src="../../../images/content/icons/redirect.png" alt="">
+                </span>
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div id="contacts">
+            <div class="contacts content-container">
+
+                <div class="contacts title-container">
+                    <h1 class="text-title">Контакты</h1>
+                </div>
+
+                <ul class="card divider-top">
+                    <li>
+                        <span class="card-item title">Акционерное общество «РусГидро Снабжение»</span>
+                        <div class="card-item info-container">
+                            <div class="card-item info-item">
+                                <span>Юридический адрес:</span>
+                                <span>125362, г. Москва, Строительный пр-д, д. 7А, корп. 5</span>
+                            </div>
+                            <div class="card-item info-item">
+                                <span>Почтовый адрес:</span>
+                                <span>117393, г. Москва, ул. Архитектора Власова, д. 51</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="card-item title">Адрес офиса в г. Москва</span>
+                        <div class="card-item info-container">
+                            <span class="card-item info-item single">117393, г. Москва, ул. Архитектора Власова, д. 51</span>
+                            <div class="card-item info-item">
+                                <span>Адрес электронной почты:</span>
+                                <span>office@rushydro.ru</span>
+                            </div>
+                            <div class="card-item info-item">
+                                <span>Тел.:</span>
+                                <span>+7 (495) 225-32-32, 8 (800) 333-80-00</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="card-item title">Адрес офиса в г. Хабаровск</span>
+                        <div class="card-item info-container">
+                            <span class="card-item info-item single">680021, Хабаровский край, г. Хабаровск, ул. Ленинградская, д. 46</span>
+                            <div class="card-item info-item">
+                                <span>Адрес электронной почты:</span>
+                                <span>office@rushydro.ru</span>
+                            </div>
+                            <div class="card-item info-item">
+                                <span>Тел.:</span>
+                                <span>+7 (495) 225-32-32, 8 (800) 333-80-00</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="card-item title">Справка о доставке почты в экспедицию (доставка корреспонденции)</span>
+                        <div class="card-item info-container">
+                            <div class="card-item info-item">
+                                <span>Адрес:</span>
+                                <span>117393, г. Москва, ул. Архитектора Власова, д. 51</span>
+                            </div>
+                            <div class="card-item info-item">
+                                <span>Тел.:</span>
+                                <span>+7 (495) 225-32-32, 8 (800) 333-80-00</span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <div class="contacts picture-container">
+                    <img src="../../../images/content/contacts/map.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <div id="contact-form">
+            <div class="contact-form content-container">
+                <div class="contact-form title-container">
+                    <h1 class="text-title">Обращение Председателю Центральной закупочной комиссии</h1>
+                </div>
+                <article>
+                    <p>«Обращение Председателю Центральной закупочной комиссии» организовано с целью приема обращений
+                        заявителей, их рассмотрения, подготовки ответов и, при необходимости, принятия соответствующих мер по
+                        совершенствованию системы закупок Общества, включая, но не ограничиваясь, следующими вопросами:</p>
+                    <br>
+                    <ul>
+                        <li>нарушения при проведении закупочных процедур;</li>
+                        <li>злоупотребление работником Общества полномочиями в сфере системы закупок.</li>
+                    </ul>
+                    <br>
+                    <p>В настоящее время для связи с председателем ЦЗК предусмотрена форма «обратной связи» на внешнем сайте
+                        закупок Общества.</p>
+                    <br>
+                    <p>Не подлежат рассмотрению:</p>
+                    <br>
+                    <ul>
+                        <li>массовые рассылки или рекламные сообщения (спам);</li>
+                        <li>обращения, изложенные в которых данные/сведения/информацию невозможно идентифицировать однозначно;
+                        </li>
+                        <li>обращения, содержащие нечитаемые символы, «пустые» формы обратной связи;</li>
+                        <li>обращения, касающиеся кадрового трудоустройства, получения справочной информации, конфиденциальных
+                            сведений/сведений, являющихся «коммерческой тайной»;
+                        </li>
+                        <li>обращения, оценка которых на предмет корректности/адекватности/существенности/релевантности не может
+                            быть осуществлена, а также обращения, не содержащие всех существенных аспектов и необходимых
+                            сведений;
+                        </li>
+                        <li>несущественные/незначительные для Общества сведения, содержащиеся в обращениях заявителей;</li>
+                        <li>обращения, не относящиеся к сфере системы закупок.</li>
+                    </ul>
+                </article>
+
+                <div class="contact form-container">
+                    <div class="form-container-header divider">
+                        <button class="btn-filter">
+                            <span>обращение</span>
+                        </button>
+                    </div>
+                    <div class="form-container-body">
+                        <form>
+                            <div class="item">
+                                <label for="name">Ваше имя</label>
+                                <input id="name">
+                            </div>
+
+                            <div class="item">
+                                <label for="email">E-mail</label>
+                                <input id="email">
+                            </div>
+
+                            <div class="item align-top">
+                                <label for="message-text">
+                                    <div>Текст сообщения</div>
+                                    <div>Обязательно</div>
+                                </label>
+                                <textarea id="message-text"> </textarea>
+                            </div>
+
+                            <div class="item">
+                                <label for="files">
+                                    <div>Файлы</div>
+                                    <div>pdf, doc, docs, ppt, pptx, pps, txt, jpg, png, gif, jpeg, bmp, pcs, xls, xlsx</div>
+                                </label>
+                                <div id="files">
+                                    <button class="upload-file">
+                                        <img class="icon size-24"
+                                             src="../../../images/content/icons/upload-file.png" alt="">
+                                        <span>Выбрать файл</span>
+                                    </button>
+                                    <button class="chosen-file">
+                                        <img class="icon size-24"
+                                             src="../../../images/content/icons/chosen-file.png" alt="">
+                                        <span>Filename.doc</span>
+                                        <img class="icon size-20"
+                                             src="../../../images/content/icons/clear.png" alt="">
+                                    </button>
+                                    <button class="chosen-file">
+                                        <img class="icon size-24"
+                                             src="../../../images/content/icons/chosen-file.png" alt="">
+                                        <span>Filename.doc</span>
+                                        <img class="icon size-20"
+                                             src="../../../images/content/icons/clear.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <label for="captcha">
+                                    <div>Введите код с картинки</div>
+                                    <div>Обязательно</div>
+                                </label>
+                                <div class="item input-container">
+                                    <input id="captcha">
+                                    <img class="icon captcha" src=
+                                            "../../../images/content/icons/captcha.png" alt="">
+                                </div>
+                            </div>
+
+                            <button class="form-container submit-btn divider">
+                                отправить
+                            </button>
+                            <p class="form-container-disclaimer">Обращаем ваше внимание, что данная форма предназначена исключительно для отправки писем, имеющих отношение к вопросам системы закупок Общества</p>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -4,25 +4,36 @@
   opacity: 0;
   width: 0;
   height: 0;
-  overflow: hidden;
-  &-container {
-    position: relative;
-  }
-
+  position: absolute;
+  top: 100%;
+  left: calc(100% - 34px);
+  box-sizing: border-box;
   &.active {
     transition: opacity 1s;
     opacity: 1;
-    position: absolute;
-    .flex-column(start, space-between);
     padding: 25px;
     width: 390px;
     height: 350px;
-    top: 100%;
-    left: 0;
     background: #FFFFFF;
     border: 1px solid #EEEFF4;
     box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
     z-index: 2;
+  }
+  ul {
+    height: 100%;
+    .flex-column(start, space-between);
+  }
+  button {
+    font-family: "Avenir Next Cyr", sans-serif;
+    .text-props(700, 14px, 17px, @background-dark);
+    text-transform: uppercase;
+    margin-right: 0;
+  }
+  li {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

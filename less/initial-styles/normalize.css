@@ -34,7 +34,7 @@ main {
  */
 
 h1 {
-    font-size-24: 2em;
+    font-size: 2em;
     margin: 0.67em 0;
 }
 
@@ -59,7 +59,7 @@ hr {
 
 pre {
     font-family: monospace, monospace; /* 1 */
-    font-size-24: 1em; /* 2 */
+    font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -102,15 +102,15 @@ code,
 kbd,
 samp {
     font-family: monospace, monospace; /* 1 */
-    font-size-24: 1em; /* 2 */
+    font-size: 1em; /* 2 */
 }
 
 /**
- * Add the correct font size-24 in all browsers.
+ * Add the correct font size in all browsers.
  */
 
-size-24 {
-    font-size-24: 80%;
+size {
+    font-size: 80%;
 }
 
 /**
@@ -120,7 +120,7 @@ size-24 {
 
 sub,
 sup {
-    font-size-24: 75%;
+    font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
@@ -159,7 +159,7 @@ optgroup,
 select,
 textarea {
     font-family: inherit; /* 1 */
-    font-size-24: 100%; /* 1 */
+    font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
 }

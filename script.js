@@ -1,36 +1,37 @@
 $(document).ready(function () {
+
     //variables
     const content = $('.router > div')
 
     //helpers
-    const routing = (pageTitle) => {
-        console.log(content.not(pageTitle))
+    const routeTo = (pageTitle) => {
+        $(pageTitle).fadeIn(500, () => {
+            $(pageTitle).show()
+        })
+        $(content.not(pageTitle)).fadeOut(500, () => {
+            $(content.not(pageTitle)).hide()
+        })
         if (pageTitle !== '#main') {
-            $('.background-section').hide();
-            $(content.not(pageTitle)).hide();
-            $(pageTitle).show();
+            $('.background-section').fadeOut(100, () => {
+                $('.background-section').hide()
+            })
         } else {
-            $(content.not(pageTitle)).hide();
-            $(pageTitle).fadeIn();
-            $('.background-section').show();
+            $('.background-section').fadeIn(100, () => {
+                $('.background-section').show()
+            })
         }
     }
-
-    const hideElements = (selectors) => {
-        selectors.forEach((s) => {
-            $(s).hide()
-        })
-    }
-    const showElements = (selectors) => {
-        selectors.forEach((s) => {
-            $(s).show()
-        })
-    }
+    routeTo('#main');
 
     //Overlay-menu
     let overlayMenu = $('.overlay-menu');
 
     $(window).click(function () {
+        if (overlayMenu.hasClass('active')) {
+            $(overlayMenu).removeClass('active');
+        }
+    });
+    $('.overlay-menu button').click(function () {
         if (overlayMenu.hasClass('active')) {
             $(overlayMenu).removeClass('active');
         }
@@ -62,19 +63,37 @@ $(document).ready(function () {
 
     //Routing
     $('#home').click(() => {
-        routing('#main');
+        routeTo('#main');
     })
     $('#procurements-planned-nav-btn').click(() => {
-        routing('#procurements-planned')
+        routeTo('#procurements-planned')
     })
     $('#procurements-about-nav-btn').click(() => {
-        routing('#procurements-about')
+        routeTo('#procurements-about')
     })
     $('#agreements-nav-btn').click(() => {
-        routing('#agreements')
+        routeTo('#agreements')
+    })
+    $('#stats-nav-btn').click(() => {
+        routeTo('#stats')
+    })
+    $('#mtr-nav-btn').click(() => {
+        routeTo('#mtr')
+    })
+    $('#archive-nav-btn').click(() => {
+        routeTo('#archive')
+    })
+    $('#tt-projects-nav-btn').click(() => {
+        routeTo('#tt-projects')
     })
     $('#results-nav-btn').click(() => {
-        routing('#results')
+        routeTo('#results')
+    })
+    $('#contacts-nav-btn').click(() => {
+        routeTo('#contacts')
+    })
+    $('#contact-form-nav-btn').click(() => {
+        routeTo('#contact-form')
     })
 
 

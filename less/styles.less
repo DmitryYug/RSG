@@ -19,13 +19,16 @@
     &:first-child {
       margin-right: 150px;
     }
+
     .flex-default(start, center);
     flex-wrap: wrap;
+
     ul {
       .flex-column(start, start);
       flex-wrap: wrap;
       column-gap: 100px;
     }
+
     li {
       margin-bottom: 10px;
     }
@@ -117,7 +120,8 @@ main {
   &-container {
     width: @content-width;
     margin: 0 auto;
-    min-height: calc( 100vh - @header-height - @footer-height);
+    min-height: calc(100vh - @header-height - @footer-height);
+
     p {
       .text-props(400, 20px, 130%, @text-regular-color)
     }
@@ -861,11 +865,11 @@ main {
 
 
 //experiments
-  //#nav-more {
-  //  position: relative;
-  //  .dropdown-options {
-  //    display: none;
-  //    position: absolute;
-  //    right: 100px;
-  //  }
-  //}
+//#nav-more {
+//  position: relative;
+//  .dropdown-options {
+//    display: none;
+//    position: absolute;
+//    right: 100px;
+//  }
+//}

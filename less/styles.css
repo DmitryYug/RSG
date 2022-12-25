@@ -4,14 +4,13 @@
 }
 .header-container button {
   background-color: transparent;
-}
-.header-container .text-link {
   margin-right: 25px;
 }
 .header-nav-left-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .header-nav-left-container #nav-more {
   margin: 0;
@@ -122,7 +121,7 @@
   margin-right: 32px;
   font-family: 'avantgardectt-bold', sans-serif;
   font-weight: 600;
-  font-size-24: 14px;
+  font-size: 14px;
   line-height: 130%;
   color: #7C7F8D;
 }
@@ -236,7 +235,7 @@
 }
 .main-slider.action.counter {
   font-weight: 400;
-  font-size-24: 14px;
+  font-size: 14px;
   line-height: 115%;
   text-align: center;
   color: #2C3148;
@@ -412,28 +411,43 @@
   opacity: 0;
   width: 0;
   height: 0;
-  overflow: hidden;
-}
-.overlay-menu-container {
-  position: relative;
+  position: absolute;
+  top: 100%;
+  left: calc(100% - 34px);
+  box-sizing: border-box;
 }
 .overlay-menu.active {
   transition: opacity 1s;
   opacity: 1;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
   padding: 25px;
   width: 390px;
   height: 350px;
-  top: 100%;
-  left: 0;
   background: #FFFFFF;
   border: 1px solid #EEEFF4;
   box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
   z-index: 2;
+}
+.overlay-menu ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.overlay-menu button {
+  font-family: "Avenir Next Cyr", sans-serif;
+  font-weight: 700 !important;
+  font-size: 14px;
+  line-height: 17px;
+  color: #005D9F;
+  text-transform: uppercase;
+  margin-right: 0;
+}
+.overlay-menu li {
+  margin-bottom: 20px;
+}
+.overlay-menu li:last-child {
+  margin-bottom: 0;
 }
 .choose-client-modal-container {
   max-width: 835px;
@@ -497,10 +511,10 @@
   opacity: 1;
   margin-top: 80px;
 }
-#close-choose-site-modal {
+#close-choose-site-modal-btn {
   display: none;
 }
-#close-choose-site-modal.active {
+#close-choose-site-modal-btn.active {
   display: block;
 }
 .start-links {
