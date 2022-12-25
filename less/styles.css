@@ -500,55 +500,9 @@
   background-image: url("../images/components/img.png");
   background-size: 20px 20px;
 }
-#choose-site {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-}
-#choose-site.active {
-  transition: opacity 2s;
-  height: 100%;
-  opacity: 1;
-  margin-top: 80px;
-}
-#close-choose-site-modal-btn {
-  display: none;
-}
-#close-choose-site-modal-btn.active {
-  display: block;
-}
-.start-links {
-  font-size: 20px;
-  max-width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-.start-links .box {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-wrap: wrap;
-}
-.start-links .box:first-child {
-  margin-right: 150px;
-}
-.start-links .box ul {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  flex-wrap: wrap;
-  column-gap: 100px;
-}
-.start-links .box li {
-  margin-bottom: 10px;
+.router {
+  margin-top: 75px;
+  margin-bottom: 110px;
 }
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
@@ -633,7 +587,6 @@ main section {
 .content-container {
   width: 990px;
   margin: 0 auto;
-  min-height: calc(100vh - 90px - 360px);
 }
 .content-container p {
   font-weight: 400 !important;

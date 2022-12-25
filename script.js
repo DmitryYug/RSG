@@ -2,64 +2,22 @@ $(document).ready(function () {
 
     //variables
     const content = $('.router > div')
+    let lastVisiblePage = $('#main')
 
     //helpers
     const routeTo = (pageTitle) => {
-        $(pageTitle).fadeIn(500, () => {
-            $(pageTitle).show()
-        })
-        $(content.not(pageTitle)).fadeOut(500, () => {
-            $(content.not(pageTitle)).hide()
-        })
         if (pageTitle !== '#main') {
-            $('.background-section').fadeOut(100, () => {
-                $('.background-section').hide()
-            })
+            $('.background-section').fadeOut(500)
         } else {
-            $('.background-section').fadeIn(100, () => {
-                $('.background-section').show()
-            })
+            $('.background-section').fadeIn(500)
         }
+        $(pageTitle).fadeIn(500)
+        $(content.not(pageTitle)).fadeOut(500)
     }
+
+    //Initial transformations
     routeTo('#main');
-
-    //Overlay-menu
-    let overlayMenu = $('.overlay-menu');
-
-    $(window).click(function () {
-        if (overlayMenu.hasClass('active')) {
-            $(overlayMenu).removeClass('active');
-        }
-    });
-    $('.overlay-menu button').click(function () {
-        if (overlayMenu.hasClass('active')) {
-            $(overlayMenu).removeClass('active');
-        }
-    });
-
-    $("#nav-more").click((e) => {
-        e.stopPropagation();
-        $(overlayMenu).toggleClass('active');
-    });
-    $(overlayMenu).click(e => {
-        e.stopPropagation();
-    })
-
-    //Choose-site modal
-    // const selectorsToHideChooseSiteModal = [
-    //     '.background-section', '#main-start-article', '#main-search',
-    //     '.header-nav-left-container .text-link',
-    //     '.header-nav-right-container button:first', '.header-nav-right-container button:last'
-    // ]
-    //
-    // $('#choose-site-btn').click(() => {
-    //     hideElements(selectorsToHideChooseSiteModal)
-    //     $('#choose-site, #close-choose-site-modal').toggleClass('active');
-    // })
-    // $('#close-choose-site-modal').click(() => {
-    //     showElements(selectorsToHideChooseSiteModal)
-    //     $('#choose-site, #close-choose-site-modal').removeClass('active');
-    // })
+    $('#close-choose-site-modal-btn').hide();
 
     //Routing
     $('#home').click(() => {
@@ -96,5 +54,62 @@ $(document).ready(function () {
         routeTo('#contact-form')
     })
 
+
+    //Overlay-menu
+    let overlayMenu = $('.overlay-menu');
+
+    $(window).click(function () {
+        if (overlayMenu.hasClass('active')) {
+            $(overlayMenu).removeClass('active');
+        }
+    });
+    $('.overlay-menu button').click(function () {
+        if (overlayMenu.hasClass('active')) {
+            $(overlayMenu).removeClass('active');
+        }
+    });
+
+    $("#nav-more").click((e) => {
+        e.stopPropagation();
+        $(overlayMenu).toggleClass('active');
+    });
+    $(overlayMenu).click(e => {
+        e.stopPropagation();
+    })
+
+    //Choose-site modal
+    const hideHeaderElements = () => {
+        $('.header-nav-left-container > button').not('#home').hide(100, 0);
+        $('#contact-form-nav-btn').hide(100, 0);
+        $('#main-search').hide();
+    }
+
+    const showHeaderElements = () => {
+        $('.header-nav-left-container > button').not('#home').show(100, 0);
+        $('#contact-form-nav-btn').show();
+        $('#main-search').show();
+        $('#close-choose-site-modal-btn').hide();
+    }
+
+    const showChooseSiteModal = () => {
+        $('#choose-site').fadeIn(100);
+        $('#close-choose-site-modal-btn').show();
+    }
+
+    $('#choose-site-nav-btn').click(() => {
+        lastVisiblePage = $('.router > div:visible:last');
+        hideHeaderElements();
+
+        if ((lastVisiblePage[0].id) === 'main') {
+            $('.background-section').hide();
+        }
+        lastVisiblePage.hide();
+        showChooseSiteModal();
+    })
+
+    $('#close-choose-site-modal-btn').click(() => {
+        showHeaderElements();
+        routeTo(`#${lastVisiblePage[0].id}`);
+    });
 
 });
