@@ -4,6 +4,8 @@
 }
 .header-container button {
   background-color: transparent;
+}
+.header-container a {
   margin-right: 25px;
 }
 .header-nav-left-container {
@@ -427,7 +429,7 @@
   align-items: start;
   justify-content: space-between;
 }
-.overlay-menu button {
+.overlay-menu a {
   font-family: "Avenir Next Cyr", sans-serif;
   font-weight: 700 !important;
   font-size: 14px;

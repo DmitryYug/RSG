@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>stats</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="UTF-8">
+
+    <!--    Custom links-->
+    <link rel="stylesheet" type="text/css" href="../../less/styles.css"/>
+    <link rel="stylesheet" href="../../less/initial-styles/normalize.css"/>
+    <link rel="stylesheet" href="../../less/initial-styles/nullstyle.css"/>
+
+    <!--    Fonts-->
+    <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+
+    <script type="application/javascript" src="../../query-3.6.3.js"></script>
+    <script src="../../script.js"></script>
+</head>
+
+<body>
+
+<header>
+    <nav class="header-container">
+        <div class="header-nav-left-container">
+            <a href="main.html" id="home" class="header icon divider">
+                <img src="../../images/header/logo.png" alt="">
+            </a>
+            <a href="procurements-planned.html" id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ ЗАКУПОК</a>
+            <a href="procurements-about.html" id="procurements-about-nav-btn" class="text-link nav">ЗАКУПКИ</a>
+            <a href="agreements.html" id="agreements-nav-btn" class="text-link nav">ДОГОВРЫ</a>
+            <a id="nav-more" class="text-link nav">
+                <img class="icon size-24" src="../../images/header/dots.png" alt="">
+            </a>
+
+            <div class="overlay-menu">
+                <ul>
+                    <li>
+                        <a href="">Управление закупочной деятельностью</a>
+                    </li>
+                    <li>
+                        <a href="">Сотрудничество с смсп</a>
+                    </li>
+                    <li>
+                        <a href="results.html" id="results-nav-btn">Результаты закупок</a>
+                    </li>
+                    <li>
+                        <a href="tt-projects.html" id="tt-projects-nav-btn">Обсуждение проектов ТТ</a>
+                    </li>
+                    <li>
+                        <a href="stats.html" id="stats-nav-btn">Статистика</a>
+                    </li>
+                    <li>
+                        <a href="mtr.html" id="mtr-nav-btn">Продажи МТP</a>
+                    </li>
+                    <li>
+                        <a href="archive.html" id="archive-nav-btn">Архив</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html" id="contacts-nav-btn">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-nav-right-container">
+            <a id="contact-form-nav-btn"
+               class="header-nav-right-item divider text-link nav">
+                <img class="icon size-24" src="../../images/header/message.png" alt="message">
+                ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
+            </a>
+            <a id='choose-site-nav-btn' class="header-nav-right-item divider text-link nav">
+                <img class="icon size-24" src="../../images/header/global.png" alt="">
+                ВСЕ САЙТЫ
+            </a>
+
+            <a id="close-choose-site-modal-btn" class="header-nav-right-item">
+                <img class="icon size-24" src="../../images/header/close.png" alt="">
+            </a>
+            <button id="main-search-btn" class="header-nav-right-item">
+                <img class="icon size-24" src="../../images/header/search.png" alt="">
+            </button>
+        </div>
+        <div class="input-with-btn main-search">
+            <button class="icon size-24">
+                <img src="../../images/header/search.png" alt="">
+            </button>
+            <input id="main-search-input" placeholder="Поисковый запрос"/>
+            <button id="close-main-search-btn" class="icon size-24">
+                <img src="../../images/content/icons/clear.png" alt="">
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section>
+
+        <div class="content-container">
+
+            <div class="stats-default title-container">
+                <h2 class="text-subtitle">АО «ЦСО СШГЭС» </h2>
+                <h1 class="text-title divider">Отчетные данные</h1>
+            </div>
+
+            <ul class="card">
+                <li>
+                    <p class="card-item title">Сведения о количестве и об общей стоимости договоров, заключенных
+                        заказчиком по результатам закупки товаров, работ, услуг, в том числе об общей стоимости
+                        договоров, информация о которых не внесена в реестр договоров</p>
+                    <div class="table-container is-card-item">
+                        <table>
+                            <thead class="table-container-header">
+                            <tr>
+                                <th>Кол-во договоров</th>
+                                <th>Стоимость договоров (руб. без НДС)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2332</td>
+                                <td>21 538 267 417,69</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <p class="card-item title">Сведения об изменении цены, объема и сроков приобретаемой продукции за
+                        период с 01.01.2022 по 31.10.2022</p>
+                    <div class="table-container is-card-item first-column-bold">
+                        <table>
+                            <thead class="table-container-header">
+                            <tr>
+                                <th>Стоимость дополнительных соглашений</th>
+                                <th>Кол-во договоров</th>
+                                <th>Кол-во дополнительных соглашений</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Изменение цены</td>
+                                <td>0</td>
+                                <td>0, 00</td>
+                            </tr>
+                            <tr>
+                                <td>Изменение цены</td>
+                                <td>0</td>
+                                <td>0, 00</td>
+                            </tr>
+                            <tr>
+                                <td>Изменение цены</td>
+                                <td>0</td>
+                                <td>0, 00</td>
+                            </tr>
+                            <tr>
+                                <td>Итого</td>
+                                <td>0</td>
+                                <td>0, 00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="stats-default link-list">
+                <li>
+                    <button class="btn flex">
+                        <img class="icon size-24" src="../../images/content/icons/watch.png" alt="">
+                        <span class="text-link">Архив данных за 2021 г.</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn flex">
+                        <img class="icon size-24" src="../../images/content/icons/watch.png" alt="">
+                        <span class="text-link">Архив данных за 2020 г.</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn flex">
+                        <img class="icon size-24" src="../../images/content/icons/watch.png" alt="">
+                        <span class="text-link">Архив данных за 2019 г.</span>
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-container with-background">
+
+            <div class="footer-row divider">
+                <img class="footer-icon main" src="../../images/header/logo.png" alt="">
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 800 333 80 00</div>
+                    <div class="text-description">Многоканальный телефон</div>
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 495 122 05 55</div>
+                    <div class="text-description">Многоканальный телефон</div>
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 800 555 99 97</div>
+                    <div class="text-description">«Горячая линия» для акционеров</div>
+                </div>
+            </div>
+
+            <div class="footer-row divider">
+                <img class="footer-icon" src="../../images/footer/eais.png" alt=""/>
+                <img class="footer-icon" src="../../images/footer/roseltorh.png" alt=""/>
+                <img class="footer-icon" src="../../images/footer/rad.png" alt=""/>
+            </div>
+
+            <div class="footer-row">
+                <span class="text-description">
+                    127006, Москва, ул. Малая Дмитровка, д.7
+                </span>
+                <span class="text-description">
+                    117393, Москва, ул. Архитектора Власова, д.51
+                </span>
+            </div>
+
+        </div>
+
+        <div class="footer-row no-background">
+            <div class="copyright">© ПАО «РусГидро» 2006-2022</div>
+            <a class="disclaimer">
+                Уведомление об ответственности и праве интеллектуальной собственности
+            </a>
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>

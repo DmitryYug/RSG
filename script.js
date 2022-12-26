@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 //Variables
-    const content = $('.router > div');
     let lastVisiblePage = $('#main');
     let overlayMenu = $('.overlay-menu');
     let mainSearchInputBlock = $('.main-search');
@@ -25,17 +24,6 @@ $(document).ready(function () {
         $('#main-search-btn').hide();
     };
 
-    const routeTo = (pageTitle) => {
-        if (pageTitle === '#main') {
-            $('.background-section').fadeIn(500);
-            showHeaderElementsForModal();
-        } else {
-            $('.background-section').fadeOut(500);
-        }
-        $(pageTitle).fadeIn(500)
-        $(content.not(pageTitle)).fadeOut(500)
-    };
-
     const hideOnOutsideClick = () => {
         hideOnOutsideClickElements.forEach(element => {
             element.hide();
@@ -46,7 +34,6 @@ $(document).ready(function () {
     hideOnInitialLoadElements.forEach(element => {
         element.hide();
     })
-    routeTo('#main');
 
     $('#close-choose-site-modal-btn').hide().click(() => {
         showHeaderElementsForModal();
@@ -60,40 +47,6 @@ $(document).ready(function () {
         }
     });
 
-//Routing
-    $('#home').click(() => {
-        routeTo('#main');
-    })
-    $('#procurements-planned-nav-btn').click(() => {
-        routeTo('#procurements-planned')
-    })
-    $('#procurements-about-nav-btn').click(() => {
-        routeTo('#procurements-about')
-    })
-    $('#agreements-nav-btn').click(() => {
-        routeTo('#agreements')
-    })
-    $('#stats-nav-btn').click(() => {
-        routeTo('#stats')
-    })
-    $('#mtr-nav-btn').click(() => {
-        routeTo('#mtr')
-    })
-    $('#archive-nav-btn').click(() => {
-        routeTo('#archive')
-    })
-    $('#tt-projects-nav-btn').click(() => {
-        routeTo('#tt-projects')
-    })
-    $('#results-nav-btn').click(() => {
-        routeTo('#results')
-    })
-    $('#contacts-nav-btn').click(() => {
-        routeTo('#contacts')
-    })
-    $('#contact-form-nav-btn').click(() => {
-        routeTo('#contact-form')
-    })
 
 //Overlay-menu
     $("#nav-more").click((e) => {
