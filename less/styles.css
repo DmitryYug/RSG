@@ -149,7 +149,7 @@
 .main-start.background-section {
   width: 100%;
   height: 400px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 70.02%, rgba(0, 0, 0, 0.72) 100%), url('../images/content/main/main-background.png');
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 70.02%, rgba(0, 0, 0, 0.72) 100%), url('/images/content/main/main-background.png');
   background-size: cover;
   margin-bottom: 65px;
   margin-top: 0;
@@ -448,6 +448,12 @@
   box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
   border-radius: 4px;
   overflow-y: scroll;
+  position: absolute;
+  margin: auto;
+  bottom: 10%;
+  left: 25%;
+  z-index: 2;
+  background-color: white;
 }
 .choose-client-modal.header {
   display: flex;
@@ -471,10 +477,15 @@
   background-color: transparent;
 }
 .dropdown-options {
-  width: 360px;
+  width: 100%;
   height: 275px;
   overflow-y: scroll;
   overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 2;
+  background-color: white;
 }
 .dropdown-options li {
   font-weight: 400 !important;
@@ -483,6 +494,18 @@
   color: #2C3148;
   padding: 15px 0 15px 40px;
   position: relative;
+  cursor: pointer;
+}
+.dropdown-options li:hover:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/components/done.png");
+  background-size: 20px 20px;
+  opacity: 0.5;
+  z-index: 2;
 }
 .dropdown-options li.chosen:before {
   content: '';
@@ -490,8 +513,9 @@
   left: 10px;
   width: 20px;
   height: 20px;
-  background-image: url("../images/components/img.png");
+  background-image: url("../images/components/done.png");
   background-size: 20px 20px;
+  z-index: 2;
 }
 .router {
   margin-top: 75px;
@@ -862,6 +886,7 @@ main section {
   border: 1px solid #D6D8E0;
   border-radius: 2px;
   background-color: white;
+  position: relative;
 }
 .input-with-btn #from-date-about,
 .input-with-btn #from-date-planned,
@@ -870,10 +895,15 @@ main section {
 .input-with-btn #to-date-planned,
 .input-with-btn #to-price-about,
 .input-with-btn #client-about,
-.input-with-btn #client-planned {
+.input-with-btn #client-planned,
+.input-with-btn #form-input-procurement-type,
+.input-with-btn #changes-period {
   border: none;
   width: 100%;
   padding: 5px;
+}
+.input-with-btn.is-select input {
+  cursor: pointer;
 }
 .input-with-btn.main-search {
   border: none;
@@ -920,14 +950,14 @@ main section {
 .form-container.contact {
   width: 820px;
 }
-.form-container span {
+.form-container button {
   font-weight: 700 !important;
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
   color: #005D9F;
 }
-.form-container span.clear {
+.form-container button.clear {
   color: grey;
 }
 .form-container-disclaimer {
@@ -989,6 +1019,9 @@ main section {
   margin-bottom: 10px;
   position: relative;
 }
+.form-container-body .item .input-with-btn {
+  width: 60%;
+}
 .form-container-body .item input,
 .form-container-body .item select {
   height: 50px;
@@ -1005,6 +1038,7 @@ main section {
   border-radius: 2px;
 }
 .form-container-body .item a {
+  margin-left: 10px;
   text-decoration: underline;
   text-align: left;
 }

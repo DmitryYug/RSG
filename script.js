@@ -4,7 +4,12 @@ $(document).ready(function () {
     const content = $('.router > div');
     let lastVisiblePage = $('#main');
     let overlayMenu = $('.overlay-menu');
-    let mainSearchInput = $('.main-search');
+    let mainSearchInputBlock = $('.main-search');
+    let dropdownOptions = $('.dropdown-options');
+    let chooseClientModal = $('.choose-client-modal-container');
+    let collapseFilerBtn = $('#form-filter-collapse-btn');
+    let hideOnInitialLoadElements = [overlayMenu, mainSearchInputBlock, dropdownOptions, collapseFilerBtn, chooseClientModal]
+    let hideOnOutsideClickElements = [overlayMenu, mainSearchInputBlock, dropdownOptions, collapseFilerBtn, chooseClientModal]
 
 //Helpers
     const showHeaderElementsForModal = () => {
@@ -12,13 +17,13 @@ $(document).ready(function () {
         $('#contact-form-nav-btn').show();
         $('#main-search-btn').show();
         $('#close-choose-site-modal-btn').hide();
-    }
+    };
 
     const hideHeaderElementsForModal = () => {
         $('.header-nav-left-container > button').not('#home').hide(100, 0);
         $('#contact-form-nav-btn').hide(100, 0);
         $('#main-search-btn').hide();
-    }
+    };
 
     const routeTo = (pageTitle) => {
         if (pageTitle === '#main') {
@@ -29,33 +34,31 @@ $(document).ready(function () {
         }
         $(pageTitle).fadeIn(500)
         $(content.not(pageTitle)).fadeOut(500)
-    }
+    };
+
+    const hideOnOutsideClick = () => {
+        hideOnOutsideClickElements.forEach(element => {
+            element.hide();
+        })
+    };
 
 //Initial transformations
-
+    hideOnInitialLoadElements.forEach(element => {
+        element.hide();
+    })
     routeTo('#main');
-    overlayMenu.hide();
-    $('#form-filter-collapse-btn').hide();
-
-
 
     $('#close-choose-site-modal-btn').hide().click(() => {
         showHeaderElementsForModal();
         routeTo(`#${lastVisiblePage[0].id}`);
     });
 
-    mainSearchInput.hide();
-
-    $(window).click(function () {
-        if (overlayMenu.css('display') !== 'none') {
-            overlayMenu.hide();
-        }
-        if (mainSearchInput.css('display') !== 'none') {
-            mainSearchInput.hide();
+    $(window).click(() => {
+        hideOnOutsideClick();
+        if (mainSearchInputBlock.css('display') === 'none') {
             $('.header-nav-right-container').show();
         }
     });
-
 
 //Routing
     $('#home').click(() => {
@@ -91,7 +94,6 @@ $(document).ready(function () {
     $('#contact-form-nav-btn').click(() => {
         routeTo('#contact-form')
     })
-
 
 //Overlay-menu
     $("#nav-more").click((e) => {
@@ -130,41 +132,57 @@ $(document).ready(function () {
     $('#main-search-btn').click((e) => {
         e.stopPropagation();
         $('.header-nav-right-container').hide();
-        mainSearchInput.show();
+        mainSearchInputBlock.show();
     })
     $('#close-main-search-btn').click(() => {
         $('.header-nav-right-container').show();
-        mainSearchInput.hide();
+        mainSearchInputBlock.hide();
     })
     $('#main-search-input')
-    mainSearchInput.click((e) => {
+    mainSearchInputBlock.click((e) => {
         e.stopPropagation();
     })
 
-
 //Form-filter
-
-    $('#form-filter-expand-btn').click( function() {
+    $('#form-filter-expand-btn').click(function () {
         $('.form-container-header').addClass('divider')
         $('#form-filter-clear-btn').show();
 
         $('#procurements-planned .form-container-body').slideDown(500, () => {
             $(this).hide();
-            $('#form-filter-collapse-btn').show();
+            collapseFilerBtn.show();
         });
 
     })
 
-    $('#form-filter-collapse-btn').click( function() {
+    collapseFilerBtn.click(function () {
         $('#procurements-planned .form-container-body').slideUp(500, () => {
             $(this).hide();
             $('#form-filter-clear-btn').hide();
             $('#form-filter-expand-btn').show();
             $('.form-container-header').removeClass('divider');
         });
-
     })
 
+//Dropdown options
+    $('.input-with-btn.is-select').click(function (e) {
+        e.stopPropagation();
+        $(this).children('.dropdown-options').slideDown(500);
+    })
+
+    $('.dropdown-options  li').click(function (e) {
+        e.stopPropagation();
+        $(this).addClass('chosen');
+        $('.dropdown-options li').not(this).removeClass('chosen');
+    });
+
+//Modal choose client
+    $('.input-with-btn.client').click(function() {
+        console.log('clicked')
+        chooseClientModal.show();
+        // $('body').not('.choose-client-modal-container').fadeTo(500, 0.3);
+
+    })
 
 });
 

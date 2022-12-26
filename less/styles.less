@@ -379,29 +379,40 @@ main {
 }
 
 .input-with-btn {
+
   .flex-default(center, end);
   height: 100%;
   border: 1px solid #D6D8E0;
   border-radius: 2px;
   background-color: white;
+  position: relative;
 
   #from-date-about, #from-date-planned, #from-price-about,
   #to-date-about, #to-date-planned, #to-price-about,
-  #client-about, #client-planned,{
+  #client-about, #client-planned, #form-input-procurement-type,
+  #changes-period {
     border: none;
     width: 100%;
     padding: 5px;
   }
 
+  &.is-select {
+    input {
+      cursor: pointer;
+    }
+  }
+
   &.main-search {
     border: none;
-    border-bottom: 1px solid #7C7F8D ;
+    border-bottom: 1px solid #7C7F8D;
     width: 405px;
     height: 35px;
 
     justify-items: stretch;
+
     input {
       width: 100%;
+
       &::placeholder {
         .text-props(400, 16px, 130%, @text-regular-color)
       }
@@ -443,7 +454,7 @@ main {
     width: 820px;
   }
 
-  span {
+  button {
     .text-props(700, 14px, 17px, @background-dark);
     text-transform: uppercase;
     color: @background-dark;
@@ -471,12 +482,15 @@ main {
       &.btn-clear {
         display: none;
       }
+
       background-color: transparent;
     }
   }
 
   &-body {
+
     display: none;
+
     &-message-sent {
       .flex-column(center, center);
       padding: 85px 0;
@@ -493,6 +507,9 @@ main {
       margin-bottom: 10px;
       position: relative;
 
+      .input-with-btn {
+        width: 60%;
+      }
 
       input, select {
         height: 50px;
@@ -511,6 +528,7 @@ main {
       }
 
       a {
+        margin-left: 10px;
         text-decoration: underline;
         text-align: left;
       }

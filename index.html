@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
 
     <!--    Custom links-->
-    <link rel="stylesheet" type="text/css" href="/less/styles.css"/>
-    <link rel="stylesheet" href="/less/initial-styles/normalize.css"/>
-    <link rel="stylesheet" href="/less/initial-styles/nullstyle.css"/>
+    <link rel="stylesheet" type="text/css" href="less/styles.css"/>
+    <link rel="stylesheet" href="less/initial-styles/normalize.css"/>
+    <link rel="stylesheet" href="less/initial-styles/nullstyle.css"/>
 
     <!--    Fonts-->
     <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
 
-    <script type="application/javascript" src="/query-3.6.3.js"></script>
-    <script src="/script.js"></script>
+    <script type="application/javascript" src="query-3.6.3.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -23,15 +23,14 @@
     <nav class="header-container">
         <div class="header-nav-left-container">
             <button id="home" class="header icon divider">
-                <img src="/images/header/logo.png" alt="">
+                <img src="images/header/logo.png" alt="">
             </button>
             <button id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ ЗАКУПОК</button>
             <button id="procurements-about-nav-btn" class="text-link nav">ЗАКУПКИ</button>
             <button id="agreements-nav-btn" class="text-link nav">ДОГОВРЫ</button>
             <button id="nav-more" class="text-link nav">
-                <img class="icon size-24" src="/images/header/dots.png" alt="">
+                <img class="icon size-24" src="images/header/dots.png" alt="">
             </button>
-
             <div class="overlay-menu">
                 <ul>
                     <li>
@@ -60,34 +59,33 @@
                     </li>
                 </ul>
             </div>
-
         </div>
 
         <div class="header-nav-right-container">
             <button id="contact-form-nav-btn"
                     class="header-nav-right-item divider text-link nav">
-                <img class="icon size-24" src="/images/header/message.png" alt="message">
+                <img class="icon size-24" src="images/header/message.png" alt="message">
                 ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
             </button>
             <button id='choose-site-nav-btn' class="header-nav-right-item divider text-link nav">
-                <img class="icon size-24" src="/images/header/global.png" alt="">
+                <img class="icon size-24" src="images/header/global.png" alt="">
                 ВСЕ САЙТЫ
             </button>
 
             <button id="close-choose-site-modal-btn" class="header-nav-right-item">
-                <img class="icon size-24" src="/images/header/close.png" alt="">
+                <img class="icon size-24" src="images/header/close.png" alt="">
             </button>
             <button id="main-search-btn" class="header-nav-right-item">
-                <img class="icon size-24" src="/images/header/search.png" alt="">
+                <img class="icon size-24" src="images/header/search.png" alt="">
             </button>
         </div>
         <div class="input-with-btn main-search">
             <button class="icon size-24">
-                <img src="/images/header/search.png" alt="">
+                <img src="images/header/search.png" alt="">
             </button>
             <input id="main-search-input" placeholder="Поисковый запрос"/>
             <button id="close-main-search-btn" class="icon size-24">
-                <img src="/images/content/icons/clear.png" alt="">
+                <img src="images/content/icons/clear.png" alt="">
             </button>
         </div>
     </nav>
@@ -119,7 +117,7 @@
                         закупочной деятельности»
                         <a class="text-link underline">https://zakupki.rushydro.ru/PublicContent/Section/6</a>
                         <span>
-                <img class="icon size-24" src="/images/content/icons/redirect.png" alt="">
+                <img class="icon size-24" src="images/content/icons/redirect.png" alt="">
             </span>
                     </p>
                     <br>
@@ -147,17 +145,17 @@
                         закупке, на официальном сайте РФ
                         <a class="text-link underline">www.zakupki.gov.ru</a>
                         <span>
-                <img class="icon size-24" src="/images/content/icons/redirect.png" alt="">
+                <img class="icon size-24" src="images/content/icons/redirect.png" alt="">
             </span>, а также на сайте Общества
                         <a class="text-link underline">www.rushydro.ru</a>,
                         и электронных торговых площадок
                         <a class="text-link underline">www.roseltorg.ru</a>
                         <span>
-                <img class="icon size-24" src="/images/content/icons/redirect.png" alt="">
+                <img class="icon size-24" src="images/content/icons/redirect.png" alt="">
             </span>
                         <a class="text-link underline">www.lot-online.ru</a>
                         <span>
-                <img class="icon size-24" src="/images/content/icons/redirect.png" alt="">
+                <img class="icon size-24" src="images/content/icons/redirect.png" alt="">
             </span>
                     </p>
                     <br>
@@ -172,7 +170,7 @@
                     </p>
                 </article>
                 <div class="main-start-picture">
-                    <img src="/images/content/main/main-article-picture.png" alt="">
+                    <img src="images/content/main/main-article-picture.png" alt="">
                 </div>
             </div>
         </div>
@@ -293,20 +291,111 @@
             </div>
 
                 <div class="content-container form-container">
+
+                    <div class="choose-client-modal-container">
+                        <div class="choose-client-modal header">
+                            <div class="choose-client-modal header-title">
+                                Выберите заказчика
+                            </div>
+                            <button class="icon size-24">
+                                <img src="images/components/close.png"/>
+                            </button>
+                        </div>
+                        <div class="choose-client-modal search">
+                            <div class="input-with-btn search">
+                                <div class="icon size-16">
+                                    <img src="images/components/search.png" alt="">
+                                </div>
+                                <input id="search" placeholder="Поик">
+                            </div>
+                        </div>
+                        <div class="table-container choose-client-modal">
+                            <table>
+                                <thead class="table-container-header">
+                                <tr>
+                                    <th>Полное наименование</th>
+                                    <th>Краткое наименование</th>
+                                    <th>ИНН</th>
+                                    <th>КПП</th>
+                                    <th>ОГРН</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                <tr>
+                                    <td>Ационерное общество “Богучанская ГЭС”</td>
+                                    <td>АО “Богучанская ГЭС”</td>
+                                    <td>2420002597</td>
+                                    <td>242001001</td>
+                                    <td>1022400828119</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                     <div class="form-container-header">
 
                         <button id="form-filter-collapse-btn" class="btn-filter">
                             <span>фильтры</span>
-                            <img class="icon size-24" src="/images/content/icons/arrow-up.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/arrow-up.png" alt="">
                         </button>
 
                         <button id="form-filter-expand-btn" class="btn-filter">
                             <span>фильтры</span>
-                            <img class="icon size-24" src="/images/content/icons/arrow-down.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/arrow-down.png" alt="">
                         </button>
 
-                        <button id="form-filter-clear-btn" class="btn-clear">
-                            <span class="clear">очистить</span>
+                        <button id="form-filter-clear-btn" class="btn-clear clear">
+                            <span>очистить</span>
                         </button>
                     </div>
 
@@ -315,7 +404,28 @@
                             <div class="item">
                                 <label for="changes-period">Период внесения сведений</label>
                                 <div class="item flex">
-                                    <select id="changes-period"></select>
+
+                                    <div class="input-with-btn is-select">
+                                        <input id="changes-period">
+                                        <img class="icon size-16" src="images/content/icons/arrow-down.png" alt="form-input-procurement-type">
+                                        <div class="dropdown-options">
+                                            <ul>
+                                                <li>
+                                                    <span>2020</span>
+                                                </li>
+                                                <li class="chosen">
+                                                    <span>2021</span>
+                                                </li>
+                                                <li>
+                                                    <span>2022</span>
+                                                </li>
+                                                <li>
+                                                    <span>2023</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
                                     <a href="">Выгрузить план закупки по Группе РусГидро за указанный год</a>
                                 </div>
                             </div>
@@ -325,11 +435,10 @@
                                 <div class="input-with-btn client">
                                     <input id="client-planned">
                                     <button class="icon size-16">
-                                        ...
+                                        <img class="icon size-24" src="images/header/dots.png" alt="">
                                     </button>
                                 </div>
                             </div>
-
                             <div class="item">
                                 <label for="plan-title">Наименование плана</label>
                                 <input id="plan-title">
@@ -346,8 +455,37 @@
                             </div>
 
                             <div class="item">
-                                <label for="type">Вид</label>
-                                <select id="type"></select>
+                                <label for="form-input-procurement-type">Вид</label>
+                                <div class="input-with-btn is-select">
+                                    <input id="form-input-procurement-type">
+                                    <img class="icon size-16" src="images/content/icons/arrow-down.png" alt="form-input-procurement-type">
+                                    <div class="dropdown-options">
+                                        <ul>
+                                            <li>
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                            <li class="chosen">
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="item">
@@ -357,14 +495,14 @@
                                     <div class="input-with-btn calendar">
                                         <input id="from-date-planned">
                                         <button class="icon size-16">
-                                            <img src="/images/content/icons/calendar.png" alt="">
+                                            <img src="images/content/icons/calendar.png" alt="">
                                         </button>
                                     </div>
                                     <label for="to-date-planned">по</label>
                                     <div class="input-with-btn calendar">
                                         <input id="to-date-planned">
                                         <button class="icon size-16">
-                                            <img src="/images/content/icons/calendar.png" alt="">
+                                            <img src="images/content/icons/calendar.png" alt="">
                                         </button>
                                     </div>
 
@@ -404,12 +542,12 @@
                         <td class="cell-flex-col">
                             <span>889</span>
                             <button class="btn-list">
-                                <img src="../../../../images/content/icons/list-btn.png" alt="">
+                                <img src="images/content/icons/list-btn.png" alt="">
                             </button>
                         </td>
                         <td>
                             <button class="btn-download">
-                                <img src="../../../../images/content/icons/download-btn.png" alt="">
+                                <img src="images/content/icons/download-btn.png" alt="">
                             </button>
                         </td>
                     </tr>
@@ -423,13 +561,13 @@
                         <td class="cell-flex-col">
                             <span>889</span>
                             <button>
-                                <img src="../../../../images/content/icons/list-btn.png" alt=""
+                                <img src="images/content/icons/list-btn.png" alt=""
                                      class="btn-list">
                             </button>
                         </td>
                         <td>
                             <button class="btn-download">
-                                <img src="../../../../images/content/icons/download-btn.png" alt="">
+                                <img src="images/content/icons/download-btn.png" alt="">
                             </button>
                         </td>
                     </tr>
@@ -443,12 +581,12 @@
                         <td class="cell-flex-col">
                             <span>889</span>
                             <button class="btn-list">
-                                <img src="../../../../images/content/icons/list-btn.png" alt="">
+                                <img src="images/content/icons/list-btn.png" alt="">
                             </button>
                         </td>
                         <td>
                             <button class="btn-download">
-                                <img src="../../../../images/content/icons/download-btn.png" alt="">
+                                <img src="images/content/icons/download-btn.png" alt="">
                             </button>
                         </td>
                     </tr>
@@ -462,12 +600,12 @@
                         <td class="cell-flex-col">
                             <span>889</span>
                             <button class="btn-list">
-                                <img src="../../../../images/content/icons/list-btn.png" alt="">
+                                <img src="images/content/icons/list-btn.png" alt="">
                             </button>
                         </td>
                         <td>
                             <button class="btn-download">
-                                <img src="../../../../images/content/icons/download-btn.png" alt="">
+                                <img src="images/content/icons/download-btn.png" alt="">
                             </button>
                         </td>
                     </tr>
@@ -481,12 +619,12 @@
                         <td class="cell-flex-col">
                             <span>889</span>
                             <button class="btn-list">
-                                <img src="../../../../images/content/icons/list-btn.png" alt="">
+                                <img src="images/content/icons/list-btn.png" alt="">
                             </button>
                         </td>
                         <td>
                             <button class="btn-download">
-                                <img src="../../../../images/content/icons/download-btn.png" alt="">
+                                <img src="images/content/icons/download-btn.png" alt="">
                             </button>
                         </td>
                     </tr>
@@ -500,12 +638,12 @@
                         <td class="cell-flex-col">
                             <span>889</span>
                             <button class="btn-list">
-                                <img src="../../../../images/content/icons/list-btn.png" alt="">
+                                <img src="images/content/icons/list-btn.png" alt="">
                             </button>
                         </td>
                         <td>
                             <button class="btn-download">
-                                <img src="../../../../images/content/icons/download-btn.png" alt="">
+                                <img src="images/content/icons/download-btn.png" alt="">
                             </button>
                         </td>
                     </tr>
@@ -533,13 +671,13 @@
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="/images/content/icons/arrow-right.png"
+                         src="images/content/icons/arrow-right.png"
                          alt=""
                     >
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="/images/content/icons/double-arrow-right.png"
+                         src="images/content/icons/double-arrow-right.png"
                          alt=""
                     >
                 </button>
@@ -558,7 +696,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Ссылка на реестр закупок АО “ЦСО СШГЭС” в ЕИС</span>
                             </div>
@@ -566,7 +704,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Уведомление о внесении изменений в конкурс в электронной форме по лотам №1–ДКУиО–2019–ЦЕНТР и №3–ДКУиО-2019-ЦЕНТР</span>
                             </div>
@@ -574,7 +712,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Протокол переторжки по конкурсу на поставку оборудования для интеллектуальных систем учета (ИСУ)</span>
                             </div>
@@ -582,7 +720,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Протокол заседания комиссии по выбору победителя закупки на право заключения договора на поставку оборудования для интеллектуальных систем учета (ИСУ)</span>
                             </div>
@@ -590,7 +728,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Протокол заседания закупочной комиссии от 10.08.2022 №7/Р</span>
                             </div>
@@ -602,7 +740,7 @@
                         <button class="procurements-planned btn-filter">
                             <span>фильтры</span>
                             <div class="icon expand">
-                                <img src="../../../../images/content/icons/arrow-up.png" alt="">
+                                <img src="images/content/icons/arrow-up.png" alt="">
                             </div>
                         </button>
                         <button class="procurements-planned btn-clear">
@@ -632,7 +770,7 @@
                                 <div class="input-with-btn client">
                                     <input id="client-about">
                                     <button class="icon size-16">
-                                        <img src="../../../../images/content/icons/clear.png" alt="">
+                                        <img src="images/content/icons/clear.png" alt="">
                                     </button>
                                     <button class="icon size-16">
                                         ...
@@ -647,14 +785,14 @@
                                     <div class="input-with-btn calendar">
                                         <input id="from-date-about">
                                         <button class="icon size-16">
-                                            <img src="../../../../images/content/icons/calendar.png" alt="">
+                                            <img src="images/content/icons/calendar.png" alt="">
                                         </button>
                                     </div>
                                     <label for="to-date-about">по</label>
                                     <div class="input-with-btn calendar">
                                         <input id="to-date-about">
                                         <button class="icon size-16">
-                                            <img src="../../../../images/content/icons/calendar.png" alt="">
+                                            <img src="images/content/icons/calendar.png" alt="">
                                         </button>
                                     </div>
                                 </div>
@@ -667,14 +805,14 @@
                                     <div class="input-with-btn calendar">
                                         <input id="from-price-about">
                                         <button class="icon size-16">
-                                            <img src="../../../../images/content/icons/calendar.png" alt="">
+                                            <img src="images/content/icons/calendar.png" alt="">
                                         </button>
                                     </div>
                                     <label for="to-price-about">по</label>
                                     <div class="input-with-btn calendar">
                                         <input id="to-price-about">
                                         <button class="icon size-16">
-                                            <img src="../../../../images/content/icons/calendar.png" alt="">
+                                            <img src="images/content/icons/calendar.png" alt="">
                                         </button>
                                     </div>
                                 </div>
@@ -713,12 +851,12 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <span>16.08.2022 11:33:40</span>
                             <button class="btn-o-zakupke">
-                                <img src="../../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>001–ПРО ДЭК-2022-ЦСО</td>
@@ -744,12 +882,12 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <span>16.08.2022 11:33:40</span>
                             <button class="btn-o-zakupke">
-                                <img src="../../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>001–ПРО ДЭК-2022-ЦСО</td>
@@ -775,12 +913,12 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <span>16.08.2022 11:33:40</span>
                             <button class="btn-o-zakupke">
-                                <img src="../../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>001–ПРО ДЭК-2022-ЦСО</td>
@@ -806,12 +944,12 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <span>16.08.2022 11:33:40</span>
                             <button class="btn-o-zakupke">
-                                <img src="../../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>001–ПРО ДЭК-2022-ЦСО</td>
@@ -849,7 +987,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Ссылка на реестр договоров, заключенных по результатам закупок АО “ЦСО СШГЭС” в ЕИС</span>
                             </div>
@@ -857,7 +995,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Договор №20 РТК 001 от 01.01.2020</span>
                             </div>
@@ -865,7 +1003,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Договор №20 РТК 001 от 01.01.2020</span>
                             </div>
@@ -873,7 +1011,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Договор №20 РТК 001 от 01.01.2020</span>
                             </div>
@@ -881,7 +1019,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Сведения о договоре 1060-15-10-2019</span>
                             </div>
@@ -894,7 +1032,7 @@
                         <button class="procurements-planned btn-filter">
                             <span>фильтры</span>
                             <div class="icon size-24">
-                                <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                <img src="images/content/icons/arrow-down.png" alt="">
                             </div>
                         </button>
                     </div>
@@ -922,11 +1060,11 @@
                             <div class="cell-flex">
                                 <button class="btn wrap">528011082002200006940000</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/docs.png" alt="">
+                                <img src="images/content/icons/docs.png" alt="">
                             </button>
                         </td>
                         <td>АО “ДРСК”</td>
@@ -945,7 +1083,7 @@
                         <td>Протокол, составленный по результатам закупки №1 от 07.11.2022</td>
                         <td class="cell-flex">
                             <button class="procurements-about icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button>
                                 Дог 1038 от 18-11-2022 Позитроника Материалы на 2023.pdf
@@ -957,11 +1095,11 @@
                             <div class="cell-flex">
                                 <button class=" btn wrap">528011082002200006940000</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/docs.png" alt="">
+                                <img src="images/content/icons/docs.png" alt="">
                             </button>
                         </td>
                         <td>АО “ДРСК”</td>
@@ -980,7 +1118,7 @@
                         <td>Протокол, составленный по результатам закупки №1 от 07.11.2022</td>
                         <td class="cell-flex">
                             <button class="procurements-about icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button>
                                 Дог 1038 от 18-11-2022 Позитроника Материалы на 2023.pdf
@@ -992,11 +1130,11 @@
                             <div class="cell-flex">
                                 <button class="btn wrap">528011082002200006940000</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/docs.png" alt="">
+                                <img src="images/content/icons/docs.png" alt="">
                             </button>
                         </td>
                         <td>АО “ДРСК”</td>
@@ -1015,7 +1153,7 @@
                         <td>Протокол, составленный по результатам закупки №1 от 07.11.2022</td>
                         <td class="cell-flex">
                             <button class="procurements-about icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button>
                                 Дог 1038 от 18-11-2022 Позитроника Материалы на 2023.pdf
@@ -1027,11 +1165,11 @@
                             <div class="cell-flex">
                                 <button class="btn wrap">528011082002200006940000</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/docs.png" alt="">
+                                <img src="images/content/icons/docs.png" alt="">
                             </button>
                         </td>
                         <td>АО “ДРСК”</td>
@@ -1050,7 +1188,7 @@
                         <td>Протокол, составленный по результатам закупки №1 от 07.11.2022</td>
                         <td class="cell-flex">
                             <button class="procurements-about icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button>
                                 Дог 1038 от 18-11-2022 Позитроника Материалы на 2023.pdf
@@ -1084,13 +1222,13 @@
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="../../../images/content/icons/arrow-right.png"
+                         src="images/content/icons/arrow-right.png"
                          alt=""
                     >
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="../../../images/content/icons/double-arrow-right.png"
+                         src="images/content/icons/double-arrow-right.png"
                          alt=""
                     >
                 </button>
@@ -1168,19 +1306,19 @@
                 <ul class="stats-default link-list">
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/watch.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/watch.png" alt="">
                             <span class="text-link">Архив данных за 2021 г.</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/watch.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/watch.png" alt="">
                             <span class="text-link">Архив данных за 2020 г.</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/watch.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/watch.png" alt="">
                             <span class="text-link">Архив данных за 2019 г.</span>
                         </button>
                     </li>
@@ -1202,7 +1340,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Ссылка на реестр завершенных закупок АО “ЦСО СШГЭС” в ЕИС</span>
                             </div>
@@ -1210,7 +1348,7 @@
                         <li>
                             <div class="accordion-item header">
                                 <button class="icon size-24">
-                                    <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                    <img src="images/content/icons/arrow-down.png" alt="">
                                 </button>
                                 <span>Итоговый протокол по лоту №7-ЭКСП-ДИТ-2019-ИА</span>
                             </div>
@@ -1241,11 +1379,11 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -1271,11 +1409,11 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -1301,11 +1439,11 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -1331,11 +1469,11 @@
                             <div class="cell-flex">
                                 <button>32211623062</button>
                                 <button class="procurements-about icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                             <button class="btn-o-zakupke">
-                                <img src="../../../images/content/icons/o-zakupke.png" alt="">
+                                <img src="images/content/icons/o-zakupke.png" alt="">
                             </button>
                         </td>
                         <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -1382,13 +1520,13 @@
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="../../../images/content/icons/arrow-right.png"
+                         src="images/content/icons/arrow-right.png"
                          alt=""
                     >
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="../../../images/content/icons/double-arrow-right.png"
+                         src="images/content/icons/double-arrow-right.png"
                          alt=""
                     >
                 </button>
@@ -1408,7 +1546,7 @@
                         <button class="btn-filter">
                             <span>фильтры</span>
                             <div class="icon size-24">
-                                <img src="../../../images/content/icons/arrow-down.png" alt="">
+                                <img src="images/content/icons/arrow-down.png" alt="">
                             </div>
                         </button>
                     </div>
@@ -1441,7 +1579,7 @@
                         <td>
                             <div class="cell-flex">
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                    <img src="images/content/icons/watch.png" alt="">
                                 </button>
                                 <button>
                                     1-ТМЦ-2018-НижГЭС
@@ -1454,7 +1592,7 @@
                                     невостребованных ТМЦ
                                 </button>
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                         </td>
@@ -1467,7 +1605,7 @@
                         <td>19.07.2018 13:00:00</td>
                         <td class="cell-flex">
                             <button class="icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button class="table-container small">
                                 Подписан протокол о выборе победителей
@@ -1480,7 +1618,7 @@
                         <td>
                             <div class="cell-flex">
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                    <img src="images/content/icons/watch.png" alt="">
                                 </button>
                                 <button>
                                     1-ТМЦ-2018-НижГЭС
@@ -1493,7 +1631,7 @@
                                     невостребованных ТМЦ
                                 </button>
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                         </td>
@@ -1506,7 +1644,7 @@
                         <td>19.07.2018 13:00:00</td>
                         <td class="cell-flex">
                             <button class="icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button class="table-container small">
                                 Подписан протокол о выборе победителей
@@ -1519,7 +1657,7 @@
                         <td>
                             <div class="cell-flex">
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                    <img src="images/content/icons/watch.png" alt="">
                                 </button>
                                 <button>
                                     1-ТМЦ-2018-НижГЭС
@@ -1532,7 +1670,7 @@
                                     невостребованных ТМЦ
                                 </button>
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                         </td>
@@ -1545,7 +1683,7 @@
                         <td>19.07.2018 13:00:00</td>
                         <td class="cell-flex">
                             <button class="icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button class="table-container small">
                                 Подписан протокол о выборе победителей
@@ -1558,7 +1696,7 @@
                         <td>
                             <div class="cell-flex">
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                    <img src="images/content/icons/watch.png" alt="">
                                 </button>
                                 <button>
                                     1-ТМЦ-2018-НижГЭС
@@ -1571,7 +1709,7 @@
                                     невостребованных ТМЦ
                                 </button>
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                         </td>
@@ -1584,7 +1722,7 @@
                         <td>19.07.2018 13:00:00</td>
                         <td class="cell-flex">
                             <button class="icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button class="table-container small">
                                 Подписан протокол о выборе победителей
@@ -1597,7 +1735,7 @@
                         <td>
                             <div class="cell-flex">
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/watch.png" alt="">
+                                    <img src="images/content/icons/watch.png" alt="">
                                 </button>
                                 <button>
                                     1-ТМЦ-2018-НижГЭС
@@ -1610,7 +1748,7 @@
                                     невостребованных ТМЦ
                                 </button>
                                 <button class="icon size-20">
-                                    <img src="../../../images/content/icons/new-tab.png" alt="">
+                                    <img src="images/content/icons/new-tab.png" alt="">
                                 </button>
                             </div>
                         </td>
@@ -1623,7 +1761,7 @@
                         <td>19.07.2018 13:00:00</td>
                         <td class="cell-flex">
                             <button class="icon size-20">
-                                <img src="../../../images/content/icons/download.png" alt="">
+                                <img src="images/content/icons/download.png" alt="">
                             </button>
                             <button class="table-container small">
                                 Подписан протокол о выборе победителей
@@ -1656,13 +1794,13 @@
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="../../../images/content/icons/arrow-right.png"
+                         src="images/content/icons/arrow-right.png"
                          alt=""
                     >
                 </button>
                 <button>
                     <img class="icon size-24"
-                         src="../../../images/content/icons/double-arrow-right.png"
+                         src="images/content/icons/double-arrow-right.png"
                          alt=""
                     >
                 </button>
@@ -1685,43 +1823,43 @@
                 <ul class="archive link-list">
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
                     <li>
                         <button class="btn flex">
-                            <img class="icon size-24" src="../../../images/content/icons/folder.png" alt="">
+                            <img class="icon size-24" src="images/content/icons/folder.png" alt="">
                             <span class="text-link">1-АХО-2016-ЭСК</span>
                         </button>
                     </li>
@@ -1754,7 +1892,7 @@
                         Функциональность доступна по адресу:
                         <a class="text-link wrap">https://www.roseltorg.ru/personal/rushydro#discussion</a>
                         <span>
-                    <img class="icon size-24" src="../../../images/content/icons/redirect.png" alt="">
+                    <img class="icon size-24" src="images/content/icons/redirect.png" alt="">
                 </span>
                     </p>
                 </article>
@@ -1830,7 +1968,7 @@
                 </ul>
 
                 <div class="contacts picture-container">
-                    <img src="../../../images/content/contacts/map.png" alt="">
+                    <img src="images/content/contacts/map.png" alt="">
                 </div>
 
             </div>
@@ -1915,22 +2053,22 @@
                                 <div id="files">
                                     <button class="upload-file">
                                         <img class="icon size-24"
-                                             src="../../../images/content/icons/upload-file.png" alt="">
+                                             src="images/content/icons/upload-file.png" alt="">
                                         <span>Выбрать файл</span>
                                     </button>
                                     <button class="chosen-file">
                                         <img class="icon size-24"
-                                             src="../../../images/content/icons/chosen-file.png" alt="">
+                                             src="images/content/icons/chosen-file.png" alt="">
                                         <span>Filename.doc</span>
                                         <img class="icon size-20"
-                                             src="../../../images/content/icons/clear.png" alt="">
+                                             src="images/content/icons/clear.png" alt="">
                                     </button>
                                     <button class="chosen-file">
                                         <img class="icon size-24"
-                                             src="../../../images/content/icons/chosen-file.png" alt="">
+                                             src="images/content/icons/chosen-file.png" alt="">
                                         <span>Filename.doc</span>
                                         <img class="icon size-20"
-                                             src="../../../images/content/icons/clear.png" alt="">
+                                             src="images/content/icons/clear.png" alt="">
                                     </button>
                                 </div>
                             </div>
@@ -1943,7 +2081,7 @@
                                 <div class="item input-container">
                                     <input id="captcha">
                                     <img class="icon captcha" src=
-                                            "../../../images/content/icons/captcha.png" alt="">
+                                            "images/content/icons/captcha.png" alt="">
                                 </div>
                             </div>
 
@@ -1969,7 +2107,7 @@
         <div class="footer-container with-background">
 
             <div class="footer-row divider">
-                <img class="footer-icon main" src="/images/header/logo.png" alt="">
+                <img class="footer-icon main" src="images/header/logo.png" alt="">
                 <div class="phone-block-container">
                     <div class="phone-block-number">+7 800 333 80 00</div>
                     <div class="text-description">Многоканальный телефон</div>
@@ -1985,9 +2123,9 @@
             </div>
 
             <div class="footer-row divider">
-                <img class="footer-icon" src="/images/footer/eais.png" alt=""/>
-                <img class="footer-icon" src="/images/footer/roseltorh.png" alt=""/>
-                <img class="footer-icon" src="/images/footer/rad.png" alt=""/>
+                <img class="footer-icon" src="images/footer/eais.png" alt=""/>
+                <img class="footer-icon" src="images/footer/roseltorh.png" alt=""/>
+                <img class="footer-icon" src="images/footer/rad.png" alt=""/>
             </div>
 
             <div class="footer-row">
