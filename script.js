@@ -1,28 +1,65 @@
 $(document).ready(function () {
 
-    //variables
-    const content = $('.router > div')
-    let lastVisiblePage = $('#main')
+//Variables
+    const content = $('.router > div');
+    let lastVisiblePage = $('#main');
+    let overlayMenu = $('.overlay-menu');
+    let mainSearchInput = $('.main-search');
 
-    //helpers
+//Helpers
+    const showHeaderElementsForModal = () => {
+        $('.header-nav-left-container > button').not('#home').show(100, 0);
+        $('#contact-form-nav-btn').show();
+        $('#main-search-btn').show();
+        $('#close-choose-site-modal-btn').hide();
+    }
+
+    const hideHeaderElementsForModal = () => {
+        $('.header-nav-left-container > button').not('#home').hide(100, 0);
+        $('#contact-form-nav-btn').hide(100, 0);
+        $('#main-search-btn').hide();
+    }
+
     const routeTo = (pageTitle) => {
-        if (pageTitle !== '#main') {
-            $('.background-section').fadeOut(500)
+        if (pageTitle === '#main') {
+            $('.background-section').fadeIn(500);
+            showHeaderElementsForModal();
         } else {
-            $('.background-section').fadeIn(500)
+            $('.background-section').fadeOut(500);
         }
         $(pageTitle).fadeIn(500)
         $(content.not(pageTitle)).fadeOut(500)
     }
 
-    //Initial transformations
+//Initial transformations
     routeTo('#main');
-    $('#close-choose-site-modal-btn').hide().click(() => {
-        showHeaderElements();
-        routeTo(`#${lastVisiblePage[0].id}`);
-    });;
 
-    //Routing
+    $('#close-choose-site-modal-btn').hide().click(() => {
+        showHeaderElementsForModal();
+        routeTo(`#${lastVisiblePage[0].id}`);
+    });
+
+    mainSearchInput.hide();
+
+    $(window).click(function () {
+        if (overlayMenu.hasClass('active')) {
+            overlayMenu.removeClass('active');
+        }
+
+        if (mainSearchInput.css('display') !== 'none') {
+            mainSearchInput.hide();
+            $('.header-nav-right-container').show();
+        }
+    });
+
+    $('.overlay-menu button').click(function () {
+        if (overlayMenu.hasClass('active')) {
+            $(overlayMenu).removeClass('active');
+        }
+    });
+
+
+//Routing
     $('#home').click(() => {
         routeTo('#main');
     })
@@ -58,20 +95,7 @@ $(document).ready(function () {
     })
 
 
-    //Overlay-menu
-    let overlayMenu = $('.overlay-menu');
-
-    $(window).click(function () {
-        if (overlayMenu.hasClass('active')) {
-            $(overlayMenu).removeClass('active');
-        }
-    });
-    $('.overlay-menu button').click(function () {
-        if (overlayMenu.hasClass('active')) {
-            $(overlayMenu).removeClass('active');
-        }
-    });
-
+//Overlay-menu
     $("#nav-more").click((e) => {
         e.stopPropagation();
         $(overlayMenu).toggleClass('active');
@@ -80,20 +104,7 @@ $(document).ready(function () {
         e.stopPropagation();
     })
 
-    //Choose-site modal
-    const hideHeaderElements = () => {
-        $('.header-nav-left-container > button').not('#home').hide(100, 0);
-        $('#contact-form-nav-btn').hide(100, 0);
-        $('#main-search').hide();
-    }
-
-    const showHeaderElements = () => {
-        $('.header-nav-left-container > button').not('#home').show(100, 0);
-        $('#contact-form-nav-btn').show();
-        $('#main-search').show();
-        $('#close-choose-site-modal-btn').hide();
-    }
-
+//Choose-site modal
     const showChooseSiteModal = () => {
         $('#choose-site').fadeIn(100);
         $('#close-choose-site-modal-btn').show();
@@ -101,7 +112,7 @@ $(document).ready(function () {
 
     $('#choose-site-nav-btn').click(() => {
         lastVisiblePage = $('.router > div:visible:last');
-        hideHeaderElements();
+        hideHeaderElementsForModal();
 
         if ((lastVisiblePage[0].id) === 'main') {
             $('.background-section').hide();
@@ -110,9 +121,18 @@ $(document).ready(function () {
         showChooseSiteModal();
     })
 
-    // $('#close-choose-site-modal-btn').click(() => {
-    //     showHeaderElements();
-    //     routeTo(`#${lastVisiblePage[0].id}`);
-    // });
-
+//Search
+    $('#main-search-btn').click((e) => {
+        e.stopPropagation();
+        $('.header-nav-right-container').hide();
+        mainSearchInput.show();
+    })
+    $('#close-main-search-btn').click(() => {
+        $('.header-nav-right-container').show();
+        mainSearchInput.hide();
+    })
+    $('#main-search-input')
+    mainSearchInput.click((e) => {
+        e.stopPropagation();
+    })
 });

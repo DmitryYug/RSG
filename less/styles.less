@@ -394,10 +394,25 @@ main {
 
   #from-date-about, #from-date-planned, #from-price-about,
   #to-date-about, #to-date-planned, #to-price-about,
-  #client-about, #client-planned {
+  #client-about, #client-planned,{
     border: none;
     width: 100%;
     padding: 5px;
+  }
+
+  &.main-search {
+    border: none;
+    border-bottom: 1px solid #7C7F8D ;
+    width: 405px;
+    height: 35px;
+
+    justify-items: stretch;
+    input {
+      width: 100%;
+      &::placeholder {
+        .text-props(400, 16px, 130%, @text-regular-color)
+      }
+    }
   }
 
   button {

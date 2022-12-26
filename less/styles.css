@@ -887,6 +887,22 @@ main section {
   width: 100%;
   padding: 5px;
 }
+.input-with-btn.main-search {
+  border: none;
+  border-bottom: 1px solid #7C7F8D;
+  width: 405px;
+  height: 35px;
+  justify-items: stretch;
+}
+.input-with-btn.main-search input {
+  width: 100%;
+}
+.input-with-btn.main-search input::placeholder {
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
+}
 .input-with-btn button {
   background-color: transparent;
   margin-right: 10px;
