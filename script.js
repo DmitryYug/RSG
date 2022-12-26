@@ -32,7 +32,12 @@ $(document).ready(function () {
     }
 
 //Initial transformations
+
     routeTo('#main');
+    overlayMenu.hide();
+    $('#form-filter-collapse-btn').hide();
+
+
 
     $('#close-choose-site-modal-btn').hide().click(() => {
         showHeaderElementsForModal();
@@ -42,19 +47,12 @@ $(document).ready(function () {
     mainSearchInput.hide();
 
     $(window).click(function () {
-        if (overlayMenu.hasClass('active')) {
-            overlayMenu.removeClass('active');
+        if (overlayMenu.css('display') !== 'none') {
+            overlayMenu.hide();
         }
-
         if (mainSearchInput.css('display') !== 'none') {
             mainSearchInput.hide();
             $('.header-nav-right-container').show();
-        }
-    });
-
-    $('.overlay-menu button').click(function () {
-        if (overlayMenu.hasClass('active')) {
-            $(overlayMenu).removeClass('active');
         }
     });
 
@@ -98,10 +96,17 @@ $(document).ready(function () {
 //Overlay-menu
     $("#nav-more").click((e) => {
         e.stopPropagation();
-        $(overlayMenu).toggleClass('active');
+        if (overlayMenu.css('display') !== 'none') {
+            overlayMenu.hide();
+        } else {
+            overlayMenu.show();
+        }
     });
     $(overlayMenu).click(e => {
         e.stopPropagation();
+    })
+    $('.overlay-menu button').click(() => {
+        overlayMenu.hide();
     })
 
 //Choose-site modal
@@ -135,4 +140,31 @@ $(document).ready(function () {
     mainSearchInput.click((e) => {
         e.stopPropagation();
     })
+
+
+//Form-filter
+
+    $('#form-filter-expand-btn').click( function() {
+        $('.form-container-header').addClass('divider')
+        $('#form-filter-clear-btn').show();
+
+        $('#procurements-planned .form-container-body').slideDown(500, () => {
+            $(this).hide();
+            $('#form-filter-collapse-btn').show();
+        });
+
+    })
+
+    $('#form-filter-collapse-btn').click( function() {
+        $('#procurements-planned .form-container-body').slideUp(500, () => {
+            $(this).hide();
+            $('#form-filter-clear-btn').hide();
+            $('#form-filter-expand-btn').show();
+            $('.form-container-header').removeClass('divider');
+        });
+
+    })
+
+
 });
+

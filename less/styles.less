@@ -3,7 +3,6 @@
 @import 'footer.less';
 @import 'content.less';
 @import 'components.less';
-@import 'actions.less';
 
 //.start-links {
 //  font-size: 20px;
@@ -163,12 +162,6 @@ main {
 
   &.captcha {
     .icon(228px, 57px)
-  }
-
-  &.expand {
-    margin-left: 10px;
-    width: 12px;
-    height: 6px;
   }
 
   &.footer-logo {
@@ -475,11 +468,15 @@ main {
     }
 
     button {
+      &.btn-clear {
+        display: none;
+      }
       background-color: transparent;
     }
   }
 
   &-body {
+    display: none;
     &-message-sent {
       .flex-column(center, center);
       padding: 85px 0;
