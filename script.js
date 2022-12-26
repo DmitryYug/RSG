@@ -17,7 +17,10 @@ $(document).ready(function () {
 
     //Initial transformations
     routeTo('#main');
-    $('#close-choose-site-modal-btn').hide();
+    $('#close-choose-site-modal-btn').hide().click(() => {
+        showHeaderElements();
+        routeTo(`#${lastVisiblePage[0].id}`);
+    });;
 
     //Routing
     $('#home').click(() => {
@@ -107,9 +110,9 @@ $(document).ready(function () {
         showChooseSiteModal();
     })
 
-    $('#close-choose-site-modal-btn').click(() => {
-        showHeaderElements();
-        routeTo(`#${lastVisiblePage[0].id}`);
-    });
+    // $('#close-choose-site-modal-btn').click(() => {
+    //     showHeaderElements();
+    //     routeTo(`#${lastVisiblePage[0].id}`);
+    // });
 
 });
