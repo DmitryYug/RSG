@@ -33,34 +33,37 @@
                 <img class="icon size-24" src="../../images/header/dots.png" alt="">
             </a>
 
-            <div class="overlay-menu">
-                <ul>
-                    <li>
-                        <a href="">Управление закупочной деятельностью</a>
-                    </li>
-                    <li>
-                        <a href="">Сотрудничество с смсп</a>
-                    </li>
-                    <li>
-                        <a href="results.html" id="results-nav-btn">Результаты закупок</a>
-                    </li>
-                    <li>
-                        <a href="tt-projects.html" id="tt-projects-nav-btn">Обсуждение проектов ТТ</a>
-                    </li>
-                    <li>
-                        <a href="stats.html" id="stats-nav-btn">Статистика</a>
-                    </li>
-                    <li>
-                        <a href="mtr.html" id="mtr-nav-btn">Продажи МТP</a>
-                    </li>
-                    <li>
-                        <a href="archive.html" id="archive-nav-btn">Архив</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html" id="contacts-nav-btn">Контакты</a>
-                    </li>
-                </ul>
+            <div id="overlay-menu" class="hidden">
+                <div class="overlay-menu">
+                    <ul>
+                        <li>
+                            <a href="">Управление закупочной деятельностью</a>
+                        </li>
+                        <li>
+                            <a href="">Сотрудничество с смсп</a>
+                        </li>
+                        <li>
+                            <a href="results.html" id="results-nav-btn">Результаты закупок</a>
+                        </li>
+                        <li>
+                            <a href="tt-projects.html" id="tt-projects-nav-btn">Обсуждение проектов ТТ</a>
+                        </li>
+                        <li>
+                            <a href="stats.html" id="stats-nav-btn">Статистика</a>
+                        </li>
+                        <li>
+                            <a href="mtr.html" id="mtr-nav-btn">Продажи МТP</a>
+                        </li>
+                        <li>
+                            <a href="archive.html" id="archive-nav-btn">Архив</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" id="contacts-nav-btn">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
 
         <div class="header-nav-right-container">
@@ -82,17 +85,21 @@
             <button id="main-search-btn" class="header-nav-right-item">
                 <img class="icon size-24" src="../../images/header/search.png" alt="">
             </button>
+        </div>
 
+        <div id="main-search-block" class="hidden">
+            <div class="input-with-btn main-search">
+                <button class="icon size-24">
+                    <img src="../../images/header/search.png" alt="">
+                </button>
+                <input id="main-search-input" placeholder="Поисковый запрос"/>
+                <button id="close-main-search-btn" class="icon size-24">
+                    <img src="../../images/content/icons/clear.png" alt="">
+                </button>
+            </div>
         </div>
-        <div class="input-with-btn main-search">
-            <button class="icon size-24">
-                <img src="../../images/header/search.png" alt="">
-            </button>
-            <input id="main-search-input" placeholder="Поисковый запрос"/>
-            <button id="close-main-search-btn" class="icon size-24">
-                <img src="../../images/content/icons/clear.png" alt="">
-            </button>
-        </div>
+
+
     </nav>
 </header>
 

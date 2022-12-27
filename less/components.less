@@ -37,15 +37,14 @@
 .choose-client-modal {
 
   &-container {
-    max-width: 835px;
+    width: 835px;
     max-height: 550px;
     box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
     border-radius: 4px;
     overflow-y: scroll;
-    position: absolute;
-    margin: auto;
-    bottom: 10%;
-    left: 25%;
+    position: fixed;
+    left: calc(50% - 415px);
+    bottom: calc(50% - 225px);
     z-index: 2;
     background-color: white;
   }
@@ -85,7 +84,8 @@
   top: 100%;
   z-index: 2;
   background-color: white;
-
+  box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
+  border-radius: 4px;
   li {
     .text-props(400, 16px, 130%, @text-regular-color);
     padding: 15px 0 15px 40px;

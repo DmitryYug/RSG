@@ -446,15 +446,14 @@
   margin-bottom: 0;
 }
 .choose-client-modal-container {
-  max-width: 835px;
+  width: 835px;
   max-height: 550px;
   box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
   border-radius: 4px;
   overflow-y: scroll;
-  position: absolute;
-  margin: auto;
-  bottom: 10%;
-  left: 25%;
+  position: fixed;
+  left: calc(50% - 415px);
+  bottom: calc(50% - 225px);
   z-index: 2;
   background-color: white;
 }
@@ -489,6 +488,8 @@
   top: 100%;
   z-index: 2;
   background-color: white;
+  box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
+  border-radius: 4px;
 }
 .dropdown-options li {
   font-weight: 400 !important;
@@ -524,18 +525,31 @@
   display: none;
   margin-top: 70px;
 }
-#close-choose-site-modal-btn {
+#close-choose-site-modal-btn,
+#collapse-arrow {
   display: none;
 }
-.router {
-  margin-top: 75px;
-  margin-bottom: 110px;
+#choose-client-modal {
+  display: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  overflow: visible;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 3;
+}
+.hidden {
+  display: none;
 }
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
   min-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
+}
+body.fixed-scroll {
+  height: 100%;
+  overflow-y: hidden;
 }
 header {
   height: 90px;

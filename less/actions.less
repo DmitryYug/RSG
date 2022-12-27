@@ -1,8 +1,24 @@
+@import '_variables.less';
+
 #choose-site-modal {
   display: none;
   margin-top: 70px;
 }
 
-#close-choose-site-modal-btn {
+#close-choose-site-modal-btn, #collapse-arrow {
+  display: none;
+}
+
+#choose-client-modal {
+  display: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  overflow: visible;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 3;
+}
+
+.hidden {
   display: none;
 }
