@@ -156,6 +156,7 @@ $(document).ready(function () {
             $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]).show();
 
         } else {
+
             $(accordionItemHiddenContentSelector).slideUp(500);
             $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[0]).show();
             $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]).hide();
