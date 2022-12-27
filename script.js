@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 //Initial transformations
     $(window).click(() => {
-        console.log($('#choose-client-modal').is(':visible'))
+        //@todo fix hide dropdown elements
         $('.hidden').hide();
         // if ($('#choose-client-modal').is(':visible')) {
         //     $('#choose-client-modal').hide();
@@ -83,22 +83,26 @@ $(document).ready(function () {
     })
 
 //Form-filter
-    $('#form-filter-btn').click(function () {
-        if ($('#procurements-planned .form-container-body').is(':hidden')) {
+    const formAccordionHandler = (formBodySelector) => {
+        if ($(formBodySelector).is(':hidden')) {
             $('.form-container-header').addClass('divider')
             $('#form-filter-clear-btn').fadeIn(500);
-            $('#procurements-planned .form-container-body').slideDown(500, () => {
+            $(formBodySelector).slideDown(500, () => {
                 $('#expand-arrow').hide();
                 $('#collapse-arrow').show();
             });
         } else {
             $('#form-filter-clear-btn').fadeOut(500);
-            $('#procurements-planned .form-container-body').slideUp(500, () => {
+            $(formBodySelector).slideUp(500, () => {
                 $('#expand-arrow').show();
                 $('#collapse-arrow').hide();
                 $('.form-container-header').removeClass('divider')
             });
         }
+    }
+
+    $('#form-filter-btn').click(function (e) {
+        formAccordionHandler('.form-container-body');
     })
 
 //Dropdown options
@@ -139,6 +143,29 @@ $(document).ready(function () {
 
     $('#choose-client-modal .choose-client-modal-container').click(function (e) {
         e.stopPropagation();
+    })
+
+//Accordion
+
+    const accordionHandler = (accordionItemHiddenContentSelector) => {
+        console.log($(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]));
+        if($(accordionItemHiddenContentSelector).is(':hidden')) {
+            $(accordionItemHiddenContentSelector).show();
+            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]).show();
+            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[0]).hide();
+
+        } else {
+            $(accordionItemHiddenContentSelector).hide();
+            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[0]).show();
+            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]).hide();
+        }
+    }
+
+
+    $('.accordion-item.header').click(function (e) {
+        e.stopPropagation();
+        accordionHandler(e.currentTarget.parentNode.lastElementChild)
+        // $(e.currentTarget.parentNode.lastElementChild).show();
     })
 })
 

@@ -387,6 +387,9 @@ main {
   border-radius: 2px;
   background-color: white;
   position: relative;
+  input {
+    width: 100%;
+  }
 
   #from-date-about, #from-date-planned, #from-price-about,
   #to-date-about, #to-date-planned, #to-price-about,
@@ -510,6 +513,10 @@ main {
 
       .input-with-btn {
         width: 60%;
+        input {
+          width: 100%;
+          border: none;
+        }
       }
 
       input, select {
@@ -677,7 +684,6 @@ main {
       background-color: transparent;
     }
 
-
   }
 
   &-item {
@@ -696,6 +702,7 @@ main {
       .divider-top(0, 0);
       width: 100%;
       padding: 15px 0;
+      cursor: pointer;
 
       &.expanded {
         background-color: @background-light;

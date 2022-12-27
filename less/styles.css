@@ -529,6 +529,9 @@
 #collapse-arrow {
   display: none;
 }
+.accordion-collapse-arrow {
+  display: none;
+}
 #choose-client-modal {
   display: none;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -912,6 +915,9 @@ main section {
   background-color: white;
   position: relative;
 }
+.input-with-btn input {
+  width: 100%;
+}
 .input-with-btn #from-date-about,
 .input-with-btn #from-date-planned,
 .input-with-btn #from-price-about,
@@ -1045,6 +1051,10 @@ main section {
 }
 .form-container-body .item .input-with-btn {
   width: 60%;
+}
+.form-container-body .item .input-with-btn input {
+  width: 100%;
+  border: none;
 }
 .form-container-body .item input,
 .form-container-body .item select {
@@ -1235,6 +1245,7 @@ main section {
   position: relative;
   width: 100%;
   padding: 15px 0;
+  cursor: pointer;
 }
 .accordion-item.header:before {
   content: '';
