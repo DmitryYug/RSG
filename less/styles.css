@@ -7,6 +7,7 @@
 }
 .header-container a {
   margin-right: 25px;
+  cursor: pointer;
 }
 .header-nav-left-container {
   display: flex;
@@ -518,6 +519,13 @@
   background-image: url("../images/components/done.png");
   background-size: 20px 20px;
   z-index: 2;
+}
+#choose-site-modal {
+  display: none;
+  margin-top: 70px;
+}
+#close-choose-site-modal-btn {
+  display: none;
 }
 .router {
   margin-top: 75px;

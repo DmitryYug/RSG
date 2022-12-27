@@ -11,18 +11,6 @@ $(document).ready(function () {
     let hideOnOutsideClickElements = [overlayMenu, mainSearchInputBlock, dropdownOptions, collapseFilerBtn, chooseClientModal]
 
 //Helpers
-    const showHeaderElementsForModal = () => {
-        $('.header-nav-left-container > button').not('#home').show(100, 0);
-        $('#contact-form-nav-btn').show();
-        $('#main-search-btn').show();
-        $('#close-choose-site-modal-btn').hide();
-    };
-
-    const hideHeaderElementsForModal = () => {
-        $('.header-nav-left-container > button').not('#home').hide(100, 0);
-        $('#contact-form-nav-btn').hide(100, 0);
-        $('#main-search-btn').hide();
-    };
 
     const hideOnOutsideClick = () => {
         hideOnOutsideClickElements.forEach(element => {
@@ -35,10 +23,6 @@ $(document).ready(function () {
         element.hide();
     })
 
-    $('#close-choose-site-modal-btn').hide().click(() => {
-        showHeaderElementsForModal();
-        routeTo(`#${lastVisiblePage[0].id}`);
-    });
 
     $(window).click(() => {
         hideOnOutsideClick();
@@ -65,20 +49,37 @@ $(document).ready(function () {
     })
 
 //Choose-site modal
-    const showChooseSiteModal = () => {
-        $('#choose-site').fadeIn(100);
-        $('#close-choose-site-modal-btn').show();
-    }
+    const showHeaderElementsForModal = () => {
+        $('.header-nav-left-container > a, button').not('#home').fadeIn(500);
+        $('#contact-form-nav-btn').fadeIn(500);
+        $('#close-choose-site-modal-btn').fadeOut(0, () => {
+            $('#main-search-btn').fadeIn(300);
+        });
+    };
+
+    const hideHeaderElementsForModal = () => {
+        $('.header-nav-left-container > a, button').not('#home').fadeOut(500, 0);
+        $('#contact-form-nav-btn').fadeOut(500);
+        $('#main-search-btn').fadeOut(0, () => {
+            $('#close-choose-site-modal-btn').fadeIn(300);
+        });
+    };
 
     $('#choose-site-nav-btn').click(() => {
-        lastVisiblePage = $('.router > div:visible:last');
         hideHeaderElementsForModal();
 
-        if ((lastVisiblePage[0].id) === 'main') {
-            $('.background-section').hide();
-        }
-        lastVisiblePage.hide();
-        showChooseSiteModal();
+        $('main > div, section, article').fadeOut(300, () => {
+            $('#choose-site-modal').slideDown(500);
+        });
+    })
+
+    $('#close-choose-site-modal-btn').click(() => {
+        showHeaderElementsForModal();
+
+        $('main > div, section, article').fadeIn(300, () => {
+            $('#choose-site-modal').slideUp(500);
+        });
+
     })
 
 //Search
@@ -130,7 +131,7 @@ $(document).ready(function () {
     });
 
 //Modal choose client
-    $('.input-with-btn.client').click(function() {
+    $('.input-with-btn.client').click(function () {
         console.log('clicked')
         chooseClientModal.show();
         // $('body').not('.choose-client-modal-container').fadeTo(500, 0.3);
