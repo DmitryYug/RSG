@@ -616,6 +616,9 @@ body.fixed-scroll {
   height: 100%;
   overflow-y: hidden;
 }
+body a:hover {
+  color: #F08400;
+}
 header {
   height: 90px;
   padding: 24px 55px 28px 24px;
