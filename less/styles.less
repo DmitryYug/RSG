@@ -808,14 +808,14 @@ main {
   .flex-default(center, space-between);
   margin-top: 60px;
 
-  button {
+  li, a {
     background-color: transparent;
     .text-props(700, 14px, 17px, @text-description-color);
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
-  .active {
+  .active a{
     position: relative;
     color: @text-regular-color;
 
@@ -832,17 +832,20 @@ main {
 
   &-subtabs {
     margin-top: 25px;
+    .flex-default(center, start);
 
-    button {
+
+    li, a {
       padding: 10px;
-      background-color: transparent;
+      //background-color: transparent;
       .text-props(700, 14px, 17px, @text-description-color);
       letter-spacing: 0.02em;
       text-transform: uppercase;
       border-radius: 4px;
     }
 
-    .active {
+    .active a{
+      color: @text-regular-color;
       background-color: #EEEFF4;
     }
   }

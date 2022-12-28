@@ -1477,7 +1477,8 @@ main section {
   bottom: -10px;
   background: #D5E2F7;
 }
-.tabs button {
+.tabs li,
+.tabs a {
   background-color: transparent;
   font-weight: 700 !important;
   font-size: 14px;
@@ -1486,11 +1487,11 @@ main section {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
-.tabs .active {
+.tabs .active a {
   position: relative;
   color: #2C3148;
 }
-.tabs .active:after {
+.tabs .active a:after {
   content: '';
   position: absolute;
   height: 4px;
@@ -1501,10 +1502,13 @@ main section {
 }
 .tabs-subtabs {
   margin-top: 25px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.tabs-subtabs button {
+.tabs-subtabs li,
+.tabs-subtabs a {
   padding: 10px;
-  background-color: transparent;
   font-weight: 700 !important;
   font-size: 14px;
   line-height: 17px;
@@ -1513,7 +1517,8 @@ main section {
   text-transform: uppercase;
   border-radius: 4px;
 }
-.tabs-subtabs .active {
+.tabs-subtabs .active a {
+  color: #2C3148;
   background-color: #EEEFF4;
 }
 .info-block .item {
