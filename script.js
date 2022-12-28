@@ -1,24 +1,14 @@
 $(document).ready(function () {
 
 //Variables
-//     let hiddenElement = $('.hidden')
     let overlayMenu = $('#overlay-menu');
     let mainSearch = $('#main-search-block');
-    let dropdownOptions = $('.dropdown-options');
-    let collapseFilerBtn = $('#form-filter-collapse-btn');
-    // let hideOnOutsideClickElements = [overlayMenu, mainSearchInputBlock, dropdownOptions, collapseFilerBtn, chooseClientModal]
 
 //Helpers
 
 //Initial transformations
     $(window).click(() => {
-        //@todo fix hide dropdown elements
         $('.hidden').hide();
-        // if ($('#choose-client-modal').is(':visible')) {
-        //     $('#choose-client-modal').hide();
-        //     $('main, header, footer').fadeIn(110);
-        //     $('body').removeClass('fixed-scroll');
-        // }
         $('.header-nav-right-container:hidden').show()
     });
 
