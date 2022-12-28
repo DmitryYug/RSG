@@ -611,19 +611,21 @@ main section {
   height: 100%;
   width: auto;
 }
-.btn-o-zakupke {
+.btn-o-zakupke,
+.btn-docs {
   width: 112px;
   height: 16px;
   margin-top: 15px;
 }
-.btn-o-zakupke img {
+.btn-o-zakupke img,
+.btn-docs img {
   height: 100%;
   width: auto;
 }
 .btn-back {
   background-color: transparent;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   margin-bottom: 55px;
 }

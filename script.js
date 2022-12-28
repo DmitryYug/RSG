@@ -82,7 +82,7 @@ $(document).ready(function () {
         e.stopPropagation();
     })
 
-//Form-filter
+//Form-filter-expand
     const formAccordionHandler = (formBodySelector) => {
         if ($(formBodySelector).is(':hidden')) {
             $('.form-container-header').addClass('divider')

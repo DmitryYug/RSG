@@ -18,52 +18,60 @@
 </head>
 
 <body>
+
+
 <header>
     <nav class="header-container">
         <div class="header-nav-left-container">
             <a href="main.html" id="home" class="header icon divider">
                 <img src="../../images/header/logo.png" alt="">
             </a>
-            <a href="procurements-planned.html" id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ ЗАКУПОК</a>
+            <a href="procurements-planned.html" id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ
+                ЗАКУПОК</a>
             <a href="procurements-about.html" id="procurements-about-nav-btn" class="text-link nav">ЗАКУПКИ</a>
             <a href="agreements.html" id="agreements-nav-btn" class="text-link nav">ДОГОВРЫ</a>
             <a id="nav-more" class="text-link nav">
                 <img class="icon size-24" src="../../images/header/dots.png" alt="">
             </a>
 
-            <div class="overlay-menu">
-                <ul>
-                    <li>
-                        <a href="">Управление закупочной деятельностью</a>
-                    </li>
-                    <li>
-                        <a href="">Сотрудничество с смсп</a>
-                    </li>
-                    <li>
-                        <a href="results.html" id="results-nav-btn">Результаты закупок</a>
-                    </li>
-                    <li>
-                        <a href="tt-projects.html" id="tt-projects-nav-btn">Обсуждение проектов ТТ</a>
-                    </li>
-                    <li>
-                        <a href="stats.html" id="stats-nav-btn">Статистика</a>
-                    </li>
-                    <li>
-                        <a href="mtr.html" id="mtr-nav-btn">Продажи МТP</a>
-                    </li>
-                    <li>
-                        <a href="archive.html" id="archive-nav-btn">Архив</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html" id="contacts-nav-btn">Контакты</a>
-                    </li>
-                </ul>
+            <div id="overlay-menu" class="hidden">
+                <div class="overlay-menu">
+                    <ul>
+                        <li>
+                            <a href="">Управление закупочной деятельностью</a>
+                        </li>
+                        <li>
+                            <a href="">Сотрудничество с смсп</a>
+                        </li>
+                        <li>
+                            <a href="results.html" id="results-nav-btn">Результаты закупок</a>
+                        </li>
+                        <li>
+                            <a href="tt-projects.html" id="tt-projects-nav-btn">Обсуждение проектов ТТ</a>
+                        </li>
+                        <li>
+                            <a href="stats.html" id="stats-nav-btn">Статистика</a>
+                        </li>
+                        <li>
+                            <a href="mtr.html" id="mtr-nav-btn">Продажи МТP</a>
+                        </li>
+                        <li>
+                            <a href="archive.html" id="archive-nav-btn">Архив</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" id="contacts-nav-btn">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
 
         <div class="header-nav-right-container">
             <a id="contact-form-nav-btn"
-               class="header-nav-right-item divider text-link nav">
+               class="header-nav-right-item divider text-link nav"
+               href="contact-form.html"
+            >
                 <img class="icon size-24" src="../../images/header/message.png" alt="message">
                 ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
             </a>
@@ -72,27 +80,137 @@
                 ВСЕ САЙТЫ
             </a>
 
-            <a id="close-choose-site-modal-btn" class="header-nav-right-item">
+            <button id="close-choose-site-modal-btn" class="header-nav-right-item">
                 <img class="icon size-24" src="../../images/header/close.png" alt="">
-            </a>
+            </button>
             <button id="main-search-btn" class="header-nav-right-item">
                 <img class="icon size-24" src="../../images/header/search.png" alt="">
             </button>
         </div>
-        <div class="input-with-btn main-search">
-            <button class="icon size-24">
-                <img src="../../images/header/search.png" alt="">
-            </button>
-            <input id="main-search-input" placeholder="Поисковый запрос"/>
-            <button id="close-main-search-btn" class="icon size-24">
-                <img src="../../images/content/icons/clear.png" alt="">
-            </button>
+
+        <div id="main-search-block" class="hidden">
+            <div class="input-with-btn main-search">
+                <button class="icon size-24">
+                    <img src="../../images/header/search.png" alt="">
+                </button>
+                <input id="main-search-input" placeholder="Поисковый запрос"/>
+                <button id="close-main-search-btn" class="icon size-24">
+                    <img src="../../images/content/icons/clear.png" alt="">
+                </button>
+            </div>
         </div>
+
+
     </nav>
 </header>
 
 <main>
     <section>
+        <div id="choose-site-modal">
+            <div class="content-container">
+                <div class="main-choose-site title-container">
+                    <h1 class="text-title divider">Организации</h1>
+                </div>
+                <ul class="main-choose-site-links">
+                    <li>
+                        <a class='text-link' href="">Богучанская ГЭС</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «ВНИИГ им. Б.Е.Веденеева»</a>
+                    </li>
+                    <li>
+                        <a class='text-link ' href="">АО «Гидроремонт-ВКК»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «ДГК»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «ДРСК»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «ДЭК»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Загорская ГАЭС-2»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Институт Гидропроект»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Камчатскэнерго»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Колымаэнерго»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Красноярскэнергосбыт»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Ленгидропроект»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Магаданэнерго» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ООО «Малые ГЭС Ставрополья и КЧР» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Мособлгидропроект» ПАО</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Передвижная энергетика» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «РАО Энергетические системы Востока» </a>
+                    </li>
+                    <li>
+                        <a class='text-link ' href="">ООО «РусГидро ИТ сервис» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «РусГидро Логистика» </a>
+                    </li>
+                    <li>
+                        <a class='text-link active' href="">АО «РусГидро ОЦО» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Рязанская энергетическая сбытовая компания» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «РусГидро» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ООО «СервисНедвижимость РусГидро» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Транспортная компания РусГидро» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «УК ГидроОГК» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Усть-СреднеканГЭСстрой» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Усть-Среднеканская ГЭС им. А.Ф. Дьякова» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «Центр оценки квалификаций РусГидро» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «ЦСО СШГЭС»</a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «ЧиркейГЭСстрой» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">АО «ЭСК РусГидро» </a>
+                    </li>
+                    <li>
+                        <a class='text-link' href="">ПАО «Якутскэнерго»</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <div class="content-container">
             <div class="agreements-main title-container">
@@ -101,44 +219,88 @@
             </div>
             <div class="accordion-container">
                 <ul>
-                    <li>
-                        <div class="accordion-item header">
+                    <li class="accordion-item">
+                        <div class="header">
                             <button class="icon size-24">
-                                <img src="../../images/content/icons/arrow-down.png" alt="">
-                            </button>
+                                <img class="accordion-expand-arrow"
+                                     src="../../images/content/icons/arrow-down.png"
+                                     alt="">
+                                <img class="accordion-collapse-arrow"
+                                     src="../../images/content/icons/arrow-up-active.png"
+                                     alt=""></button>
                             <span>Ссылка на реестр договоров, заключенных по результатам закупок АО “ЦСО СШГЭС” в ЕИС</span>
                         </div>
-                    </li>
-                    <li>
-                        <div class="accordion-item header">
-                            <button class="icon size-24">
-                                <img src="../../images/content/icons/arrow-down.png" alt="">
-                            </button>
-                            <span>Договор №20 РТК 001 от 01.01.2020</span>
+                        <div class="accordion-hidden">
+                            <div class="content">
+                                <p>пусто</p>
+                            </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="accordion-item header">
+                    <li class="accordion-item">
+                        <div class="header">
                             <button class="icon size-24">
-                                <img src="../../images/content/icons/arrow-down.png" alt="">
-                            </button>
+                                <img class="accordion-expand-arrow"
+                                     src="../../images/content/icons/arrow-down.png"
+                                     alt="">
+                                <img class="accordion-collapse-arrow"
+                                     src="../../images/content/icons/arrow-up-active.png"
+                                     alt=""></button>
                             <span>Договор №20 РТК 001 от 01.01.2020</span>
                         </div>
-                    </li>
-                    <li>
-                        <div class="accordion-item header">
-                            <button class="icon size-24">
-                                <img src="../../images/content/icons/arrow-down.png" alt="">
-                            </button>
-                            <span>Договор №20 РТК 001 от 01.01.2020</span>
+                        <div class="accordion-hidden">
+                            <div class="content">
+                                <p>пусто</p>
+                            </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="accordion-item header">
+                    <li class="accordion-item">
+                        <div class="header">
                             <button class="icon size-24">
-                                <img src="../../images/content/icons/arrow-down.png" alt="">
-                            </button>
+                                <img class="accordion-expand-arrow"
+                                     src="../../images/content/icons/arrow-down.png"
+                                     alt="">
+                                <img class="accordion-collapse-arrow"
+                                     src="../../images/content/icons/arrow-up-active.png"
+                                     alt=""></button>
+                            <span>Договор №20 РТК 001 от 01.01.2020</span>
+                        </div>
+                        <div class="accordion-hidden">
+                            <div class="content">
+                                <p>пусто</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <div class="header">
+                            <button class="icon size-24">
+                                <img class="accordion-expand-arrow"
+                                     src="../../images/content/icons/arrow-down.png"
+                                     alt="">
+                                <img class="accordion-collapse-arrow"
+                                     src="../../images/content/icons/arrow-up-active.png"
+                                     alt=""></button>
+                            <span>Договор №20 РТК 001 от 01.01.2020</span>
+                        </div>
+                        <div class="accordion-hidden">
+                            <div class="content">
+                                <p>пусто</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <div class="header">
+                            <button class="icon size-24">
+                                <img class="accordion-expand-arrow"
+                                     src="../../images/content/icons/arrow-down.png"
+                                     alt="">
+                                <img class="accordion-collapse-arrow"
+                                     src="../../images/content/icons/arrow-up-active.png" alt=""></button>
                             <span>Сведения о договоре 1060-15-10-2019</span>
+                        </div>
+                        <div class="accordion-hidden">
+                            <div class="content">
+                                <p>пусто</p>
+                            </div>
                         </div>
                     </li>
 
@@ -146,16 +308,23 @@
             </div>
             <div class="form-container">
                 <div class="form-container-header">
-                    <button class="procurements-planned btn-filter">
+                    <button id="form-filter-btn" class="procurements-planned btn-filter">
                         <span>фильтры</span>
-                        <div class="icon size-24">
-                            <img src="../../images/content/icons/arrow-down.png" alt="">
-                        </div>
+                        <img id="collapse-arrow" class="icon size-24" src="../../images/content/icons/arrow-up.png"
+                             alt="collapse">
+                        <img id="expand-arrow" class="icon size-24" src="../../images/content/icons/arrow-down.png"
+                             alt="expand">
                     </button>
+
+                    <button id="form-filter-clear-btn" class="btn-clear clear">
+                        <span class="clear">очистить</span>
+                    </button>
+                </div>
+                <div class="form-container-body">
+                    <p>пусто</p>
                 </div>
             </div>
         </div>
-
 
         <div class="agreements-main table-container with-margin">
             <table>
@@ -181,9 +350,9 @@
                                 <img src="../../images/content/icons/new-tab.png" alt="">
                             </button>
                         </div>
-                        <button class="btn-o-zakupke">
+                        <a class="btn-docs" href='agreements-linked-docs.html'>
                             <img src="../../images/content/icons/docs.png" alt="">
-                        </button>
+                        </a>
                     </td>
                     <td>АО “ДРСК”</td>
                     <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -216,9 +385,9 @@
                                 <img src="../../images/content/icons/new-tab.png" alt="">
                             </button>
                         </div>
-                        <button class="btn-o-zakupke">
+                        <a class="btn-docs" href='agreements-linked-docs.html'>
                             <img src="../../images/content/icons/docs.png" alt="">
-                        </button>
+                        </a>
                     </td>
                     <td>АО “ДРСК”</td>
                     <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -251,9 +420,9 @@
                                 <img src="../../images/content/icons/new-tab.png" alt="">
                             </button>
                         </div>
-                        <button class="btn-o-zakupke">
+                        <a class="btn-docs" href='agreements-linked-docs.html'>
                             <img src="../../images/content/icons/docs.png" alt="">
-                        </button>
+                        </a>
                     </td>
                     <td>АО “ДРСК”</td>
                     <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
@@ -286,9 +455,9 @@
                                 <img src="../../images/content/icons/new-tab.png" alt="">
                             </button>
                         </div>
-                        <button class="btn-o-zakupke">
+                        <a class="btn-docs" href='agreements-linked-docs.html'>
                             <img src="../../images/content/icons/docs.png" alt="">
-                        </button>
+                        </a>
                     </td>
                     <td>АО “ДРСК”</td>
                     <td>1038 163701-ТО-ДИТ-2023-ДРСК-АЭС</td>
