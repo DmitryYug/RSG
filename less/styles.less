@@ -387,6 +387,7 @@ main {
   border-radius: 2px;
   background-color: white;
   position: relative;
+
   input {
     width: 100%;
   }
@@ -453,6 +454,7 @@ main {
   width: 690px;
   height: 100%;
   background: @background-light;
+  position: relative;
 
   &.contact {
     width: 820px;
@@ -468,7 +470,7 @@ main {
     }
   }
 
-  &-disclaimer {
+  &-disclaimer p {
     margin-top: 8px;
     .text-props(400, 12px, 115%, #4E536B);
   }
@@ -494,6 +496,7 @@ main {
   &-body {
 
     display: none;
+    position: relative;
 
     &-message-sent {
       .flex-column(center, center);
@@ -513,6 +516,7 @@ main {
 
       .input-with-btn {
         width: 60%;
+
         input {
           width: 100%;
           border: none;
@@ -640,6 +644,10 @@ main {
         .divider-bottom(-30px, 0);
       }
 
+    }
+
+    &.divider-bottom {
+      .divider-bottom(100px, 0);
     }
   }
 

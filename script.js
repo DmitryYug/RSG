@@ -146,7 +146,6 @@ $(document).ready(function () {
     })
 
 //Accordion
-
     const accordionHandler = (clickedElement) => {
         const hiddenElement = $(clickedElement).siblings('.accordion-hidden');
         const collapseArrow = $(clickedElement).find('.accordion-collapse-arrow');
@@ -168,6 +167,12 @@ $(document).ready(function () {
     $('.accordion-item .header').click(function (e) {
         e.stopPropagation();
         accordionHandler(this)
+    })
+
+//Contact form submit
+    $('.contact .submit-btn').click(function (e) {
+        $('.form-container-body').hide();
+        $('.hidden-form-status').show();
     })
 })
 

@@ -391,13 +391,17 @@
   color: #005D9F;
   letter-spacing: -0.02em;
 }
-.contact-form article {
+.contact-form article p {
   font-weight: 400 !important;
   font-size: 16px;
   line-height: 130%;
   color: #2C3148;
 }
 .contact-form article ul li {
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
   position: relative;
   margin-bottom: 5px;
 }
@@ -541,7 +545,8 @@
   position: fixed;
   z-index: 3;
 }
-.hidden {
+.hidden,
+.hidden-form-status {
   display: none;
 }
 .accordion-hidden {
@@ -981,6 +986,7 @@ main section {
   width: 690px;
   height: 100%;
   background: #F9F9FE;
+  position: relative;
 }
 .form-container.contact {
   width: 820px;
@@ -995,7 +1001,7 @@ main section {
 .form-container button.clear {
   color: grey;
 }
-.form-container-disclaimer {
+.form-container-disclaimer p {
   margin-top: 8px;
   font-weight: 400 !important;
   font-size: 12px;
@@ -1028,6 +1034,7 @@ main section {
 }
 .form-container-body {
   display: none;
+  position: relative;
 }
 .form-container-body-message-sent {
   display: flex;
@@ -1189,6 +1196,15 @@ main section {
   width: 100%;
   left: 0;
   bottom: -30px;
+  background: #D5E2F7;
+}
+.form-container-body.divider-bottom:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 100px;
   background: #D5E2F7;
 }
 .form-container.submit-btn {
