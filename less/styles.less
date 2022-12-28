@@ -55,6 +55,9 @@ header {
   padding: 24px 55px 28px 24px;
   position: relative;
   .divider-bottom(0, 0);
+  a:hover {
+    color: @active-link;
+  }
 }
 
 footer {
@@ -200,12 +203,17 @@ main {
   &-link {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 20px, 130%, @background-dark);
-
+    &:hover {
+      color: @active-link
+    }
     &.nav {
       font-family: "Avenir Next Cyr", sans-serif;
       .text-props(700, 14px, 17px, @background-dark);
       text-transform: uppercase;
       letter-spacing: 0.02em;
+      &:hover {
+        color: @active-link
+      }
     }
 
     &.active {
@@ -362,19 +370,21 @@ main {
   position: relative;
   .divider-bottom(130%, 0);
 
-  span {
+  a {
     font-weight: 450;
     font-size: 16px;
     line-height: 115%;
     color: @text-regular-color;
   }
 
-  button {
+  li, button {
     background-color: transparent;
     margin-right: 20px;
+    cursor: pointer;
   }
 
   .current-page {
+    .flex-default(center, center);
     width: 40px;
     height: 40px;
     background: #EEEFF4;

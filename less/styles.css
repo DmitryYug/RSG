@@ -633,6 +633,9 @@ header:after {
   bottom: 0;
   background: #D5E2F7;
 }
+header a:hover {
+  color: #F08400;
+}
 footer {
   height: 360px;
   background-color: #EBF3FF;
@@ -779,6 +782,9 @@ main section {
   line-height: 130%;
   color: #005D9F;
 }
+.text-link:hover {
+  color: #F08400;
+}
 .text-link.nav {
   font-family: "Avenir Next Cyr", sans-serif;
   font-weight: 700 !important;
@@ -787,6 +793,9 @@ main section {
   color: #005D9F;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+}
+.text-link.nav:hover {
+  color: #F08400;
 }
 .text-link.active {
   color: #F08400;
@@ -956,17 +965,22 @@ main section {
   bottom: 130%;
   background: #D5E2F7;
 }
-.pagination-container span {
+.pagination-container a {
   font-weight: 450;
   font-size: 16px;
   line-height: 115%;
   color: #2C3148;
 }
+.pagination-container li,
 .pagination-container button {
   background-color: transparent;
   margin-right: 20px;
+  cursor: pointer;
 }
 .pagination-container .current-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   background: #EEEFF4;
