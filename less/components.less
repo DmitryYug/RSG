@@ -86,11 +86,13 @@
   background-color: white;
   box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
   border-radius: 4px;
+
   li {
     .text-props(400, 16px, 130%, @text-regular-color);
     padding: 15px 0 15px 40px;
     position: relative;
     cursor: pointer;
+
     &:hover:before {
       content: '';
       position: absolute;
@@ -102,6 +104,7 @@
       opacity: 0.5;
       z-index: 2;
     }
+
     &.chosen:before {
       content: '';
       position: absolute;
@@ -114,4 +117,65 @@
     }
   }
 }
+
+
+.ui-datepicker {
+  width: 276px;
+  background: #FFFFFF;
+  box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
+  border-radius: 4px;
+
+  a {
+    text-decoration: none;
+    .text-props(400, 14px, 18px, @text-regular-color);
+    text-align: center;
+
+  }
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    .text-props(700, 11px, 13px, @text-description-color)
+  }
+
+  .ui-datepicker-title {
+
+  }
+
+  .ui-datepicker-prev, .ui-datepicker-next {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+
+  }
+
+  .ui-datepicker-prev {
+    background-image: url("../images/components/calendar-prev-month.png");
+  }
+
+  .ui-datepicker-next {
+    background-image: url("../images/components/calendar-next-month.png");
+  }
+
+  .ui-state-default {
+    text-align: center;
+  }
+
+  .ui-state-hover {
+    background: #EEEFF4;
+    border-radius: 100px;
+  }
+}
+.ui-datepicker-trigger {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+
+
+
+
 

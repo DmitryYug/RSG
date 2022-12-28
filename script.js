@@ -174,6 +174,22 @@ $(document).ready(function () {
         $('.form-container-body').hide();
         $('.hidden-form-status').show();
     })
+
+//Date pickers
+    $( "#datepicker-from" ).datepicker({
+        dayNamesMin: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
+        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+        showOn: "button",
+        buttonImageOnly: true,
+        buttonImage: "../../images/content/icons/calendar.png"
+    })
+    $( "#datepicker-to" ).datepicker({
+        dayNamesMin: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
+        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+        showOn: "button",
+        buttonImageOnly: true,
+        buttonImage: "../../images/content/icons/calendar.png"
+    })
 })
 
 

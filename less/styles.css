@@ -525,6 +525,53 @@
   background-size: 20px 20px;
   z-index: 2;
 }
+.ui-datepicker {
+  width: 276px;
+  background: #FFFFFF;
+  box-shadow: 0 8px 16px rgba(28, 72, 120, 0.12);
+  border-radius: 4px;
+}
+.ui-datepicker a {
+  text-decoration: none;
+  font-weight: 400 !important;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2C3148;
+  text-align: center;
+}
+.ui-datepicker table {
+  width: 100%;
+}
+.ui-datepicker thead {
+  font-weight: 700 !important;
+  font-size: 11px;
+  line-height: 13px;
+  color: #7C7F8D;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+}
+.ui-datepicker .ui-datepicker-prev {
+  background-image: url("../images/components/calendar-prev-month.png");
+}
+.ui-datepicker .ui-datepicker-next {
+  background-image: url("../images/components/calendar-next-month.png");
+}
+.ui-datepicker .ui-state-default {
+  text-align: center;
+}
+.ui-datepicker .ui-state-hover {
+  background: #EEEFF4;
+  border-radius: 100px;
+}
+.ui-datepicker-trigger {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
 #choose-site-modal {
   display: none;
   margin-top: 70px;
