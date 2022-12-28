@@ -83,6 +83,9 @@
 
     button {
       background-color: transparent;
+      &:disabled {
+        opacity: 0.5;
+      }
     }
 
     &-container {
@@ -104,9 +107,14 @@
       margin-bottom: 30px;
 
       img {
+        display: none;
         width: auto;
         height: 100%;
+        &.current {
+          display: block;
+        }
       }
+
     }
 
     &.action {

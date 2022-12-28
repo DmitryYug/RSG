@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>presentation</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="UTF-8">
+
+    <!--    Custom links-->
+    <link rel="stylesheet" type="text/css" href="../../less/styles.css"/>
+    <link rel="stylesheet" href="../../less/initial-styles/normalize.css"/>
+    <link rel="stylesheet" href="../../less/initial-styles/nullstyle.css"/>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.2.custom/jquery-ui.css">
+
+
+    <!--    Fonts-->
+    <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+
+    <script type="application/javascript" src="../../jquery-ui-1.13.2.custom/external/jquery/jquery.js"></script>
+    <script type="application/javascript" src="../../jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+    <script type="application/javascript" src="../../script.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <nav class="header-container">
+        <div class="header-nav-left-container">
+            <a href="main.html" id="home" class="header icon divider">
+                <img src="../../images/header/logo.png" alt="">
+            </a>
+            <a href="procurements-planned.html" id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ
+                ЗАКУПОК</a>
+            <a href="procurements-about.html" id="procurements-about-nav-btn" class="text-link nav">ЗАКУПКИ</a>
+            <a href="agreements.html" id="agreements-nav-btn" class="text-link nav">ДОГОВРЫ</a>
+            <a id="nav-more" class="text-link nav">
+                <img class="icon size-24" src="../../images/header/dots.png" alt="">
+            </a>
+
+            <div id="overlay-menu" class="hidden">
+                <div class="overlay-menu">
+                    <ul>
+                        <li>
+                            <a href="">Управление закупочной деятельностью</a>
+                        </li>
+                        <li>
+                            <a href="">Сотрудничество с смсп</a>
+                        </li>
+                        <li>
+                            <a href="results.html" id="results-nav-btn">Результаты закупок</a>
+                        </li>
+                        <li>
+                            <a href="tt-projects.html" id="tt-projects-nav-btn">Обсуждение проектов ТТ</a>
+                        </li>
+                        <li>
+                            <a href="stats.html" id="stats-nav-btn">Статистика</a>
+                        </li>
+                        <li>
+                            <a href="mtr.html" id="mtr-nav-btn">Продажи МТP</a>
+                        </li>
+                        <li>
+                            <a href="archive.html" id="archive-nav-btn">Архив</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" id="contacts-nav-btn">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-nav-right-container">
+            <a id="contact-form-nav-btn"
+               class="header-nav-right-item divider text-link nav"
+               href="contact-form.html"
+            >
+                <img class="icon size-24" src="../../images/header/message.png" alt="message">
+                ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЮ ЦЗК
+            </a>
+            <a id='choose-site-nav-btn' class="header-nav-right-item divider text-link nav">
+                <img class="icon size-24" src="../../images/header/global.png" alt="">
+                ВСЕ САЙТЫ
+            </a>
+
+            <button id="close-choose-site-modal-btn" class="header-nav-right-item">
+                <img class="icon size-24" src="../../images/header/close.png" alt="">
+            </button>
+            <button id="main-search-btn" class="header-nav-right-item">
+                <img class="icon size-24" src="../../images/header/search.png" alt="">
+            </button>
+        </div>
+
+        <div id="main-search-block" class="hidden">
+            <div class="input-with-btn main-search">
+                <button class="icon size-24">
+                    <img src="../../images/header/search.png" alt="">
+                </button>
+                <input id="main-search-input" placeholder="Поисковый запрос"/>
+                <button id="close-main-search-btn" class="icon size-24">
+                    <img src="../../images/content/icons/clear.png" alt="">
+                </button>
+            </div>
+        </div>
+
+
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div class="main-slider content-container title-container">
+            <h2 class="text-subtitle">ПАО «РУСГИДРО» </h2>
+            <h1 class="text-title">Система закупок</h1>
+        </div>
+        <div class="main-slider-container">
+
+            <div class="main-slider picture-container">
+                <img src="../../images/content/main/slider/first-slide.png" alt="">
+                <img class="current" src="../../images/content/main/slider/second-slide.png" alt="">
+                <img src="../../images/content/main/slider/first-slide.png" alt="">
+            </div>
+
+
+            <div class="main-slider action">
+                <button class="icon size-36 previous">
+                    <img src="../../images/content/main/slider/arrow-left.png" alt="">
+                </button>
+                <div class="main-slider action counter">
+                    1/30
+                </div>
+                <button class=" icon size-36 next">
+                    <img src="../../images/content/main/slider/arrow-right.png" alt="">
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-container with-background">
+
+            <div class="footer-row divider">
+                <img class="footer-icon main" src="../../images/header/logo.png" alt="">
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 800 333 80 00</div>
+                    <div class="text-description">Многоканальный телефон</div>
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 495 122 05 55</div>
+                    <div class="text-description">Многоканальный телефон</div>
+                </div>
+                <div class="phone-block-container">
+                    <div class="phone-block-number">+7 800 555 99 97</div>
+                    <div class="text-description">«Горячая линия» для акционеров</div>
+                </div>
+            </div>
+
+            <div class="footer-row divider">
+                <img class="footer-icon" src="../../images/footer/eais.png" alt=""/>
+                <img class="footer-icon" src="../../images/footer/roseltorh.png" alt=""/>
+                <img class="footer-icon" src="../../images/footer/rad.png" alt=""/>
+            </div>
+
+            <div class="footer-row">
+                <span class="text-description">
+                    127006, Москва, ул. Малая Дмитровка, д.7
+                </span>
+                <span class="text-description">
+                    117393, Москва, ул. Архитектора Власова, д.51
+                </span>
+            </div>
+
+        </div>
+
+        <div class="footer-row no-background">
+            <div class="copyright">© ПАО «РусГидро» 2006-2022</div>
+            <a class="disclaimer">
+                Уведомление об ответственности и праве интеллектуальной собственности
+            </a>
+        </div>
+
+    </div>
+
+
+</footer>
+
+</body>
+</html>

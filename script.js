@@ -106,10 +106,15 @@ $(document).ready(function () {
     })
 
 //Dropdown options
+
     $('.input-with-btn.is-select').click(function (e) {
         e.stopPropagation();
+        let thisInput = $(this).children('input');
         $('.dropdown-options').hide();
         $(this).children('.dropdown-options').slideDown(500);
+        $(this).find('.dropdown-options span').click(function (e) {
+            thisInput.val(e.currentTarget.innerText)
+        })
     })
 
     $('.dropdown-options  li').click(function (e) {
@@ -150,7 +155,7 @@ $(document).ready(function () {
         const hiddenElement = $(clickedElement).siblings('.accordion-hidden');
         const collapseArrow = $(clickedElement).find('.accordion-collapse-arrow');
         const expandArrow = $(clickedElement).find('.accordion-expand-arrow');
-        if(hiddenElement.is(':hidden')) {
+        if (hiddenElement.is(':hidden')) {
             hiddenElement.slideDown(500);
             expandArrow.hide();
             collapseArrow.show();
@@ -176,20 +181,41 @@ $(document).ready(function () {
     })
 
 //Date pickers
-    $( "#datepicker-from" ).datepicker({
+    $("#datepicker-to, #datepicker-from").datepicker({
         dayNamesMin: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
-        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+        monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
         showOn: "button",
         buttonImageOnly: true,
         buttonImage: "../../images/content/icons/calendar.png"
     })
-    $( "#datepicker-to" ).datepicker({
-        dayNamesMin: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
-        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-        showOn: "button",
-        buttonImageOnly: true,
-        buttonImage: "../../images/content/icons/calendar.png"
+
+//Slider
+
+    $('.main-slider .previous').click(function(e) {
+        e.stopPropagation();
+        $('.main-slider .next').removeAttr('disabled');
+        let currentSlide = $('.main-slider-container .picture-container').find('.current');
+        if(currentSlide.prev().length) {
+            currentSlide.prev().addClass('current')
+            currentSlide.removeClass('current')
+        } else {
+            $(this).attr("disabled", 'disabled')
+        }
     })
+    $('.main-slider .next').click(function(e) {
+        e.stopPropagation();
+        $('.main-slider .previous').removeAttr('disabled');
+        let currentSlide = $('.main-slider-container .picture-container').find('.current');
+        if(currentSlide.next().length) {
+            currentSlide.next().addClass('current')
+            currentSlide.removeClass('current')
+        } else {
+            $(this).attr("disabled", 'disabled')
+        }
+    })
+
 })
+
+
 
 

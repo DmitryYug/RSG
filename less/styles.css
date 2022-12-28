@@ -209,6 +209,9 @@
 .main-slider button {
   background-color: transparent;
 }
+.main-slider button:disabled {
+  opacity: 0.5;
+}
 .main-slider-container {
   display: flex;
   flex-direction: column;
@@ -228,8 +231,12 @@
   margin-bottom: 30px;
 }
 .main-slider.picture-container img {
+  display: none;
   width: auto;
   height: 100%;
+}
+.main-slider.picture-container img.current {
+  display: block;
 }
 .main-slider.action {
   display: flex;
