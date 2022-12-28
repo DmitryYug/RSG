@@ -147,27 +147,27 @@ $(document).ready(function () {
 
 //Accordion
 
-    const accordionHandler = (accordionItemHiddenContentSelector) => {
-        // console.log(accordionItemHiddenContentSelector)
-        // console.log($(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]));
-        if($(accordionItemHiddenContentSelector).is(':hidden')) {
-            $(accordionItemHiddenContentSelector).slideDown(500);
-            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[0]).hide();
-            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]).show();
-
+    const accordionHandler = (clickedElement) => {
+        const hiddenElement = $(clickedElement).siblings('.accordion-hidden');
+        const collapseArrow = $(clickedElement).find('.accordion-collapse-arrow');
+        const expandArrow = $(clickedElement).find('.accordion-expand-arrow');
+        if(hiddenElement.is(':hidden')) {
+            hiddenElement.slideDown(500);
+            expandArrow.hide();
+            collapseArrow.show();
+            $(clickedElement).addClass('expanded')
         } else {
-
-            $(accordionItemHiddenContentSelector).slideUp(500);
-            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[0]).show();
-            $(accordionItemHiddenContentSelector.parentNode.childNodes[1].childNodes[1].children[1]).hide();
+            hiddenElement.slideUp(500, () => {
+                $(clickedElement).removeClass('expanded')
+            });
+            expandArrow.show();
+            collapseArrow.hide();
         }
     }
 
-
     $('.accordion-item .header').click(function (e) {
         e.stopPropagation();
-        accordionHandler(e.currentTarget.parentNode.lastElementChild)
-        // $(e.currentTarget.parentNode.lastElementChild).show();
+        accordionHandler(this)
     })
 })
 
