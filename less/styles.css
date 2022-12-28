@@ -1512,8 +1512,7 @@ main section {
   top: -10px;
   background: #D5E2F7;
 }
-.breadcrumbs span {
-  cursor: pointer;
+.breadcrumbs a {
   background-color: transparent;
   font-weight: 450 !important;
   font-size: 20px;
@@ -1522,7 +1521,7 @@ main section {
   position: relative;
   margin-right: 25px;
 }
-.breadcrumbs span:after {
+.breadcrumbs a:after {
   position: absolute;
   content: "/";
   font-weight: 450 !important;
@@ -1531,12 +1530,12 @@ main section {
   color: #C3C4CC;
   right: -20px;
 }
-.breadcrumbs span:last-child {
+.breadcrumbs a:last-child {
   font-weight: 450 !important;
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
 }
-.breadcrumbs span:last-child:after {
+.breadcrumbs a:last-child:after {
   content: '';
 }
