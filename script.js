@@ -96,7 +96,6 @@ $(document).ready(function () {
     })
 
 //Dropdown options
-
     $('.input-with-btn.is-select').click(function (e) {
         e.stopPropagation();
         let thisInput = $(this).children('input');

@@ -5,36 +5,6 @@
 @import 'components.less';
 @import 'actions.less';
 
-//.start-links {
-//  font-size: 20px;
-//  max-width: 100vw;
-//  height: 100vh;
-//  margin: 0 auto;
-//  padding: 30px;
-//  .flex-column(start, center);
-//  flex-wrap: wrap;
-//  box-sizing: border-box;
-//
-//  .box {
-//    &:first-child {
-//      margin-right: 150px;
-//    }
-//
-//    .flex-default(start, center);
-//    flex-wrap: wrap;
-//
-//    ul {
-//      .flex-column(start, start);
-//      flex-wrap: wrap;
-//      column-gap: 100px;
-//    }
-//
-//    li {
-//      margin-bottom: 10px;
-//    }
-//  }
-//}
-
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
   min-height: 100vh;
@@ -45,6 +15,7 @@ body {
     height: 100%;
     overflow-y: hidden;
   }
+
   a:hover {
     color: @active-link
   }
@@ -55,6 +26,7 @@ header {
   padding: 24px 55px 28px 24px;
   position: relative;
   .divider-bottom(0, 0);
+
   a:hover {
     color: @active-link;
   }
@@ -203,14 +175,17 @@ main {
   &-link {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 20px, 130%, @background-dark);
+
     &:hover {
       color: @active-link
     }
+
     &.nav {
       font-family: "Avenir Next Cyr", sans-serif;
       .text-props(700, 14px, 17px, @background-dark);
       text-transform: uppercase;
       letter-spacing: 0.02em;
+
       &:hover {
         color: @active-link
       }
@@ -363,33 +338,61 @@ main {
 }
 
 .pagination-container {
-  .flex-default(center, start);
+  .flex-column(start, start);
   max-width: 1280px;
-  margin: 35px auto 0 auto;
   padding-left: 10px;
   position: relative;
   .divider-bottom(130%, 0);
 
-  a {
-    font-weight: 450;
-    font-size: 16px;
-    line-height: 115%;
-    color: @text-regular-color;
-  }
-
-  li, button {
-    background-color: transparent;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-
-  .current-page {
+  &-items-per-page {
     .flex-default(center, center);
-    width: 40px;
-    height: 40px;
-    background: #EEEFF4;
-    border-radius: 100px;
+    .total {
+      padding: 3px;
+      background-color: transparent;
+      font-family: "Avenir Next Cyr Medium", sans-serif;
+      .text-props(450, 16px, 115%, @text-regular-color);
+    }
+    .items {
+      margin: 0 10px;
+      button {
+        padding: 3px;
+        background-color: transparent;
+        font-family: "Avenir Next Cyr Medium", sans-serif;
+        .text-props(450, 16px, 115%, @text-regular-color);
+      }
+      .active {
+        background-color: @divider-color;
+      }
+    }
   }
+  &-pages {
+    .flex-default(center, start);
+    ul {
+      .flex-default(center, start);
+    }
+    a {
+      font-weight: 450;
+      font-size: 16px;
+      line-height: 115%;
+      color: @text-regular-color;
+    }
+
+    li, button {
+      background-color: transparent;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .current-page {
+      .flex-default(center, center);
+      width: 40px;
+      height: 40px;
+      background: #EEEFF4;
+      border-radius: 100px;
+    }
+  }
+
+
 }
 
 .input-with-btn {
@@ -403,6 +406,10 @@ main {
 
   input {
     width: 100%;
+  }
+
+  img {
+    margin-right: 10px;
   }
 
   #from-date-about, #from-date-planned, #from-price-about,
@@ -442,10 +449,6 @@ main {
     margin-right: 10px;
   }
 
-  &.calendar {
-    margin-right: 10px;
-  }
-
   &.client {
     width: 60%;
   }
@@ -453,10 +456,6 @@ main {
   &.search {
     padding: 10px;
     .flex-default(center, start);
-
-    img {
-      margin-right: 10px;
-    }
   }
 }
 
@@ -510,7 +509,9 @@ main {
 
     display: none;
     position: relative;
-
+    textarea {
+      resize: none;
+    }
     &-message-sent {
       .flex-column(center, center);
       padding: 85px 0;
@@ -527,10 +528,43 @@ main {
       margin-bottom: 10px;
       position: relative;
 
-      .input-with-btn {
-        width: 60%;
+      &.required {
 
-        input {
+        &.validation-error {
+          & > .helper-text {
+            span, img {
+              display: block;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        & > .helper-text > span {
+          display: none;
+          .text-props(400, 14px, 115%, #E33838);
+        }
+        & > .helper-text  img {
+          display: none;
+        }
+
+        .helper-text {
+          width: 60%;
+          .flex-column(start, center);
+          &.captcha {
+            width: auto;
+            max-width: 25%;
+          }
+        }
+
+        .input-with-btn {
+          width: 100%;
+        }
+      }
+
+      .input-with-btn {
+        flex: 0 1 60%;
+
+        input, textarea {
           width: 100%;
           border: none;
         }
@@ -606,7 +640,7 @@ main {
         flex-wrap: wrap;
         gap: 5px;
 
-        button {
+        button, label {
           .flex-default(center, center);
           letter-spacing: 0.02em;
           border-radius: 100px;
@@ -614,9 +648,32 @@ main {
           padding: 10px 16px;
         }
 
+        input[type="file"] {
+          display: none;
+        }
+
         span {
           text-transform: none;
           margin-right: 10px;
+        }
+
+        .size-error {
+          .text-props(450, 16px, 130%, #E33838);
+          background: #FCDFDF;
+          border-radius: 6px;
+          width: 100%;
+          margin-top: 10px;
+          padding: 10px 0 10px 5px;
+
+          span {
+            margin: 0;
+
+          }
+        }
+
+        .loaded-files {
+          .flex-default(center, center);
+          gap: 10px;
         }
 
         .upload-file {
@@ -626,10 +683,6 @@ main {
             text-transform: uppercase;
           }
         }
-      }
-
-      #captcha {
-        width: 50%;
       }
 
       &.flex {
@@ -802,11 +855,20 @@ main {
 }
 
 .tabs {
-  width: 390px;
   position: relative;
-  .divider-bottom(-10px, 0);
-  .flex-default(center, space-between);
+  .flex-default(center, start);
   margin-top: 60px;
+  gap: 20px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    left: 0;
+    bottom: -10px;
+    background: @divider-color;
+  }
 
   li, a {
     background-color: transparent;
@@ -815,7 +877,7 @@ main {
     text-transform: uppercase;
   }
 
-  .active a{
+  .active a {
     position: relative;
     color: @text-regular-color;
 
@@ -837,14 +899,13 @@ main {
 
     li, a {
       padding: 10px;
-      //background-color: transparent;
       .text-props(700, 14px, 17px, @text-description-color);
       letter-spacing: 0.02em;
       text-transform: uppercase;
       border-radius: 4px;
     }
 
-    .active a{
+    .active a {
       color: @text-regular-color;
       background-color: #EEEFF4;
     }

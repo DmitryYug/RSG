@@ -115,7 +115,7 @@
 <header>
     <nav class="header-container">
         <div class="header-nav-left-container">
-            <a href="main.html" id="home" class="header icon divider">
+            <a href="../../main.html" id="home" class="header icon divider">
                 <img src="../../images/header/logo.png" alt="">
             </a>
             <a href="procurements-planned.html" id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ
@@ -306,151 +306,156 @@
 
     <section>
         <div id="procurements-planned">
-            <div class="content-container procurements-planned title-container">
-                <h2 class="text-subtitle">ПАО «РУСГИДРО»</h2>
-                <h1 class="text-title">Планы закупок</h1>
-                <p>В периоды 12:00—12:15, 15:00—15:15, 23:00—00:00 по МСК происходит обновление данных, данные для
-                    выгрузки
-                    могут быть недоступны.</p>
-            </div>
-
-            <div class="content-container form-container">
-                <div class="form-container-header">
-
-                    <button id="form-filter-btn" class="btn-filter">
-                        <span>фильтры</span>
-                        <img id="collapse-arrow" class="icon size-24" src="../../images/content/icons/arrow-up.png" alt="collapse">
-                        <img  id="expand-arrow" class="icon size-24" src="../../images/content/icons/arrow-down.png" alt="expand">
-                    </button>
-
-                    <button id="form-filter-clear-btn" class="btn-clear clear">
-                        <span>очистить</span>
-                    </button>
+            <div class="content-container">
+                <div class="content-container procurements-planned title-container">
+                    <h2 class="text-subtitle">ПАО «РУСГИДРО»</h2>
+                    <h1 class="text-title">Планы закупок</h1>
+                    <p>В периоды 12:00—12:15, 15:00—15:15, 23:00—00:00 по МСК происходит обновление данных, данные для
+                        выгрузки
+                        могут быть недоступны.</p>
                 </div>
 
-                <div class="form-container-body">
-                    <form>
-                        <div class="item">
-                            <label for="changes-period">Период внесения сведений</label>
-                            <div class="item flex">
+                <div class="form-container">
+                    <div class="form-container-header">
+
+                        <button id="form-filter-btn" class="btn-filter">
+                            <span>фильтры</span>
+                            <img id="collapse-arrow" class="icon size-24" src="../../images/content/icons/arrow-up.png"
+                                 alt="collapse">
+                            <img id="expand-arrow" class="icon size-24" src="../../images/content/icons/arrow-down.png"
+                                 alt="expand">
+                        </button>
+
+                        <button id="form-filter-clear-btn" class="btn-clear clear">
+                            <span>очистить</span>
+                        </button>
+                    </div>
+
+                    <div class="form-container-body">
+                        <form>
+                            <div class="item">
+                                <label for="changes-period">Период внесения сведений</label>
+                                <div class="item flex">
+
+                                    <div class="input-with-btn is-select">
+                                        <input id="changes-period">
+                                        <img class="icon size-16" src="../../images/content/icons/arrow-down.png"
+                                             alt="form-input-procurement-type">
+                                        <div class="dropdown-options hidden">
+                                            <ul>
+                                                <li>
+                                                    <span>2020</span>
+                                                </li>
+                                                <li class="chosen">
+                                                    <span>2021</span>
+                                                </li>
+                                                <li>
+                                                    <span>2022</span>
+                                                </li>
+                                                <li>
+                                                    <span>2023</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <a href="">Выгрузить план закупки по Группе РусГидро за указанный год</a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <label for="client-planned">Заказчик</label>
+
+                                <div class="input-with-btn client">
+                                    <input id="client-planned">
+                                    <button class="icon size-16">
+                                        <img class="icon size-24" src="../../images/header/dots.png" alt="">
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <label for="plan-title">Наименование плана</label>
+                                <input id="plan-title">
+                            </div>
+
+                            <div class="item">
+                                <label for="lot-number">Номер лота</label>
+                                <input id="lot-number">
+                            </div>
+
+                            <div class="item">
+                                <label for="agreement-issue">Предмет договора</label>
+                                <input id="agreement-issue">
+                            </div>
+
+                            <div class="item">
+                                <label for="form-input-procurement-type">Вид</label>
 
                                 <div class="input-with-btn is-select">
-                                    <input id="changes-period">
+
+                                    <input id="form-input-procurement-type">
+
                                     <img class="icon size-16" src="../../images/content/icons/arrow-down.png"
                                          alt="form-input-procurement-type">
                                     <div class="dropdown-options hidden">
                                         <ul>
                                             <li>
-                                                <span>2020</span>
+                                                <span>Выбранный вариант 1</span>
                                             </li>
                                             <li class="chosen">
-                                                <span>2021</span>
+                                                <span>Выбранный вариант 2</span>
                                             </li>
                                             <li>
-                                                <span>2022</span>
+                                                <span>Выбранный вариант 3</span>
                                             </li>
                                             <li>
-                                                <span>2023</span>
+                                                <span>Выбранный вариант 4</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант 5</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант 6</span>
+                                            </li>
+                                            <li>
+                                                <span>Выбранный вариант 7</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <a href="">Выгрузить план закупки по Группе РусГидро за указанный год</a>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <label for="client-planned">Заказчик</label>
-
-                            <div class="input-with-btn client">
-                                <input id="client-planned">
-                                <button class="icon size-16">
-                                    <img class="icon size-24" src="../../images/header/dots.png" alt="">
-                                </button>
                             </div>
 
-                        </div>
-                        <div class="item">
-                            <label for="plan-title">Наименование плана</label>
-                            <input id="plan-title">
-                        </div>
+                            <div class="item">
+                                <label for="plan-period">Период действия плана</label>
 
-                        <div class="item">
-                            <label for="lot-number">Номер лота</label>
-                            <input id="lot-number">
-                        </div>
+                                <div id="plan-period">
+                                    <label for="datepicker-from">с</label>
 
-                        <div class="item">
-                            <label for="agreement-issue">Предмет договора</label>
-                            <input id="agreement-issue">
-                        </div>
+                                    <div class="input-with-btn">
+                                        <input id="datepicker-from">
+                                    </div>
 
-                        <div class="item">
-                            <label for="form-input-procurement-type">Вид</label>
+                                    <label for="datepicker-to">по</label>
 
-                            <div class="input-with-btn is-select">
+                                    <div class="input-with-btn ">
+                                        <input type="text" id="datepicker-to">
+                                    </div>
 
-                                <input id="form-input-procurement-type">
-
-                                <img class="icon size-16" src="../../images/content/icons/arrow-down.png"
-                                     alt="form-input-procurement-type">
-                                <div class="dropdown-options hidden">
-                                    <ul>
-                                        <li>
-                                            <span>Выбранный вариант 1</span>
-                                        </li>
-                                        <li class="chosen">
-                                            <span>Выбранный вариант 2</span>
-                                        </li>
-                                        <li>
-                                            <span>Выбранный вариант 3</span>
-                                        </li>
-                                        <li>
-                                            <span>Выбранный вариант 4</span>
-                                        </li>
-                                        <li>
-                                            <span>Выбранный вариант 5</span>
-                                        </li>
-                                        <li>
-                                            <span>Выбранный вариант 6</span>
-                                        </li>
-                                        <li>
-                                            <span>Выбранный вариант 7</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="item">
-                            <label for="plan-period">Период действия плана</label>
-
-                            <div id="plan-period">
-                                <label for="datepicker-from">с</label>
-
-                                <div class="input-with-btn calendar">
-                                    <input id="datepicker-from">
-                                </div>
-
-                                <label for="datepicker-to">по</label>
-
-                                <div class="input-with-btn calendar">
-                                    <input type="text" id="datepicker-to">
                                 </div>
 
                             </div>
-
-                        </div>
-                        <div class="item divider checkbox">
-                            <input id="show-archive" type="checkbox">
-                            <label class="full-width" for="show-archive">Показывать архивные версии</label>
-                        </div>
-                        <button class="form-container submit-btn">применить</button>
-                    </form>
+                            <div class="item divider checkbox">
+                                <input id="show-archive" type="checkbox">
+                                <label class="full-width" for="show-archive">Показывать архивные версии</label>
+                            </div>
+                            <button class="form-container submit-btn">применить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+
 
             <div class="procurements-planned table-container with-margin first-column-bold">
                 <table>
@@ -584,39 +589,46 @@
                     </tr>
                     </tbody>
                 </table>
+                <ul class="procurements-planned pagination-container">
+                    <div class="pagination-container-pages">
+                        <ul>
+                            <li class="current-page">
+                                <a>1</a>
+                            </li>
+                            <li>
+                                <a>2</a>
+                            </li>
+                            <li>
+                                <a>3</a>
+                            </li>
+                            <li>
+                                <a>4</a>
+                            </li>
+                            <li>
+                                <a>...</a>
+                            </li>
+                            <li>
+                                <a>12</a>
+                            </li>
+                        </ul>
+                        <button>
+                            <img class="icon size-24"
+                                 src="../../images/content/icons/arrow-right.png"
+                                 alt=""
+                            >
+                        </button>
+                        <button>
+                            <img class="icon size-24"
+                                 src="../../images/content/icons/double-arrow-right.png"
+                                 alt=""
+                            >
+                        </button>
+                    </div>
+                </ul>
             </div>
-            <ul class="procurements-planned pagination-container">
-                <li class="current-page">
-                    <a>1</a>
-                </li>
-                <li>
-                    <a>2</a>
-                </li>
-                <li>
-                    <a>3</a>
-                </li>
-                <li>
-                    <a>4</a>
-                </li>
-                <li>
-                    <a>...</a>
-                </li>
-                <li>
-                    <a>12</a>
-                </li>
-                <button>
-                    <img class="icon size-24"
-                         src="../../images/content/icons/arrow-right.png"
-                         alt=""
-                    >
-                </button>
-                <button>
-                    <img class="icon size-24"
-                         src="../../images/content/icons/double-arrow-right.png"
-                         alt=""
-                    >
-                </button>
-            </ul>
+
+
+
 
         </div>
     </section>

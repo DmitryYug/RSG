@@ -24,7 +24,7 @@
 
     <nav class="header-container">
         <div class="header-nav-left-container">
-            <a href="main.html" id="home" class="header icon divider">
+            <a href="../../main.html" id="home" class="header icon divider">
                 <img src="../../images/header/logo.png" alt="">
             </a>
             <a href="procurements-planned.html" id="procurements-planned-nav-btn" class="text-link nav">АНОНСИРОВАНИЕ
@@ -220,7 +220,8 @@
 
             <article>
                 <p>«Обращение Председателю Центральной закупочной комиссии» организовано с целью приема обращений
-                    заявителей, их рассмотрения, подготовки ответов и, при необходимости, принятия соответствующих мер по
+                    заявителей, их рассмотрения, подготовки ответов и, при необходимости, принятия соответствующих мер
+                    по
                     совершенствованию системы закупок Общества, включая, но не ограничиваясь, следующими вопросами:</p>
                 <br>
                 <ul>
@@ -235,13 +236,16 @@
                 <br>
                 <ul>
                     <li>массовые рассылки или рекламные сообщения (спам);</li>
-                    <li>обращения, изложенные в которых данные/сведения/информацию невозможно идентифицировать однозначно;
+                    <li>обращения, изложенные в которых данные/сведения/информацию невозможно идентифицировать
+                        однозначно;
                     </li>
                     <li>обращения, содержащие нечитаемые символы, «пустые» формы обратной связи;</li>
-                    <li>обращения, касающиеся кадрового трудоустройства, получения справочной информации, конфиденциальных
+                    <li>обращения, касающиеся кадрового трудоустройства, получения справочной информации,
+                        конфиденциальных
                         сведений/сведений, являющихся «коммерческой тайной»;
                     </li>
-                    <li>обращения, оценка которых на предмет корректности/адекватности/существенности/релевантности не может
+                    <li>обращения, оценка которых на предмет корректности/адекватности/существенности/релевантности не
+                        может
                         быть осуществлена, а также обращения, не содержащие всех существенных аспектов и необходимых
                         сведений;
                     </li>
@@ -255,73 +259,114 @@
 
                     <button id="form-filter-btn" class="btn-filter">
                         <span>обращение</span>
-                        <img id="collapse-arrow" class="icon size-24" src="../../images/content/icons/arrow-up.png" alt="collapse">
-                        <img  id="expand-arrow" class="icon size-24" src="../../images/content/icons/arrow-down.png" alt="expand">
+                        <img id="collapse-arrow" class="icon size-24" src="../../images/content/icons/arrow-up.png"
+                             alt="collapse">
+                        <img id="expand-arrow" class="icon size-24" src="../../images/content/icons/arrow-down.png"
+                             alt="expand">
                     </button>
 
                 </div>
                 <div class="form-container-body divider-bottom">
                     <form>
-                        <div class="item">
+
+                        <div class="item required validation-error">
                             <label for="name">Ваше имя</label>
-                            <input id="name">
+                            <div class="helper-text">
+                                <div class="input-with-btn">
+                                    <input id="name">
+                                    <img class="icon size-16" src="../../images/content/icons/alert.png" alt="">
+                                </div>
+                                <span>Неверное имя</span>
+                            </div>
                         </div>
-                        <div class="item">
+
+                        <div class="item required validation-error">
                             <label for="email">E-mail</label>
-                            <input id="email">
+                            <div class="helper-text">
+                                <div class="input-with-btn">
+                                    <input id="email">
+                                    <img class="icon size-16" src="../../images/content/icons/alert.png" alt="">
+                                </div>
+                                <span>Неверный e-mail</span>
+                            </div>
                         </div>
-                        <div class="item align-top">
+
+                        <div class="item align-top required validation-error">
                             <label for="message-text">
                                 <span>Текст сообщения</span>
                                 <span>Обязательно</span>
                             </label>
-                            <textarea id="message-text"> </textarea>
+                            <div class="helper-text">
+                                <div class="input-with-btn">
+                                    <textarea id="message-text"> </textarea>
+                                    <img class="icon size-16" src="../../images/content/icons/alert.png" alt="">
+                                </div>
+                                <span>Обязательное поле</span>
+                            </div>
                         </div>
+
                         <div class="item">
                             <label for="files">
                                 <span>Файлы</span>
                                 <span>pdf, doc, docs, ppt, pptx, pps, txt, jpg, png, gif, jpeg, bmp, pcs, xls, xlsx</span>
                             </label>
                             <div id="files">
-                                <button class="upload-file">
+                                <label for="upload-file" class="upload-file full-width">
+                                    <input type="file" id="upload-file" name="file" multiple>
                                     <img class="icon size-24"
-                                         src="../../images/content/icons/upload-file.png" alt="">
+                                         src="../../images/content/icons/upload-file.png" alt=""
+                                    >
                                     <span>Выбрать файл</span>
-                                </button>
-                                <button class="chosen-file">
-                                    <img class="icon size-24"
-                                         src="../../images/content/icons/chosen-file.png" alt="">
-                                    <span>Filename.doc</span>
-                                    <img class="icon size-20"
-                                         src="../../images/content/icons/clear.png" alt="">
-                                </button>
-                                <button class="chosen-file">
-                                    <img class="icon size-24"
-                                         src="../../images/content/icons/chosen-file.png" alt="">
-                                    <span>Filename.doc</span>
-                                    <img class="icon size-20"
-                                         src="../../images/content/icons/clear.png" alt="">
-                                </button>
+                                </label>
+
+                                <div class="loaded-files">
+                                    <button class="chosen-file">
+                                        <img class="icon size-24"
+                                             src="../../images/content/icons/chosen-file.png" alt="">
+                                        <span>Filename.doc</span>
+                                        <img class="icon size-20"
+                                             src="../../images/content/icons/clear.png" alt="">
+                                    </button>
+                                    <button class="chosen-file">
+                                        <img class="icon size-24"
+                                             src="../../images/content/icons/chosen-file.png" alt="">
+                                        <span>Filename.doc</span>
+                                        <img class="icon size-20"
+                                             src="../../images/content/icons/clear.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="size-error">
+                                    <img class="icon size-16" src="../../images/content/icons/alert.png" alt="">
+                                    <span>Суммарный размер файлов не должен превышать 30Мб</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="item">
+
+                        <div class="item required validation-error">
                             <label for="captcha">
                                 <span>Введите код с картинки</span>
                                 <span>Обязательно</span>
                             </label>
-                            <div class="item input-container">
-                                <input id="captcha">
-                                <img class="icon captcha" src=
-                                        "../../images/content/icons/captcha.png" alt="">
+                            <div class="helper-text captcha">
+                                <div class="input-with-btn">
+                                    <input id="captcha">
+                                    <img class="icon size-16" src="../../images/content/icons/alert.png" alt="">
+                                </div>
+                                <span>Обязательное поле</span>
                             </div>
+                            <img class="icon captcha"
+                                 src="../../images/content/icons/captcha.png"
+                                 alt="captcha"
+                            >
                         </div>
 
-                        <button type="button" class="form-container submit-btn" >
+                        <button type="button" class="form-container submit-btn">
                             отправить
                         </button>
 
                         <div class="form-container-disclaimer">
-                            <p>Обращаем ваше внимание, что данная форма предназначена исключительно для отправки писем, имеющих отношение к вопросам системы закупок Общества</p>
+                            <p>Обращаем ваше внимание, что данная форма предназначена исключительно для отправки писем,
+                                имеющих отношение к вопросам системы закупок Общества</p>
                         </div>
 
                     </form>
