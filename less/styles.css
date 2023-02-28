@@ -706,6 +706,16 @@ main section {
   align-items: center;
   margin-bottom: 55px;
 }
+.btn-back:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/content/icons/back.png");
+  background-size: contain;
+}
+.btn-back:hover:before {
+  background-image: url("../images/content/icons/back-hovered.png");
+}
 .btn.wrap {
   word-wrap: break-word;
   max-width: 100px;
@@ -1064,7 +1074,6 @@ main section {
 .input-with-btn #form-input-procurement-type,
 .input-with-btn #changes-period {
   border: none;
-  width: 100%;
   padding: 5px;
 }
 .input-with-btn.is-select input {
@@ -1111,6 +1120,9 @@ main section {
   width: 820px;
 }
 .form-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700 !important;
   font-size: 14px;
   line-height: 17px;
@@ -1183,6 +1195,41 @@ main section {
   margin-bottom: 10px;
   position: relative;
 }
+.form-container-body .item input,
+.form-container-body .item select {
+  height: 50px;
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #D6D8E0;
+  border-radius: 2px;
+}
+.form-container-body .item textarea {
+  height: 160px;
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #D6D8E0;
+  border-radius: 2px;
+}
+.form-container-body .item a {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: left;
+}
+.form-container-body .item label {
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2C3148;
+  max-width: 35%;
+  margin-right: 10px;
+}
+.form-container-body .item label.with-margin {
+  margin-left: 5px;
+}
+.form-container-body .item label.full-width {
+  max-width: 100%;
+}
 .form-container-body .item.required.validation-error > .helper-text span,
 .form-container-body .item.required.validation-error > .helper-text img {
   display: block;
@@ -1213,44 +1260,15 @@ main section {
   width: 100%;
 }
 .form-container-body .item .input-with-btn {
-  flex: 0 1 60%;
+  width: 60%;
 }
 .form-container-body .item .input-with-btn input,
 .form-container-body .item .input-with-btn textarea {
   width: 100%;
   border: none;
 }
-.form-container-body .item input,
-.form-container-body .item select {
-  height: 50px;
-  width: 60%;
-  padding: 5px;
-  border: 1px solid #D6D8E0;
-  border-radius: 2px;
-}
-.form-container-body .item textarea {
-  height: 160px;
-  width: 60%;
-  padding: 5px;
-  border: 1px solid #D6D8E0;
-  border-radius: 2px;
-}
-.form-container-body .item a {
-  margin-left: 10px;
-  text-decoration: underline;
-  text-align: left;
-}
-.form-container-body .item label {
-  font-family: "Avenir Next Cyr Medium", sans-serif;
-  font-weight: 450 !important;
-  font-size: 16px;
-  line-height: 130%;
-  color: #2C3148;
-  max-width: 35%;
-  margin-right: 10px;
-}
-.form-container-body .item label.full-width {
-  max-width: 100%;
+.form-container-body .item .input-with-btn.is-flex {
+  flex: 1 1 50%;
 }
 .form-container-body .item.align-top label {
   height: 160px;

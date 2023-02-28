@@ -89,6 +89,20 @@ main {
     background-color: transparent;
     .flex-default(center, start);
     margin-bottom: 55px;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/content/icons/back.png");
+      background-size: contain;
+    }
+
+    &:hover {
+      &:before {
+        background-image: url("../images/content/icons/back-hovered.png");
+      }
+    }
   }
 
   &.wrap {
@@ -346,30 +360,37 @@ main {
 
   &-items-per-page {
     .flex-default(center, center);
+
     .total {
       padding: 3px;
       background-color: transparent;
       font-family: "Avenir Next Cyr Medium", sans-serif;
       .text-props(450, 16px, 115%, @text-regular-color);
     }
+
     .items {
       margin: 0 10px;
+
       button {
         padding: 3px;
         background-color: transparent;
         font-family: "Avenir Next Cyr Medium", sans-serif;
         .text-props(450, 16px, 115%, @text-regular-color);
       }
+
       .active {
         background-color: @divider-color;
       }
     }
   }
+
   &-pages {
     .flex-default(center, start);
+
     ul {
       .flex-default(center, start);
     }
+
     a {
       font-weight: 450;
       font-size: 16px;
@@ -417,7 +438,7 @@ main {
   #client-about, #client-planned, #form-input-procurement-type,
   #changes-period {
     border: none;
-    width: 100%;
+    //width: 100%;
     padding: 5px;
   }
 
@@ -473,6 +494,7 @@ main {
   }
 
   button {
+    .flex-default(center, center);
     .text-props(700, 14px, 17px, @background-dark);
     text-transform: uppercase;
     color: @background-dark;
@@ -509,9 +531,11 @@ main {
 
     display: none;
     position: relative;
+
     textarea {
       resize: none;
     }
+
     &-message-sent {
       .flex-column(center, center);
       padding: 85px 0;
@@ -527,48 +551,6 @@ main {
       .text-props(450, 16px, 130%, @text-regular-color);
       margin-bottom: 10px;
       position: relative;
-
-      &.required {
-
-        &.validation-error {
-          & > .helper-text {
-            span, img {
-              display: block;
-              margin-top: 5px;
-            }
-          }
-        }
-
-        & > .helper-text > span {
-          display: none;
-          .text-props(400, 14px, 115%, #E33838);
-        }
-        & > .helper-text  img {
-          display: none;
-        }
-
-        .helper-text {
-          width: 60%;
-          .flex-column(start, center);
-          &.captcha {
-            width: auto;
-            max-width: 25%;
-          }
-        }
-
-        .input-with-btn {
-          width: 100%;
-        }
-      }
-
-      .input-with-btn {
-        flex: 0 1 60%;
-
-        input, textarea {
-          width: 100%;
-          border: none;
-        }
-      }
 
       input, select {
         height: 50px;
@@ -588,7 +570,7 @@ main {
 
       a {
         margin-left: 10px;
-        text-decoration: underline;
+        text-decoration: none;
         text-align: left;
       }
 
@@ -598,8 +580,60 @@ main {
         max-width: 35%;
         margin-right: 10px;
 
+        &.with-margin {
+          margin-left: 5px;
+        }
+
         &.full-width {
           max-width: 100%;
+        }
+      }
+
+      &.required {
+
+        &.validation-error {
+          & > .helper-text {
+            span, img {
+              display: block;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        & > .helper-text > span {
+          display: none;
+          .text-props(400, 14px, 115%, #E33838);
+        }
+
+        & > .helper-text img {
+          display: none;
+        }
+
+        .helper-text {
+          width: 60%;
+          .flex-column(start, center);
+
+          &.captcha {
+            width: auto;
+            max-width: 25%;
+          }
+        }
+
+        .input-with-btn {
+          width: 100%;
+        }
+      }
+
+      .input-with-btn {
+        width: 60%;
+
+        input, textarea {
+          width: 100%;
+          border: none;
+        }
+
+        &.is-flex {
+          flex: 1 1 50%;
         }
       }
 

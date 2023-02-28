@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../less/initial-styles/normalize.css"/>
     <link rel="stylesheet" href="../../less/initial-styles/nullstyle.css"/>
     <link rel="stylesheet" href="../../jquery-ui-1.13.2.custom/jquery-ui.css">
+
     <!--    Fonts-->
     <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
 
@@ -310,9 +311,11 @@
                 <div class="content-container procurements-planned title-container">
                     <h2 class="text-subtitle">ПАО «РУСГИДРО»</h2>
                     <h1 class="text-title">Планы закупок</h1>
-                    <p>В периоды 12:00—12:15, 15:00—15:15, 23:00—00:00 по МСК происходит обновление данных, данные для
+                    <p>
+                        В периоды 12:00—12:15, 15:00—15:15, 23:00—00:00 по МСК происходит обновление данных, данные для
                         выгрузки
-                        могут быть недоступны.</p>
+                        могут быть недоступны.
+                    </p>
                 </div>
 
                 <div class="form-container">
@@ -337,7 +340,7 @@
                                 <label for="changes-period">Период внесения сведений</label>
                                 <div class="item flex">
 
-                                    <div class="input-with-btn is-select">
+                                    <div class="input-with-btn is-flex is-select">
                                         <input id="changes-period">
                                         <img class="icon size-16" src="../../images/content/icons/arrow-down.png"
                                              alt="form-input-procurement-type">
@@ -391,13 +394,12 @@
 
                             <div class="item">
                                 <label for="form-input-procurement-type">Вид</label>
-
                                 <div class="input-with-btn is-select">
-
                                     <input id="form-input-procurement-type">
-
-                                    <img class="icon size-16" src="../../images/content/icons/arrow-down.png"
-                                         alt="form-input-procurement-type">
+                                    <img class="icon size-16"
+                                         src="../../images/content/icons/arrow-down.png"
+                                         alt="form-input-procurement-type"
+                                    >
                                     <div class="dropdown-options hidden">
                                         <ul>
                                             <li>
@@ -432,17 +434,14 @@
 
                                 <div id="plan-period">
                                     <label for="datepicker-from">с</label>
-
                                     <div class="input-with-btn">
                                         <input id="datepicker-from">
                                     </div>
 
-                                    <label for="datepicker-to">по</label>
-
+                                    <label class="with-margin" for="datepicker-to">по</label>
                                     <div class="input-with-btn ">
                                         <input type="text" id="datepicker-to">
                                     </div>
-
                                 </div>
 
                             </div>
@@ -626,8 +625,6 @@
                     </div>
                 </ul>
             </div>
-
-
 
 
         </div>
