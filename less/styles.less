@@ -3,39 +3,22 @@
 @import 'footer.less';
 @import 'content.less';
 @import 'components.less';
-
-.start-links {
-  font-size: 20px;
-  max-width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 30px;
-  .flex-column(start, center);
-  flex-wrap: wrap;
-  box-sizing: border-box;
-
-  .box {
-    &:first-child {
-      margin-right: 150px;
-    }
-    .flex-default(start, center);
-    flex-wrap: wrap;
-    ul {
-      .flex-column(start, start);
-      flex-wrap: wrap;
-      column-gap: 100px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-  }
-}
+@import 'actions.less';
 
 body {
   font-family: 'Avenir Next Cyr', sans-serif;
   min-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
+
+  &.fixed-scroll {
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  a:hover {
+    color: @active-link
+  }
 }
 
 header {
@@ -43,6 +26,10 @@ header {
   padding: 24px 55px 28px 24px;
   position: relative;
   .divider-bottom(0, 0);
+
+  a:hover {
+    color: @active-link;
+  }
 }
 
 footer {
@@ -59,12 +46,11 @@ main {
   }
 }
 
-
 .btn {
   background-color: transparent;
 
   &.flex {
-    .flex-default(center, center);
+    .flex-default(center, start);
   }
 
   &-filter {
@@ -89,7 +75,7 @@ main {
     }
   }
 
-  &-o-zakupke {
+  &-o-zakupke, &-docs {
     .icon(112px, 16px);
     margin-top: 15px;
 
@@ -101,7 +87,7 @@ main {
 
   &-back {
     background-color: transparent;
-    .flex-default(center, center);
+    .flex-default(center, start);
     margin-bottom: 55px;
   }
 
@@ -117,6 +103,10 @@ main {
   &-container {
     width: @content-width;
     margin: 0 auto;
+    //min-height: calc(100vh - @header-height - @footer-height);
+    p {
+      .text-props(400, 20px, 130%, @text-regular-color)
+    }
   }
 
 }
@@ -153,12 +143,6 @@ main {
     .icon(228px, 57px)
   }
 
-  &.expand {
-    margin-left: 10px;
-    width: 12px;
-    height: 6px;
-  }
-
   &.footer-logo {
     width: 195px;
     height: auto;
@@ -192,11 +176,19 @@ main {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 20px, 130%, @background-dark);
 
+    &:hover {
+      color: @active-link
+    }
+
     &.nav {
       font-family: "Avenir Next Cyr", sans-serif;
       .text-props(700, 14px, 17px, @background-dark);
       text-transform: uppercase;
       letter-spacing: 0.02em;
+
+      &:hover {
+        color: @active-link
+      }
     }
 
     &.active {
@@ -346,54 +338,114 @@ main {
 }
 
 .pagination-container {
-  .flex-default(center, start);
+  .flex-column(start, start);
   max-width: 1280px;
-  margin: 35px auto 0 auto;
   padding-left: 10px;
   position: relative;
   .divider-bottom(130%, 0);
 
-  span {
-    font-weight: 450;
-    font-size: 16px;
-    line-height: 115%;
-    color: @text-regular-color;
+  &-items-per-page {
+    .flex-default(center, center);
+    .total {
+      padding: 3px;
+      background-color: transparent;
+      font-family: "Avenir Next Cyr Medium", sans-serif;
+      .text-props(450, 16px, 115%, @text-regular-color);
+    }
+    .items {
+      margin: 0 10px;
+      button {
+        padding: 3px;
+        background-color: transparent;
+        font-family: "Avenir Next Cyr Medium", sans-serif;
+        .text-props(450, 16px, 115%, @text-regular-color);
+      }
+      .active {
+        background-color: @divider-color;
+      }
+    }
+  }
+  &-pages {
+    .flex-default(center, start);
+    ul {
+      .flex-default(center, start);
+    }
+    a {
+      font-weight: 450;
+      font-size: 16px;
+      line-height: 115%;
+      color: @text-regular-color;
+    }
+
+    li, button {
+      background-color: transparent;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .current-page {
+      .flex-default(center, center);
+      width: 40px;
+      height: 40px;
+      background: #EEEFF4;
+      border-radius: 100px;
+    }
   }
 
-  button {
-    background-color: transparent;
-    margin-right: 20px;
-  }
 
-  .current-page {
-    width: 40px;
-    height: 40px;
-    background: #EEEFF4;
-    border-radius: 100px;
-  }
 }
 
 .input-with-btn {
+
   .flex-default(center, end);
   height: 100%;
   border: 1px solid #D6D8E0;
   border-radius: 2px;
   background-color: white;
+  position: relative;
+
+  input {
+    width: 100%;
+  }
+
+  img {
+    margin-right: 10px;
+  }
 
   #from-date-about, #from-date-planned, #from-price-about,
   #to-date-about, #to-date-planned, #to-price-about,
-  #client-about, #client-planned {
+  #client-about, #client-planned, #form-input-procurement-type,
+  #changes-period {
     border: none;
     width: 100%;
     padding: 5px;
   }
 
-  button {
-    background-color: transparent;
-    margin-right: 10px;
+  &.is-select {
+    input {
+      cursor: pointer;
+    }
   }
 
-  &.calendar {
+  &.main-search {
+    border: none;
+    border-bottom: 1px solid #7C7F8D;
+    width: 405px;
+    height: 35px;
+
+    justify-items: stretch;
+
+    input {
+      width: 100%;
+
+      &::placeholder {
+        .text-props(400, 16px, 130%, @text-regular-color)
+      }
+    }
+  }
+
+  button {
+    background-color: transparent;
     margin-right: 10px;
   }
 
@@ -404,10 +456,6 @@ main {
   &.search {
     padding: 10px;
     .flex-default(center, start);
-
-    img {
-      margin-right: 10px;
-    }
   }
 }
 
@@ -418,12 +466,13 @@ main {
   width: 690px;
   height: 100%;
   background: @background-light;
+  position: relative;
 
   &.contact {
     width: 820px;
   }
 
-  span {
+  button {
     .text-props(700, 14px, 17px, @background-dark);
     text-transform: uppercase;
     color: @background-dark;
@@ -433,7 +482,7 @@ main {
     }
   }
 
-  &-disclaimer {
+  &-disclaimer p {
     margin-top: 8px;
     .text-props(400, 12px, 115%, #4E536B);
   }
@@ -448,11 +497,21 @@ main {
     }
 
     button {
+      &.btn-clear {
+        display: none;
+      }
+
       background-color: transparent;
     }
   }
 
   &-body {
+
+    display: none;
+    position: relative;
+    textarea {
+      resize: none;
+    }
     &-message-sent {
       .flex-column(center, center);
       padding: 85px 0;
@@ -469,6 +528,47 @@ main {
       margin-bottom: 10px;
       position: relative;
 
+      &.required {
+
+        &.validation-error {
+          & > .helper-text {
+            span, img {
+              display: block;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        & > .helper-text > span {
+          display: none;
+          .text-props(400, 14px, 115%, #E33838);
+        }
+        & > .helper-text  img {
+          display: none;
+        }
+
+        .helper-text {
+          width: 60%;
+          .flex-column(start, center);
+          &.captcha {
+            width: auto;
+            max-width: 25%;
+          }
+        }
+
+        .input-with-btn {
+          width: 100%;
+        }
+      }
+
+      .input-with-btn {
+        flex: 0 1 60%;
+
+        input, textarea {
+          width: 100%;
+          border: none;
+        }
+      }
 
       input, select {
         height: 50px;
@@ -487,6 +587,7 @@ main {
       }
 
       a {
+        margin-left: 10px;
         text-decoration: underline;
         text-align: left;
       }
@@ -539,7 +640,7 @@ main {
         flex-wrap: wrap;
         gap: 5px;
 
-        button {
+        button, label {
           .flex-default(center, center);
           letter-spacing: 0.02em;
           border-radius: 100px;
@@ -547,9 +648,32 @@ main {
           padding: 10px 16px;
         }
 
+        input[type="file"] {
+          display: none;
+        }
+
         span {
           text-transform: none;
           margin-right: 10px;
+        }
+
+        .size-error {
+          .text-props(450, 16px, 130%, #E33838);
+          background: #FCDFDF;
+          border-radius: 6px;
+          width: 100%;
+          margin-top: 10px;
+          padding: 10px 0 10px 5px;
+
+          span {
+            margin: 0;
+
+          }
+        }
+
+        .loaded-files {
+          .flex-default(center, center);
+          gap: 10px;
         }
 
         .upload-file {
@@ -559,10 +683,6 @@ main {
             text-transform: uppercase;
           }
         }
-      }
-
-      #captcha {
-        width: 50%;
       }
 
       &.flex {
@@ -590,6 +710,10 @@ main {
         .divider-bottom(-30px, 0);
       }
 
+    }
+
+    &.divider-bottom {
+      .divider-bottom(100px, 0);
     }
   }
 
@@ -634,7 +758,6 @@ main {
       background-color: transparent;
     }
 
-
   }
 
   &-item {
@@ -646,13 +769,14 @@ main {
       font-weight: 400;
     }
 
-    &.header {
+    .header {
       .text-props(450, 20px, 130%, @text-regular-color);
       .flex-default(center, start);
       position: relative;
       .divider-top(0, 0);
       width: 100%;
       padding: 15px 0;
+      cursor: pointer;
 
       &.expanded {
         background-color: @background-light;
@@ -660,7 +784,7 @@ main {
       }
     }
 
-    &.content {
+    .content {
       .text-props(400, 20px, 130%, @text-regular-color);
       .flex-default(start, start);
       margin-left: 34px;
@@ -731,20 +855,29 @@ main {
 }
 
 .tabs {
-  width: 390px;
   position: relative;
-  .divider-bottom(-10px, 0);
-  .flex-default(center, space-between);
+  .flex-default(center, start);
   margin-top: 60px;
+  gap: 20px;
 
-  button {
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    left: 0;
+    bottom: -10px;
+    background: @divider-color;
+  }
+
+  li, a {
     background-color: transparent;
     .text-props(700, 14px, 17px, @text-description-color);
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
-  .active {
+  .active a {
     position: relative;
     color: @text-regular-color;
 
@@ -761,17 +894,19 @@ main {
 
   &-subtabs {
     margin-top: 25px;
+    .flex-default(center, start);
 
-    button {
+
+    li, a {
       padding: 10px;
-      background-color: transparent;
       .text-props(700, 14px, 17px, @text-description-color);
       letter-spacing: 0.02em;
       text-transform: uppercase;
       border-radius: 4px;
     }
 
-    .active {
+    .active a {
+      color: @text-regular-color;
       background-color: #EEEFF4;
     }
   }
@@ -831,8 +966,7 @@ main {
   .divider-top(-10px, 0);
   margin-top: 65px;
 
-  span {
-    cursor: pointer;
+  a {
     background-color: transparent;
     .text-props(450, 20px, 130%, @background-dark);
     position: relative;
@@ -856,3 +990,12 @@ main {
 }
 
 
+//experiments
+//#nav-more {
+//  position: relative;
+//  .dropdown-options {
+//    display: none;
+//    position: absolute;
+//    right: 100px;
+//  }
+//}

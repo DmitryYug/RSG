@@ -10,14 +10,20 @@
       background-color: transparent;
     }
 
-    .text-link {
+    a {
       margin-right: 25px;
+      cursor: pointer;
     }
   }
 
   &-nav-left {
     &-container {
       .flex-default(center, center);
+      position: relative;
+
+      #nav-more {
+        margin: 0;
+      }
     }
   }
 
@@ -29,6 +35,7 @@
 
     &-item {
       .flex-default(center, center);
+
       &.divider {
         position: relative;
         .divider-right(0, -15px)

@@ -4,7 +4,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
-html,body{line-height: 1;font-size-24: 14px;-ms-text-size-24-adjust: 100%;-moz-text-size-24-adjust: 100%;-webkit-text-size-24-adjust: 100%;}
+html,body{line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
 input,button,textarea{font-family: inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
