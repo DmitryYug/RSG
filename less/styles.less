@@ -428,6 +428,7 @@ main {
 
   input {
     width: 100%;
+    .text-props(400, 16px, 130%, @text-regular-color);
   }
 
   img {
@@ -491,13 +492,18 @@ main {
   position: relative;
 
   &.contact {
-    width: 820px;
+    width: 100%;
   }
 
   button {
     .flex-default(center, center);
-    .text-props(700, 14px, 17px, @text-description-color);
+    .text-props(700, 14px, 17px, @background-dark);
     text-transform: uppercase;
+    letter-spacing: 0.02em;
+
+    span {
+      margin-right: 10px;
+    }
 
     &.clear {
       color: grey;
@@ -718,8 +724,11 @@ main {
 
           }
         }
+
         .chosen-file {
           background-color: rgba(238, 239, 244, 0.5);
+          .text-props(700, 14px, 17px, @text-description-color);
+
           &:hover {
             transition: all 0.5s;
             background-color: rgba(238, 239, 244, 1);
@@ -729,10 +738,12 @@ main {
         .upload-file {
           background-color: rgba(213, 226, 247, 0.5);
           cursor: pointer;
+
           &:hover {
             transition: all 0.5s;
             background-color: rgba(213, 226, 247, 1);
           }
+
           span {
             .text-props(700, 14px, 17px, @background-dark);
             letter-spacing: 0.02em;
@@ -779,7 +790,7 @@ main {
     margin-top: 45px;
     width: 150px;
     height: 50px;
-    background: rgba(0, 93,	159, 0.7);
+    background: rgba(0, 93, 159, 0.7);
     border-radius: 2px;
     font-weight: 700;
     font-size: 18px;
@@ -788,9 +799,10 @@ main {
     text-transform: uppercase;
     color: #FFFFFF;
     position: relative;
+
     &:hover {
       transition: all 0.5s;
-      background: rgba(0, 93,	159, 1);
+      background: rgba(0, 93, 159, 1);
     }
   }
 

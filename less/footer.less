@@ -7,7 +7,7 @@
     .flex-column(center, space-between);
 
     &.with-background {
-      padding: 33px 80px 18px 80px;
+      padding: 18px 80px 18px 80px;
     }
   }
   &-icon {
@@ -64,13 +64,14 @@
   }
 
   &-container {
-    .flex-column(center, center)
+    .flex-column(flex-start, center);
+    gap: 8px;
   }
 }
 
 .copyright {
   margin-right: 32px;
-  font-family: 'avantgardectt-bold', sans-serif;
+  font-family: 'avantgardectt', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 130%;
