@@ -48,6 +48,40 @@ main {
 
 .btn {
   background-color: transparent;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  .text-props(450, 16px, 130%, @background-dark);
+  text-align: left;
+
+  &.small {
+    .text-props(450, 14px, 115%, @text-regular-color);
+  }
+
+  &.has-after-element-new-tab {
+    &.single-string {
+      .hovered-button-with-icon('../images/content/icons/new-tab.png', '../images/content/icons/new-tab-hovered.png', 20px, 20px, 0, -25px);
+    }
+
+    &.multiple-string {
+      .hovered-button-with-icon('../images/content/icons/new-tab.png', '../images/content/icons/new-tab-hovered.png', 20px, 20px, 0, -25px);
+      width: 50%;
+      word-wrap: break-word;
+    }
+  }
+
+  &.has-before-element-watch {
+    display: block;
+    margin-left: 25px;
+    .hovered-button-with-icon('../images/content/icons/watch.png', '../images/content/icons/watch-hovered.png', 20px, 100%, 0, 110%);
+
+    &.is-small {
+      .text-props(450, 14px, 115%, @background-dark);
+      .hovered-button-with-icon('../images/content/icons/watch.png', '../images/content/icons/watch-hovered.png', 16px, 100%, 0, 110%);
+    }
+  }
+
+  &.has-before-element-download {
+    .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, 0, 105%);
+  }
 
   &.flex {
     .flex-default(center, start);
@@ -55,34 +89,6 @@ main {
 
   &-filter {
     .flex-default(center, center)
-  }
-
-  &-list {
-    .icon(112px, 16px);
-
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  &-download {
-    .icon(112px, 21px);
-
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  &-o-zakupke, &-docs {
-    .icon(112px, 16px);
-    margin-top: 15px;
-
-    img {
-      height: 100%;
-      width: auto;
-    }
   }
 
   &-back {
@@ -104,6 +110,7 @@ main {
       span {
         color: @active-link;
       }
+
       &:before {
         background-image: url("../images/content/icons/back-hovered.png");
       }
@@ -248,16 +255,6 @@ main {
     }
   }
 
-  button {
-    font-family: "Avenir Next Cyr Medium", sans-serif;
-    .text-props(450, 16px, 130%, @text-regular-color);
-    background-color: transparent;
-
-    &.small {
-      .text-props(450, 14px, 115%, @text-regular-color);
-    }
-  }
-
   &.with-margin {
     margin: 55px auto 0 auto;
   }
@@ -278,11 +275,8 @@ main {
   }
 
   .cell-flex-col {
-    .flex-column(start, center);
-
-    &:nth-child(n) {
-      margin-bottom: 5px;
-    }
+    .flex-column(flex-start, flex-start);
+    gap: 5px;
 
     span {
       .text-props(400, 14px, 115%, @text-regular-color);
@@ -292,11 +286,6 @@ main {
   .cell-flex {
     .flex-default(start, center);
     gap: 5px;
-
-    button {
-      text-align: left;
-      color: @background-dark;
-    }
 
     span {
       text-align: left;

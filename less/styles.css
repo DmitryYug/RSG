@@ -289,9 +289,6 @@
 .agreements-main td:nth-child(2) {
   min-width: 125px;
 }
-.agreements-main td:nth-child(1) {
-  min-width: 200px;
-}
 .agreements-main td:nth-child(6) {
   min-width: 125px;
 }
@@ -339,6 +336,7 @@
   margin-bottom: 95px;
 }
 .archive.link-list li {
+  margin-left: 30px;
   margin-bottom: 10px;
 }
 .archive.pagination-container {
@@ -386,6 +384,9 @@
 }
 .results.pagination-container {
   margin-top: 30px;
+}
+.results-procurements.table-container td:last-child {
+  padding: 20px;
 }
 .contacts.title-container {
   margin-bottom: 65px;
@@ -664,6 +665,126 @@ main section {
 }
 .btn {
   background-color: transparent;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 450 !important;
+  font-size: 16px;
+  line-height: 130%;
+  color: #005D9F;
+  text-align: left;
+}
+.btn.small {
+  font-weight: 450 !important;
+  font-size: 14px;
+  line-height: 115%;
+  color: #2C3148;
+}
+.btn.has-after-element-new-tab.single-string {
+  position: relative;
+}
+.btn.has-after-element-new-tab.single-string:after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/content/icons/new-tab.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn.has-after-element-new-tab.single-string:hover {
+  color: #F08400;
+}
+.btn.has-after-element-new-tab.single-string:hover:after {
+  background-image: url('../images/content/icons/new-tab-hovered.png');
+}
+.btn.has-after-element-new-tab.multiple-string {
+  position: relative;
+  width: 50%;
+  word-wrap: break-word;
+}
+.btn.has-after-element-new-tab.multiple-string:after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/content/icons/new-tab.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn.has-after-element-new-tab.multiple-string:hover {
+  color: #F08400;
+}
+.btn.has-after-element-new-tab.multiple-string:hover:after {
+  background-image: url('../images/content/icons/new-tab-hovered.png');
+}
+.btn.has-before-element-watch {
+  display: block;
+  margin-left: 25px;
+  position: relative;
+}
+.btn.has-before-element-watch:after {
+  content: "";
+  position: absolute;
+  right: 110%;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-image: url('../images/content/icons/watch.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn.has-before-element-watch:hover {
+  color: #F08400;
+}
+.btn.has-before-element-watch:hover:after {
+  background-image: url('../images/content/icons/watch-hovered.png');
+}
+.btn.has-before-element-watch.is-small {
+  font-weight: 450 !important;
+  font-size: 14px;
+  line-height: 115%;
+  color: #005D9F;
+  position: relative;
+}
+.btn.has-before-element-watch.is-small:after {
+  content: "";
+  position: absolute;
+  right: 110%;
+  top: 0;
+  width: 16px;
+  height: 100%;
+  background-image: url('../images/content/icons/watch.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn.has-before-element-watch.is-small:hover {
+  color: #F08400;
+}
+.btn.has-before-element-watch.is-small:hover:after {
+  background-image: url('../images/content/icons/watch-hovered.png');
+}
+.btn.has-before-element-download {
+  position: relative;
+}
+.btn.has-before-element-download:after {
+  content: "";
+  position: absolute;
+  right: 105%;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-image: url('../images/content/icons/download.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn.has-before-element-download:hover {
+  color: #F08400;
+}
+.btn.has-before-element-download:hover:after {
+  background-image: url('../images/content/icons/download-hovered.png');
 }
 .btn.flex {
   display: flex;
@@ -674,33 +795,6 @@ main section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.btn-list {
-  width: 112px;
-  height: 16px;
-}
-.btn-list img {
-  height: 100%;
-  width: auto;
-}
-.btn-download {
-  width: 112px;
-  height: 21px;
-}
-.btn-download img {
-  height: 100%;
-  width: auto;
-}
-.btn-o-zakupke,
-.btn-docs {
-  width: 112px;
-  height: 16px;
-  margin-top: 15px;
-}
-.btn-o-zakupke img,
-.btn-docs img {
-  height: 100%;
-  width: auto;
 }
 .btn-back {
   background-color: transparent;
@@ -862,20 +956,6 @@ main section {
 .table-container tr:nth-child(2n) {
   background-color: #EBF3FF;
 }
-.table-container button {
-  font-family: "Avenir Next Cyr Medium", sans-serif;
-  font-weight: 450 !important;
-  font-size: 16px;
-  line-height: 130%;
-  color: #2C3148;
-  background-color: transparent;
-}
-.table-container button.small {
-  font-weight: 450 !important;
-  font-size: 14px;
-  line-height: 115%;
-  color: #2C3148;
-}
 .table-container.with-margin {
   margin: 55px auto 0 auto;
 }
@@ -895,11 +975,9 @@ main section {
 .table-container .cell-flex-col {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-.table-container .cell-flex-col:nth-child(n) {
-  margin-bottom: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
 }
 .table-container .cell-flex-col span {
   font-weight: 400 !important;
@@ -912,10 +990,6 @@ main section {
   justify-content: center;
   align-items: start;
   gap: 5px;
-}
-.table-container .cell-flex button {
-  text-align: left;
-  color: #005D9F;
 }
 .table-container .cell-flex span {
   text-align: left;

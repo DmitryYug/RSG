@@ -17,6 +17,7 @@
   line-height: @height;
   color: @color;
 }
+
 .flex-column(@align, @justify) {
   display: flex;
   flex-direction: column;
@@ -53,6 +54,7 @@
     background: @divider-color;
   }
 }
+
 .divider-top(@top, @left) {
   &:before {
     content: '';
@@ -64,7 +66,33 @@
     background: @divider-color;
   }
 }
+
 .icon(@width, @height) {
   width: @width;
   height: @height;
 }
+
+.hovered-button-with-icon(@imagePath, @hoveredImagePath, @width, @height, @top, @right) {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: @right;
+    top: @top;
+    width: @width;
+    height: @height;
+    background-image: url(@imagePath);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    color: @active-link;
+
+    &:after {
+      background-image: url(@hoveredImagePath);
+    }
+  }
+}
+
