@@ -17,11 +17,6 @@
 }
 .header-nav-left-container #nav-more {
   margin: 0;
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/header/dots.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .header-nav-right-container {
   display: flex;
@@ -197,12 +192,14 @@
   color: white;
 }
 .main-choose-site-links {
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .main-choose-site-links li {
+  padding-right: 80px;
   margin-bottom: 20px;
   flex: 1 1 50%;
 }
@@ -416,6 +413,9 @@
   line-height: 110%;
   color: #005D9F;
   letter-spacing: -0.02em;
+}
+.contact-form .btn-filter {
+  margin-bottom: 20px;
 }
 .contact-form article p {
   font-weight: 400 !important;
@@ -1238,8 +1238,8 @@ main section {
   font-weight: 700 !important;
   font-size: 14px;
   line-height: 17px;
+  color: #7C7F8D;
   text-transform: uppercase;
-  color: #005D9F;
 }
 .form-container button.clear {
   color: grey;
@@ -1282,6 +1282,9 @@ main section {
 .form-container-body textarea {
   resize: none;
 }
+.form-container-body.show {
+  display: block;
+}
 .form-container-body-message-sent {
   display: flex;
   flex-direction: column;
@@ -1299,7 +1302,7 @@ main section {
 .form-container-body .item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 450 !important;
   font-size: 16px;
   line-height: 130%;
@@ -1341,6 +1344,16 @@ main section {
 }
 .form-container-body .item label.full-width {
   max-width: 100%;
+}
+.form-container-body .item label.files {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.form-container-body .item label.files span:nth-child(2) {
+  color: #7C7F8D;
+  max-width: 200px;
 }
 .form-container-body .item.required.validation-error > .helper-text span,
 .form-container-body .item.required.validation-error > .helper-text img {
@@ -1442,6 +1455,7 @@ main section {
   display: none;
 }
 .form-container-body .item #files span {
+  width: 100%;
   text-transform: none;
   margin-right: 10px;
 }
@@ -1459,16 +1473,27 @@ main section {
 .form-container-body .item #files .size-error span {
   margin: 0;
 }
-.form-container-body .item #files .loaded-files {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.form-container-body .item #files .chosen-file {
+  background-color: rgba(238, 239, 244, 0.5);
+}
+.form-container-body .item #files .chosen-file:hover {
+  transition: all 0.5s;
+  background-color: #eeeff4;
 }
 .form-container-body .item #files .upload-file {
-  background-color: #D5E2F7;
+  background-color: rgba(213, 226, 247, 0.5);
+  cursor: pointer;
+}
+.form-container-body .item #files .upload-file:hover {
+  transition: all 0.5s;
+  background-color: #d5e2f7;
 }
 .form-container-body .item #files .upload-file span {
+  font-weight: 700 !important;
+  font-size: 14px;
+  line-height: 17px;
+  color: #005D9F;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 .form-container-body .item.flex {
@@ -1517,7 +1542,7 @@ main section {
   margin-top: 45px;
   width: 150px;
   height: 50px;
-  background: #005D9F;
+  background: rgba(0, 93, 159, 0.7);
   border-radius: 2px;
   font-weight: 700;
   font-size: 18px;
@@ -1526,6 +1551,10 @@ main section {
   text-transform: uppercase;
   color: #FFFFFF;
   position: relative;
+}
+.form-container.submit-btn:hover {
+  transition: all 0.5s;
+  background: #005d9f;
 }
 .accordion-container {
   position: relative;
@@ -1673,6 +1702,13 @@ main section {
 }
 .card-item.info-item {
   margin-bottom: 5px;
+}
+.card-item.info-item a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #005D9F;
+  font-family: "Avenir Next Cyr Medium", sans-serif;
+  font-weight: 600;
 }
 .card-item.info-item span:nth-child(1) {
   font-weight: 400 !important;
