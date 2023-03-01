@@ -602,6 +602,9 @@
 .accordion-collapse-arrow {
   display: none;
 }
+.accordion-expand-arrow.hovered {
+  display: none;
+}
 #choose-client-modal {
   display: none;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -702,9 +705,11 @@ main section {
 .btn-back {
   background-color: transparent;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
+  gap: 10px;
   margin-bottom: 55px;
+  width: fit-content;
 }
 .btn-back:before {
   content: "";
@@ -712,6 +717,9 @@ main section {
   height: 24px;
   background-image: url("../images/content/icons/back.png");
   background-size: contain;
+}
+.btn-back:hover span {
+  color: #F08400;
 }
 .btn-back:hover:before {
   background-image: url("../images/content/icons/back-hovered.png");

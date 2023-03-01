@@ -144,6 +144,8 @@ $(document).ready(function () {
         const hiddenElement = $(clickedElement).siblings('.accordion-hidden');
         const collapseArrow = $(clickedElement).find('.accordion-collapse-arrow');
         const expandArrow = $(clickedElement).find('.accordion-expand-arrow');
+        const expandArrowHovered = $(clickedElement).find('.accordion-expand-arrow.hovered');
+
         if (hiddenElement.is(':hidden')) {
             hiddenElement.slideDown(500);
             expandArrow.hide();
@@ -153,15 +155,43 @@ $(document).ready(function () {
             hiddenElement.slideUp(500, () => {
                 $(clickedElement).removeClass('expanded')
             });
-            expandArrow.show();
+            // expandArrow.show();
+            expandArrowHovered.show();
             collapseArrow.hide();
         }
     }
+    const accordionHoverInHandler = (hoveredElement) => {
+        if ($(hoveredElement).hasClass('expanded')) {
+            return
+        }
+        const expandArrow = $(hoveredElement).find('.accordion-expand-arrow');
+        const expandArrowHovered = $(hoveredElement).find('.accordion-expand-arrow.hovered');
+        expandArrow.hide()
+        expandArrowHovered.show()
+    }
+    const accordionHoverOutHandler = (hoveredElement) => {
+        if ($(hoveredElement).hasClass('expanded')) {
+            return
+        }
+        const expandArrow = $(hoveredElement).find('.accordion-expand-arrow');
+        const expandArrowHovered = $(hoveredElement).find('.accordion-expand-arrow.hovered');
+        expandArrow.show()
+        expandArrowHovered.hide()
+    }
 
-    $('.accordion-item .header').click(function (e) {
-        e.stopPropagation();
-        accordionHandler(this)
-    })
+    $('.accordion-item .header')
+        .click(function (e) {
+            e.stopPropagation();
+            accordionHandler(this)
+        })
+        .hover(
+            function () {
+                accordionHoverInHandler(this)
+            },
+            function () {
+                accordionHoverOutHandler(this)
+            }
+        )
 
 //Contact form submit
     $('.contact .submit-btn').click(function (e) {
@@ -180,22 +210,22 @@ $(document).ready(function () {
 
 //Slider
 
-    $('.main-slider .previous').click(function(e) {
+    $('.main-slider .previous').click(function (e) {
         e.stopPropagation();
         $('.main-slider .next').removeAttr('disabled');
         let currentSlide = $('.main-slider-container .picture-container').find('.current');
-        if(currentSlide.prev().length) {
+        if (currentSlide.prev().length) {
             currentSlide.prev().addClass('current')
             currentSlide.removeClass('current')
         } else {
             $(this).attr("disabled", 'disabled')
         }
     })
-    $('.main-slider .next').click(function(e) {
+    $('.main-slider .next').click(function (e) {
         e.stopPropagation();
         $('.main-slider .previous').removeAttr('disabled');
         let currentSlide = $('.main-slider-container .picture-container').find('.current');
-        if(currentSlide.next().length) {
+        if (currentSlide.next().length) {
             currentSlide.next().addClass('current')
             currentSlide.removeClass('current')
         } else {

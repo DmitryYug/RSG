@@ -87,8 +87,10 @@ main {
 
   &-back {
     background-color: transparent;
-    .flex-default(center, start);
+    .flex-default(center, flex-start);
+    gap: 10px;
     margin-bottom: 55px;
+    width: fit-content;
 
     &:before {
       content: "";
@@ -99,6 +101,9 @@ main {
     }
 
     &:hover {
+      span {
+        color: @active-link;
+      }
       &:before {
         background-image: url("../images/content/icons/back-hovered.png");
       }
