@@ -77,6 +77,10 @@ main {
       .text-props(450, 14px, 115%, @background-dark);
       .hovered-button-with-icon('../images/content/icons/watch.png', '../images/content/icons/watch-hovered.png', 16px, 100%, 0, 110%);
     }
+    &.is-large {
+      .text-props(450, 20px, 130%, @background-dark);
+      .hovered-button-with-icon('../images/content/icons/watch.png', '../images/content/icons/watch-hovered.png', 22px, 100%, 0, 100%);
+    }
   }
 
   &.has-before-element-download {
@@ -239,12 +243,18 @@ main {
   th {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 14px, 115%, @text-regular-color);
-    padding: 10px;
+
+    &:nth-child(n) {
+      padding: 10px;
+    }
   }
 
   td {
     .text-props(400, 16px, 130%, @text-regular-color);
-    padding: 10px;
+
+    &:nth-child(n) {
+      padding: 10px;
+    }
   }
 
   tr {
@@ -298,10 +308,6 @@ main {
   }
 
   &-header {
-    th {
-      padding: 5px;
-    }
-
     background-color: @divider-color;
 
     &-child {
@@ -799,7 +805,7 @@ main {
 
     .header {
       .text-props(450, 20px, 130%, @text-regular-color);
-      .flex-default(center, start);
+      .flex-default(flex-start, flex-start);
       position: relative;
       .divider-top(0, 0);
       width: 100%;
@@ -898,14 +904,19 @@ main {
     background: @divider-color;
   }
 
-  li, a {
+  button {
     background-color: transparent;
     .text-props(700, 14px, 17px, @text-description-color);
     letter-spacing: 0.02em;
     text-transform: uppercase;
+
+    &:hover {
+      color: @text-regular-color;
+      opacity: 0.8;
+    }
   }
 
-  .active a {
+  .active button {
     position: relative;
     color: @text-regular-color;
 
@@ -924,16 +935,26 @@ main {
     margin-top: 25px;
     .flex-default(center, start);
 
-
-    li, a {
+    li {
       padding: 10px;
-      .text-props(700, 14px, 17px, @text-description-color);
+    }
+
+    button {
+      background-color: transparent;
+      padding: 10px;
+      .text-props(700, 12px, 15px, @text-description-color);
       letter-spacing: 0.02em;
       text-transform: uppercase;
       border-radius: 4px;
+
+      &:hover {
+        transition: all 0.5s;
+        background-color: #EEEFF4;
+        opacity: 0.8;
+      }
     }
 
-    .active a {
+    .active button {
       color: @text-regular-color;
       background-color: #EEEFF4;
     }
