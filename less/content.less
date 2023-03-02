@@ -33,6 +33,7 @@
       &-title-container {
         .flex-column(flex-start, flex-end);
         width: 80%;
+
         h2 {
           .text-props(700, 18px, 24px, white);
         }
@@ -152,6 +153,39 @@
       margin-top: 30px;
     }
 
+    &-subpage {
+      tbody tr:nth-child(2n) > td {
+
+        table {
+          thead {
+            background: @divider-color;
+          }
+          tbody {
+            background: #FFFFFF;
+          }
+        }
+
+      }
+
+      &.title-container {
+        margin-bottom: 70px;
+
+        .text-title {
+          margin-bottom: 25px;
+
+          &.divider {
+            position: relative;
+            .divider-bottom(-125px, 0);
+          }
+        }
+      }
+
+      &.content-container {
+        h3 {
+          .text-props(750, 24px, 135 pxm, @text-regular-color);
+        }
+      }
+    }
   }
 
   &-about {
@@ -338,6 +372,14 @@
 
 .results-procurements {
   &.table-container {
+    tr {
+      vertical-align: top;
+
+      &:nth-child(n) {
+        background-color: unset;
+      }
+    }
+
     td:last-child {
       padding: 20px;
     }
