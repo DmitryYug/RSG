@@ -233,6 +233,13 @@ $(document).ready(function () {
         }
     })
 
+    //main header container
+    let mainTitle = $('.background-section-title-container')
+    if(mainTitle.height() > 160) {
+        mainTitle.css('padding-left', '0')
+    } else {
+        mainTitle.css('padding-left', '110px')
+    }
 })
 
 

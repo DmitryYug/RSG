@@ -28,12 +28,11 @@
       margin-bottom: 65px;
       margin-top: 0;
       position: relative;
+      .flex-default(flex-end, center);
 
       &-title-container {
-        position: absolute;
-        left: auto;
-        bottom: 0;
-
+        .flex-column(flex-start, flex-end);
+        width: 80%;
         h2 {
           .text-props(700, 18px, 24px, white);
         }
@@ -210,6 +209,10 @@
   }
 
   &-linked-docs {
+    &.content-container {
+      margin-bottom: 120px;
+    }
+
     &.title-container {
       margin: 70px auto;
     }
@@ -269,6 +272,7 @@
 
     p {
       margin-top: 25px;
+      .text-props(400, 20px, 130%, @text-regular-color);
     }
   }
 
@@ -277,7 +281,6 @@
     margin-bottom: 95px;
 
     li {
-      margin-left: 30px;
       margin-bottom: 10px;
     }
   }
@@ -358,6 +361,10 @@
   &.content-container {
     margin-bottom: 95px;
   }
+
+  .card li:last-child:after {
+    display: none;
+  }
 }
 
 .contact-form {
@@ -377,6 +384,7 @@
 
   article {
     margin-left: 20px;
+
     p {
       .text-props(400, 16px, 130%, @text-regular-color);
     }

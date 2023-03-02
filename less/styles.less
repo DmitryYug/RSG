@@ -46,6 +46,12 @@ main {
   }
 }
 
+.flex {
+  &-row-center-start {
+    .flex-default(center, flex-start)
+  }
+}
+
 .btn {
   background-color: transparent;
   font-family: "Avenir Next Cyr Medium", sans-serif;
@@ -85,10 +91,17 @@ main {
   }
 
   &.has-before-element-download {
-    .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, 0, 105%);
+    &.single-string {
+      margin-left: 35px;
+      .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, 25%, 105%);
+    }
+    &.multiple-string {
+      .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, 0, 105%);
+    }
   }
 
   &.flex {
+    width: fit-content;
     .flex-default(center, start);
   }
 
@@ -159,7 +172,7 @@ main {
 
   &.size-24 {
     .icon(24px, 24px);
-    margin-right: 10px;
+    margin-right: 6.5px;
   }
 
   &.size-36 {
@@ -246,7 +259,7 @@ main {
     .text-props(450, 14px, 115%, @text-regular-color);
 
     &:nth-child(n) {
-      padding: 10px;
+      padding: 12px;
     }
   }
 
@@ -355,7 +368,6 @@ main {
 .pagination-container {
   .flex-column(start, start);
   max-width: 1280px;
-  padding-left: 10px;
   position: relative;
   .divider-bottom(130%, 0);
 
@@ -879,25 +891,26 @@ main {
 
     p {
       position: relative;
-      .divider-bottom(-15px, 0);
+      .divider-bottom(-32px, 0);
     }
   }
 
   li {
     .flex-column(start, start);
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     position: relative;
-    .divider-bottom(-20px, 0);
+    .divider-bottom(-32px, 0);
   }
 
   &-item {
     &.title {
       font-family: "Avenir Next Cyr Medium", sans-serif;
       .text-props(450, 20px, 130%, @text-regular-color);
-      margin-bottom: 25px;
+      margin-bottom: 32px;
+      margin-top: 8px;
 
-      &-bold {
-        .text-props(750, 24px, 135%, @text-regular-color);
+      &.bold {
+        .text-props(450, 24px, 135%, @text-regular-color);
       }
     }
 
@@ -939,13 +952,15 @@ main {
   position: relative;
   .flex-default(center, start);
   margin-top: 60px;
+  margin-left: 260px;
   gap: 20px;
+  width: fit-content;
 
   &:after {
     content: '';
     position: absolute;
     height: 1px;
-    width: 50%;
+    width: 100%;
     left: 0;
     bottom: -10px;
     background: @divider-color;

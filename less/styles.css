@@ -159,11 +159,16 @@
   margin-bottom: 65px;
   margin-top: 0;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 .main-start.background-section-title-container {
-  position: absolute;
-  left: auto;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 80%;
 }
 .main-start.background-section-title-container h2 {
   font-weight: 700 !important;
@@ -303,6 +308,9 @@
   line-height: 115%;
   color: #005D9F;
 }
+.agreements-linked-docs.content-container {
+  margin-bottom: 120px;
+}
 .agreements-linked-docs.title-container {
   margin: 70px auto;
 }
@@ -334,13 +342,16 @@
 }
 .archive.title-container p {
   margin-top: 25px;
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 130%;
+  color: #2C3148;
 }
 .archive.link-list {
   margin-top: 40px;
   margin-bottom: 95px;
 }
 .archive.link-list li {
-  margin-left: 30px;
   margin-bottom: 10px;
 }
 .archive.pagination-container {
@@ -404,6 +415,9 @@
 }
 .contacts.content-container {
   margin-bottom: 95px;
+}
+.contacts .card li:last-child:after {
+  display: none;
 }
 .contact-form.title-container {
   margin-bottom: 40px;
@@ -495,7 +509,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 12px;
   font-weight: 750;
   font-size: 14px;
   line-height: 115%;
@@ -507,6 +521,7 @@
   width: 50%;
 }
 .choose-client-modal #search {
+  margin-left: 10px;
   width: 100%;
 }
 .choose-client-modal button {
@@ -673,6 +688,11 @@ main section {
   margin-top: 80px;
   margin-bottom: 95px;
 }
+.flex-row-center-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .btn {
   background-color: transparent;
   font-family: "Avenir Next Cyr Medium", sans-serif;
@@ -800,10 +820,31 @@ main section {
 .btn.has-before-element-watch.is-large:hover:after {
   background-image: url('../images/content/icons/watch-hovered.png');
 }
-.btn.has-before-element-download {
+.btn.has-before-element-download.single-string {
+  margin-left: 35px;
   position: relative;
 }
-.btn.has-before-element-download:after {
+.btn.has-before-element-download.single-string:after {
+  content: "";
+  position: absolute;
+  right: 105%;
+  top: 25%;
+  width: 20px;
+  height: 100%;
+  background-image: url('../images/content/icons/download.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn.has-before-element-download.single-string:hover {
+  color: #F08400;
+}
+.btn.has-before-element-download.single-string:hover:after {
+  background-image: url('../images/content/icons/download-hovered.png');
+}
+.btn.has-before-element-download.multiple-string {
+  position: relative;
+}
+.btn.has-before-element-download.multiple-string:after {
   content: "";
   position: absolute;
   right: 105%;
@@ -814,13 +855,14 @@ main section {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.btn.has-before-element-download:hover {
+.btn.has-before-element-download.multiple-string:hover {
   color: #F08400;
 }
-.btn.has-before-element-download:hover:after {
+.btn.has-before-element-download.multiple-string:hover:after {
   background-image: url('../images/content/icons/download-hovered.png');
 }
 .btn.flex {
+  width: fit-content;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -881,7 +923,7 @@ main section {
 .icon.size-24 {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 6.5px;
 }
 .icon.size-36 {
   width: 36px;
@@ -977,7 +1019,7 @@ main section {
   color: #2C3148;
 }
 .table-container th:nth-child(n) {
-  padding: 10px;
+  padding: 12px;
 }
 .table-container td {
   font-weight: 400 !important;
@@ -1092,7 +1134,6 @@ main section {
   align-items: start;
   justify-content: start;
   max-width: 1280px;
-  padding-left: 10px;
   position: relative;
 }
 .pagination-container:after {
@@ -1671,7 +1712,7 @@ main section {
   height: 1px;
   width: 100%;
   left: 0;
-  bottom: -15px;
+  bottom: -32px;
   background: #D5E2F7;
 }
 .card li {
@@ -1679,7 +1720,7 @@ main section {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   position: relative;
 }
 .card li:after {
@@ -1688,7 +1729,7 @@ main section {
   height: 1px;
   width: 100%;
   left: 0;
-  bottom: -20px;
+  bottom: -32px;
   background: #D5E2F7;
 }
 .card-item.title {
@@ -1697,10 +1738,11 @@ main section {
   font-size: 20px;
   line-height: 130%;
   color: #2C3148;
-  margin-bottom: 25px;
+  margin-bottom: 32px;
+  margin-top: 8px;
 }
-.card-item.title-bold {
-  font-weight: 750 !important;
+.card-item.title.bold {
+  font-weight: 450 !important;
   font-size: 24px;
   line-height: 135%;
   color: #2C3148;
@@ -1751,13 +1793,15 @@ main section {
   justify-content: start;
   align-items: center;
   margin-top: 60px;
+  margin-left: 260px;
   gap: 20px;
+  width: fit-content;
 }
 .tabs:after {
   content: '';
   position: absolute;
   height: 1px;
-  width: 50%;
+  width: 100%;
   left: 0;
   bottom: -10px;
   background: #D5E2F7;
