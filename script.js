@@ -16,7 +16,13 @@ $(document).ready(function () {
 //Overlay-menu
     $("#nav-more").click((e) => {
         e.stopPropagation();
-        overlayMenu.is(':hidden') ? overlayMenu.show() : overlayMenu.hide();
+        if (overlayMenu.is(':hidden')) {
+            overlayMenu.show()
+            $("#nav-more").addClass('active')
+        } else {
+            overlayMenu.hide()
+            $("#nav-more").removeClass('active')
+        }
     });
     $('.overlay-menu a').click(() => {
         overlayMenu.hide();

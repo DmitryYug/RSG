@@ -17,6 +17,14 @@
 }
 .header-nav-left-container #nav-more {
   margin: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/header/dots.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header-nav-left-container #nav-more.active {
+  background-image: url("../images/header/dots-clicked.png");
 }
 .header-nav-right-container {
   display: flex;
