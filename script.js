@@ -67,13 +67,18 @@ $(document).ready(function () {
     $('#main-search-btn').click((e) => {
         e.stopPropagation();
         $('.header-nav-right-container').hide(0, () => {
-            mainSearch.show();
+            mainSearch.css('display', 'flex').css('justify-content', 'flex-end').animate({
+                width: '50%'
+            }, 500);
         });
     })
     $('#close-main-search-btn').click(() => {
-        $('.hidden').hide(0, () => {
+        $(mainSearch).animate({
+            width: '0'
+        }, 500, 'swing', () => {
             $('.header-nav-right-container').show();
-        });
+            $('.hidden').hide()
+        })
     })
     $('.hidden').not('#close-main-search-btn').click((e) => {
         e.stopPropagation();

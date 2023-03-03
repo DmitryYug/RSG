@@ -63,6 +63,10 @@
   right: -25px;
   background: #D5E2F7;
 }
+#main-search-block {
+  width: 0;
+  flex-grow: 0;
+}
 .footer-container {
   width: 100%;
   display: flex;
@@ -1381,6 +1385,7 @@ main section {
   border-bottom: 1px solid #7C7F8D;
   width: 405px;
   height: 35px;
+  position: relative;
   justify-items: stretch;
 }
 .input-with-btn.main-search input {
