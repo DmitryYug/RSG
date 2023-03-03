@@ -9,8 +9,19 @@ $(document).ready(function () {
 
 //Initial transformations
     $(window).click(() => {
-        $('.hidden').hide();
-        $('.header-nav-right-container:hidden').show()
+        // $('.hidden').hide();
+        // $('.header-nav-right-container:hidden').show()
+
+        if ($('#main-search-block').is(':hidden')) {
+            $('.hidden').hide();
+        } else {
+            $(mainSearch).animate({
+                width: '0'
+            }, 500, 'swing', () => {
+                $('.header-nav-right-container').show();
+                $('.hidden').hide()
+            })
+        }
     });
 
 
