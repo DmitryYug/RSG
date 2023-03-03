@@ -3,6 +3,7 @@ $(document).ready(function () {
 //Variables
     let overlayMenu = $('#overlay-menu');
     let mainSearch = $('#main-search-block');
+    let screenWidth = $(window).width();
 
 //Helpers
 
@@ -161,7 +162,6 @@ $(document).ready(function () {
             hiddenElement.slideUp(500, () => {
                 $(clickedElement).removeClass('expanded')
             });
-            // expandArrow.show();
             expandArrowHovered.show();
             collapseArrow.hide();
         }
@@ -239,12 +239,17 @@ $(document).ready(function () {
         }
     })
 
-    //main header container
+//Main header container
     let mainTitle = $('.background-section-title-container')
-    if(mainTitle.height() > 160) {
+
+    if (mainTitle.height() > 160) {
         mainTitle.css('padding-left', '0')
     } else {
-        mainTitle.css('padding-left', '110px')
+        if (screenWidth > 1440) {
+            mainTitle.css('padding-left', '300px')
+        } else {
+            mainTitle.css('padding-left', '110px')
+        }
     }
 })
 

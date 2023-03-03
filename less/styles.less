@@ -47,8 +47,21 @@ main {
 }
 
 .flex {
+  &-row-center-center {
+    .flex-default(center, center);
+  }
+
   &-row-center-start {
-    .flex-default(center, flex-start)
+    .flex-default(center, flex-start);
+  }
+
+  &-row-start-center {
+    .flex-default(flex-start, center);
+
+    &.captcha {
+      flex: 0 1 60%;
+      gap: 10px;
+    }
   }
 }
 
@@ -80,7 +93,7 @@ main {
     }
 
     &.multiple-string {
-      .hovered-button-with-icon('../images/content/icons/new-tab.png', '../images/content/icons/new-tab-hovered.png', 20px, 20px, 0, -25px);
+      .hovered-button-with-icon('../images/content/icons/new-tab.png', '../images/content/icons/new-tab-hovered.png', 20px, 20px, 3px, -25px);
       width: 50%;
       word-wrap: break-word;
     }
@@ -105,7 +118,12 @@ main {
   &.has-before-element-download {
     &.single-string {
       margin-left: 35px;
-      .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, 25%, 105%);
+      .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, 0, 105%);
+
+      &-inside-flex {
+        margin-left: 35px;
+        .hovered-button-with-icon('../images/content/icons/download.png', '../images/content/icons/download-hovered.png', 20px, 100%, unset, 105%);
+      }
     }
 
     &.multiple-string {
@@ -232,6 +250,7 @@ main {
   &-link {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     .text-props(450, 20px, 130%, @background-dark);
+    cursor: pointer;
 
     &:hover {
       color: @active-link;
@@ -315,6 +334,10 @@ main {
     .flex-column(flex-start, flex-start);
     gap: 5px;
 
+    &.gap-15 {
+      gap: 15px;
+    }
+
     span {
       .text-props(400, 14px, 115%, @text-regular-color);
     }
@@ -387,6 +410,7 @@ main {
   &-items-per-page {
     .flex-default(center, center);
     margin-top: 10px;
+
     .total {
       padding: 3px;
       background-color: transparent;
@@ -658,8 +682,11 @@ main {
           .flex-column(start, center);
 
           &.captcha {
-            width: auto;
-            max-width: 25%;
+            width: 100%;
+
+            span {
+              .text-props(400, 14px, 115%, #E33838);
+            }
           }
         }
 
@@ -701,6 +728,9 @@ main {
         height: 100%;
         width: 50%;
         margin-right: 81px;
+        label {
+          margin-left: 5px;
+        }
       }
 
       #from-price-about, #from-date-planned, #from-date-about {
@@ -966,6 +996,9 @@ main {
   .flex-default(center, start);
   margin-top: 60px;
   margin-left: 260px;
+  @media (min-width: 1441px) {
+    margin-left: 320px;
+  }
   gap: 20px;
   width: fit-content;
 
